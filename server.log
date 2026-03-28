@@ -1,0 +1,2589 @@
+INFO:     Started server process [78707]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+╭──────────────────── 🚀 Crew Execution Started ────────────────────╮
+│                                                                   │
+│  Crew Execution Started                                           │
+│  Name: crew                                                       │
+│  ID: 6dbd1a22-59fd-45f1-b441-1d694a2f6a97                         │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────── 📋 Task Started ─────────────────────────╮
+│                                                                   │
+│  Task Started                                                     │
+│  Name: Search the knowledge base for 'decision trees' in course   │
+│  'Intro_to_Programming'. Return relevant passages.                │
+│  ID: 2a3136e9-32ba-4a32-a4f4-a75fca71a699                         │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────── 🤖 Agent Started ─────────────────────────╮
+│                                                                   │
+│  Agent: Retrieval Agent (Librarian)                               │
+│                                                                   │
+│  Task: Search the knowledge base for 'decision trees' in course   │
+│  'Intro_to_Programming'. Return relevant passages.                │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭───────────────── 🔧 Tool Execution Started (#1) ──────────────────╮
+│                                                                   │
+│  Tool: search_usf_knowledge_base                                  │
+│  Args: {'query': 'decision trees', 'course':                      │
+│  'Intro_to_Programming'}                                          │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+[32mTool search_usf_knowledge_base executed with result: --- Passage 1 (relevance: 0.68) ---
+# Figure 4-12 Combining sequence structures with a decision structure
+
+| Start              | Go to the window. |
+| ------------------ | ----------------- |
+| Seque...[0m
+╭──────────────── ✅ Tool Execution Completed (#1) ─────────────────╮
+│                                                                   │
+│  Tool Completed                                                   │
+│  Tool: search_usf_knowledge_base                                  │
+│  Output: --- Passage 1 (relevance: 0.68) ---                      │
+│  # Figure 4-12 Combining sequence structures with a decision      │
+│  structure                                                        │
+│                                                                   │
+│  | Start              | Go to the window. |                       │
+│  | ------------------ | ----------------- |                       │
+│  | Sequence structure | Read thermometer. |                       │
+│  | Decision structure | True              |                       │
+│  |                    | Wear a coat.      |                       │
+│  |                    | False             |                       │
+│  |                    | Open the door.    |                       │
+│  | Sequence structure | Go outside.       |                       │
+│  |                    | End               |                       │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # 4.4 Nested Decision Structures and the if-elif-else Statement  │
+│                                                                   │
+│  The flowchart in the figure starts with a sequence structure.    │
+│  Assuming you have an outdoor thermometer in your window, the     │
+│  first step is Go to the window, and the next step is Read        │
+│  thermometer. A decision structure appears next, testing the      │
+│  condition Cold outside. If this is true, the action wear a coat  │
+│  is performed. Another sequence structure appears next. The step  │
+│  Open the door is performed, followed by Go outside.              │
+│                                                                   │
+│  --- Passage 2 (relevance: 0.67) ---                              │
+│  # Figure 4-1 A simple decision structure                         │
+│                                                                   │
+│  | Cold outside | True  | Wear a coat. |                          │
+│  | ------------ | ----- | ------------ |                          │
+│  |              | False |              |                          │
+│                                                                   │
+│  In the flowchart, the diamond symbol indicates some condition    │
+│  that must be tested. In this case, we are determining whether    │
+│  the condition cold outside is true or false. If this condition   │
+│  is true, the action wear a coat is performed. If the condition   │
+│  is false, the action is skipped. The action is conditionally     │
+│  executed because it is performed only when a certain condition   │
+│  is true.                                                         │
+│                                                                   │
+│  --- Passage 3 (relevance: 0.67) ---                              │
+│  In a decision structure's simplest form, a specific action is    │
+│  performed only if a certain condition exists. If the condition   │
+│  does not exist, the action is not performed. The flowchart       │
+│  shown in Figure 4‑1 shows how the logic of an everyday decision  │
+│  can be diagrammed as a decision structure. The diamond symbol    │
+│  represents a true/false condition. If the condition is true, we  │
+│  follow one path, which leads to an action being performed. If    │
+│  the condition is false, we follow another path, which skips the  │
+│  action.                                                          │
+│                                                                   │
+│  # Figure 4-1 A simple decision structure                         │
+│                                                                   │
+│  | Cold outside | True  | Wear a coat. |                          │
+│  | ------------ | ----- | ------------ |                          │
+│  |              | False |              |                          │
+│                                                                   │
+│  --- Passage 4 (relevance: 0.67) ---                              │
+│  # Nested blocks                                                  │
+│                                                                   │
+│  if salary >= 30000.0:                                            │
+│  if years on job >= 7:                                            │
+│  # Some code here                                                 │
+│  else:                                                            │
+│  print 'You must earn at least $30,000 per year to qualify.'      │
+│  print 'You do not qualify.'                                      │
+│                                                                   │
+│  # Testing a Series of Conditions                                 │
+│                                                                   │
+│  In the previous example you saw how a program can use nested     │
+│  decision structures to test more than one condition. It is not   │
+│  uncommon for a program to have a series of conditions to test,   │
+│  and then perform an action depending on which condition is       │
+│  true. One way to accomplish this is to have a decision           │
+│  structure with numerous other decision structures nested inside  │
+│  it. For example, consider the program presented in the           │
+│  following In the Spotlight section.                              │
+│                                                                   │
+│  # In the Spotlight:                                              │
+│                                                                   │
+│  # Multiple Nested Decision Structures                            │
+│                                                                   │
+│  Dr. Suarez teaches a literature class and uses the following 10  │
+│  point grading scale for all of his exams:                        │
+│                                                                   │
+│  --- Passage 5 (relevance: 0.66) ---                              │
+│  You can also nest decision structures inside other decision      │
+│  structures. In fact, this is a common requirement in programs    │
+│  that need to test more than one condition. For example,          │
+│  consider a program that determines whether a bank customer       │
+│  qualifies for a loan. To qualify, two conditions must exist:     │
+│  (1) the customer must earn at least $30,000 per year, and (2)    │
+│  the customer must have been employed at his or her current job   │
+│  for at least two years. Figure 4‑14 shows a flowchart for an     │
+│  algorithm that could be used in such a program. Assume that the  │
+│  salary variable is assigned the customer's annual salary, and    │
+│  the years on job variable is assigned the number of years that   │
+│  the customer has worked on his or her current job.               │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # Chapter 4 Decision Structures and Boolean Logic                │
+│                                                                   │
+│  Figure 4-84 A nested decision structure                          │
+│                                                                   │
+│  False salary >= 30000 True                                       │
+│                                                                   │
+│  print 'You must earn at least $30,000 per year to qualify.'      │
+│  False years_on_job >= 2 True                                     │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── ✅ Agent Final Answer ──────────────────────╮
+│                                                                   │
+│  Agent: Retrieval Agent (Librarian)                               │
+│                                                                   │
+│  Final Answer:                                                    │
+│  --- Passage 1 (relevance: 0.68) ---                              │
+│  # Figure 4-12 Combining sequence structures with a decision      │
+│  structure                                                        │
+│                                                                   │
+│  | Start | Go to the window. |                                    │
+│  | --- | --- |                                                    │
+│  | Sequence structure | Read thermometer. |                       │
+│  | Decision structure | True |                                    │
+│  | | Wear a coat. |                                               │
+│  | | False |                                                      │
+│  | | Open the door. |                                             │
+│  | Sequence structure | Go outside. |                             │
+│  | | End |                                                        │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # 4.4 Nested Decision Structures and the if-elif-else Statement  │
+│                                                                   │
+│  The flowchart in the figure starts with a sequence structure.    │
+│  Assuming you have an outdoor thermometer in your window, the     │
+│  first step is Go to the window, and the next step is Read        │
+│  thermometer. A decision structure appears next, testing the      │
+│  condition Cold outside. If this is true, the action wear a coat  │
+│  is performed. Another sequence structure appears next. The step  │
+│  Open the door is performed, followed by Go outside.              │
+│                                                                   │
+│  --- Passage 2 (relevance: 0.67) ---                              │
+│  # Figure 4-1 A simple decision structure                         │
+│                                                                   │
+│  | Cold outside | True | Wear a coat. |                           │
+│  | --- | --- | --- |                                              │
+│  | | False | |                                                    │
+│                                                                   │
+│  In the flowchart, the diamond symbol indicates some condition    │
+│  that must be tested. In this case, we are determining whether    │
+│  the condition cold outside is true or false. If this condition   │
+│  is true, the action wear a coat is performed. If the condition   │
+│  is false, the action is skipped. The action is conditionally     │
+│  executed because it is performed only when a certain condition   │
+│  is true.                                                         │
+│                                                                   │
+│  --- Passage 3 (relevance: 0.67) ---                              │
+│  In a decision structure's simplest form, a specific action is    │
+│  performed only if a certain condition exists. If the condition   │
+│  does not exist, the action is not performed. The flowchart       │
+│  shown in Figure 4‑1 shows how the logic of an everyday decision  │
+│  can be diagrammed as a decision structure. The diamond symbol    │
+│  represents a true/false condition. If the condition is true, we  │
+│  follow one path, which leads to an action being performed. If    │
+│  the condition is false, we follow another path, which skips the  │
+│  action.                                                          │
+│                                                                   │
+│  # Figure 4-1 A simple decision structure                         │
+│                                                                   │
+│  | Cold outside | True | Wear a coat. |                           │
+│  | --- | --- | --- |                                              │
+│  | | False | |                                                    │
+│                                                                   │
+│  --- Passage 4 (relevance: 0.67) ---                              │
+│  # Nested blocks                                                  │
+│                                                                   │
+│  if salary >= 30000.0:                                            │
+│  if years on job >= 7:                                            │
+│  # Some code here                                                 │
+│  else:                                                            │
+│  print 'You must earn at least $30,000 per year to qualify.'      │
+│  print 'You do not qualify.'                                      │
+│                                                                   │
+│  # Testing a Series of Conditions                                 │
+│                                                                   │
+│  In the previous example you saw how a program can use nested     │
+│  decision structures to test more than one condition. It is not   │
+│  uncommon for a program to have a series of conditions to test,   │
+│  and then perform an action depending on which condition is       │
+│  true. One way to accomplish this is to have a decision           │
+│  structure with numerous other decision structures nested inside  │
+│  it. For example, consider the program presented in the           │
+│  following In the Spotlight section.                              │
+│                                                                   │
+│  # In the Spotlight:                                              │
+│                                                                   │
+│  # Multiple Nested Decision Structures                            │
+│                                                                   │
+│  Dr. Suarez teaches a literature class and uses the following 10  │
+│  point grading scale for all of his exams:                        │
+│                                                                   │
+│  --- Passage 5 (relevance: 0.66) ---                              │
+│  You can also nest decision structures inside other decision      │
+│  structures. In fact, this is a common requirement in programs    │
+│  that need to test more than one condition. For example,          │
+│  consider a program that determines whether a bank customer       │
+│  qualifies for a loan. To qualify, two conditions must exist:     │
+│  (1) the customer must earn at least $30,000 per year, and (2)    │
+│  the customer must have been employed at his or her current job   │
+│  for at least two years. Figure 4‑14 shows a flowchart for an     │
+│  algorithm that could be used in such a program. Assume that the  │
+│  salary variable is assigned the customer's annual salary, and    │
+│  the years on job variable is assigned the number of years that   │
+│  the customer has worked on his or her current job.               │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # Chapter 4 Decision Structures and Boolean Logic                │
+│                                                                   │
+│  Figure 4-84 A nested decision structure                          │
+│                                                                   │
+│  False salary >= 30000 True                                       │
+│                                                                   │
+│  print 'You must earn at least $30,000 per year to qualify.'      │
+│  False years_on_job >= 2 True                                     │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 📋 Task Completion ────────────────────────╮
+│                                                                   │
+│  Task Completed                                                   │
+│  Name: Search the knowledge base for 'decision trees' in course   │
+│  'Intro_to_Programming'. Return relevant passages.                │
+│  Agent: Retrieval Agent (Librarian)                               │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────── 📋 Task Started ─────────────────────────╮
+│                                                                   │
+│  Task Started                                                     │
+│  Name: Using the retrieved passages, write a clear,               │
+│  freshman-friendly explanation of 'decision trees'.               │
+│                                                                   │
+│  History: No prior conversation.                                  │
+│                                                                   │
+│  Guidelines:                                                      │
+│  - Use analogies and define jargon.                               │
+│                                                                   │
+│  CRITICAL: You MUST output a valid JSON object with EXACTLY two   │
+│  keys: 'response' and 'suggested_prompts'.                        │
+│  - 'response': Your clear explanation string (markdown            │
+│  supported).                                                      │
+│  - 'suggested_prompts': An array of 3 highly relevant follow-up   │
+│  question strings the student should ask next.                    │
+│  Do not include any other text outside the JSON.                  │
+│  ID: c9478198-495e-4562-a0e6-f4f3ce178cc2                         │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────── 🤖 Agent Started ─────────────────────────╮
+│                                                                   │
+│  Agent: Tutor Agent (Teacher)                                     │
+│                                                                   │
+│  Task: Using the retrieved passages, write a clear,               │
+│  freshman-friendly explanation of 'decision trees'.               │
+│                                                                   │
+│  History: No prior conversation.                                  │
+│                                                                   │
+│  Guidelines:                                                      │
+│  - Use analogies and define jargon.                               │
+│                                                                   │
+│  CRITICAL: You MUST output a valid JSON object with EXACTLY two   │
+│  keys: 'response' and 'suggested_prompts'.                        │
+│  - 'response': Your clear explanation string (markdown            │
+│  supported).                                                      │
+│  - 'suggested_prompts': An array of 3 highly relevant follow-up   │
+│  question strings the student should ask next.                    │
+│  Do not include any other text outside the JSON.                  │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── ✅ Agent Final Answer ──────────────────────╮
+│                                                                   │
+│  Agent: Tutor Agent (Teacher)                                     │
+│                                                                   │
+│  Final Answer:                                                    │
+│  ```json                                                          │
+│  {                                                                │
+│    "response": "Hey there! Let's break down 'decision trees' in   │
+│  a way that makes perfect sense, even if you're just starting     │
+│  out. Think of it like making a series of choices in your daily   │
+│  life.\n\n### What's a Decision Structure First?\n\nBefore we     │
+│  get to a whole 'tree,' let's start with a single **decision      │
+│  structure**. Imagine you're getting ready to go outside:\n\n*    │
+│  **Analogy:** You go to the window and read the thermometer.\n*   │
+│  **Condition:** Your brain asks, \"Is it cold outside?\"\n    *   │
+│  This \"Is it cold outside?\" question is what we call a          │
+│  **condition**. It's something that can only be *true* or         │
+│  *false*.\n*   **Action (if True):** If the answer is *True*      │
+│  (yes, it's cold!), you decide to \"Wear a coat.\"\n*   **Action  │
+│  (if False):** If the answer is *False* (no, it's not cold!),     │
+│  you *skip* wearing a coat.\n\nSo, a **decision structure** is    │
+│  essentially a question that has a *True* or *False* answer, and  │
+│  based on that answer, you perform a specific **action** (or you  │
+│  don't). In diagrams, these conditions are often shown in a       │
+│  diamond shape.\n\n### What are Nested Decision                   │
+│  Structures?\n\nNow, life isn't usually just one simple           │
+│  decision. You often make choices that depend on previous         │
+│  choices. This is where **nested decision structures** come       │
+│  in.\n\n*   **Analogy:** Let's stick with our                     │
+│  getting-ready-to-go-outside example, but make it a bit more      │
+│  complex. You've already asked, \"Is it cold outside?\"\n    *    │
+│  **First Decision:** \"Is it cold outside?\"\n        *   **If    │
+│  True:** \"Wear a coat.\" (And maybe you're done!)\n        *     │
+│  **If False:** *Now* you ask another question *inside* that       │
+│  'false' path: \"Is it raining?\"\n            *   **If *that*    │
+│  is True (and it's not cold):** \"Grab an umbrella.\"\n           │
+│  *   **If *that* is False (and it's not cold, and not             │
+│  raining):** \"Just go outside!\"\n\nSee how the second decision  │
+│  (\"Is it raining?\") is **nested** inside the *False* path of    │
+│  the first decision? You only even *consider* the umbrella if     │
+│  it's *not* cold. This allows programs to test a whole **series   │
+│  of conditions** and perform different actions depending on       │
+│  which combination of conditions turns out to be true.\n\n###     │
+│  Bringing it all together: Decision Trees!\n\nWhen you start      │
+│  linking many of these individual **decision structures**         │
+│  together, especially **nesting** them and creating multiple      │
+│  possible paths based on those *True* or *False* conditions,      │
+│  you're essentially building a **decision tree**!\n\n*            │
+│  **Imagine a real tree:** It has a trunk, then branches, then     │
+│  smaller twigs, all leading to different leaves (or in our case,  │
+│  different outcomes or actions).\n*   **In programming or         │
+│  logic:** Each 'node' (or point where you make a choice) in the   │
+│  tree is a **condition** (like \"Is it cold?\" or \"Is it         │
+│  raining?\"). Each path branching off from that node represents   │
+│  a possible answer (True or False). Eventually, you reach the     │
+│  end of a path, which is a final **action** or result.\n\nSo, a   │
+│  **decision tree** is just a visual and logical way to map out a  │
+│  series of interconnected decisions and their potential           │
+│  outcomes, helping you navigate complex situations                │
+│  step-by-step!"                                                   │
+│  }                                                                │
+│  ```                                                              │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 📋 Task Completion ────────────────────────╮
+│                                                                   │
+│  Task Completed                                                   │
+│  Name: Using the retrieved passages, write a clear,               │
+│  freshman-friendly explanation of 'decision trees'.               │
+│                                                                   │
+│  History: No prior conversation.                                  │
+│                                                                   │
+│  Guidelines:                                                      │
+│  - Use analogies and define jargon.                               │
+│                                                                   │
+│  CRITICAL: You MUST output a valid JSON object with EXACTLY two   │
+│  keys: 'response' and 'suggested_prompts'.                        │
+│  - 'response': Your clear explanation string (markdown            │
+│  supported).                                                      │
+│  - 'suggested_prompts': An array of 3 highly relevant follow-up   │
+│  question strings the student should ask next.                    │
+│  Do not include any other text outside the JSON.                  │
+│  Agent: Tutor Agent (Teacher)                                     │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+INFO:     127.0.0.1:54926 - "POST /api/chat HTTP/1.1" 200 OK
+╭───────────────────────── Crew Completion ─────────────────────────╮
+│                                                                   │
+│  Crew Execution Completed                                         │
+│  Name: crew                                                       │
+│  ID: 6dbd1a22-59fd-45f1-b441-1d694a2f6a97                         │
+│  Final Output: ```json                                            │
+│  {                                                                │
+│    "response": "Hey there! Let's break down 'decision trees' in   │
+│  a way that makes perfect sense, even if you're just starting     │
+│  out. Think of it like making a series of choices in your daily   │
+│  life.\n\n### What's a Decision Structure First?\n\nBefore we     │
+│  get to a whole 'tree,' let's start with a single **decision      │
+│  structure**. Imagine you're getting ready to go outside:\n\n*    │
+│  **Analogy:** You go to the window and read the thermometer.\n*   │
+│  **Condition:** Your brain asks, \"Is it cold outside?\"\n    *   │
+│  This \"Is it cold outside?\" question is what we call a          │
+│  **condition**. It's something that can only be *true* or         │
+│  *false*.\n*   **Action (if True):** If the answer is *True*      │
+│  (yes, it's cold!), you decide to \"Wear a coat.\"\n*   **Action  │
+│  (if False):** If the answer is *False* (no, it's not cold!),     │
+│  you *skip* wearing a coat.\n\nSo, a **decision structure** is    │
+│  essentially a question that has a *True* or *False* answer, and  │
+│  based on that answer, you perform a specific **action** (or you  │
+│  don't). In diagrams, these conditions are often shown in a       │
+│  diamond shape.\n\n### What are Nested Decision                   │
+│  Structures?\n\nNow, life isn't usually just one simple           │
+│  decision. You often make choices that depend on previous         │
+│  choices. This is where **nested decision structures** come       │
+│  in.\n\n*   **Analogy:** Let's stick with our                     │
+│  getting-ready-to-go-outside example, but make it a bit more      │
+│  complex. You've already asked, \"Is it cold outside?\"\n    *    │
+│  **First Decision:** \"Is it cold outside?\"\n        *   **If    │
+│  True:** \"Wear a coat.\" (And maybe you're done!)\n        *     │
+│  **If False:** *Now* you ask another question *inside* that       │
+│  'false' path: \"Is it raining?\"\n            *   **If *that*    │
+│  is True (and it's not cold):** \"Grab an umbrella.\"\n           │
+│  *   **If *that* is False (and it's not cold, and not             │
+│  raining):** \"Just go outside!\"\n\nSee how the second decision  │
+│  (\"Is it raining?\") is **nested** inside the *False* path of    │
+│  the first decision? You only even *consider* the umbrella if     │
+│  it's *not* cold. This allows programs to test a whole **series   │
+│  of conditions** and perform different actions depending on       │
+│  which combination of conditions turns out to be true.\n\n###     │
+│  Bringing it all together: Decision Trees!\n\nWhen you start      │
+│  linking many of these individual **decision structures**         │
+│  together, especially **nesting** them and creating multiple      │
+│  possible paths based on those *True* or *False* conditions,      │
+│  you're essentially building a **decision tree**!\n\n*            │
+│  **Imagine a real tree:** It has a trunk, then branches, then     │
+│  smaller twigs, all leading to different leaves (or in our case,  │
+│  different outcomes or actions).\n*   **In programming or         │
+│  logic:** Each 'node' (or point where you make a choice) in the   │
+│  tree is a **condition** (like \"Is it cold?\" or \"Is it         │
+│  raining?\"). Each path branching off from that node represents   │
+│  a possible answer (True or False). Eventually, you reach the     │
+│  end of a path, which is a final **action** or result.\n\nSo, a   │
+│  **decision tree** is just a visual and logical way to map out a  │
+│  series of interconnected decisions and their potential           │
+│  outcomes, helping you navigate complex situations                │
+│  step-by-step!"                                                   │
+│  }                                                                │
+│  ```                                                              │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────── Tracing Status ──────────────────────────╮
+│                                                                   │
+│  Info: Tracing is disabled.                                       │
+│                                                                   │
+│  To enable tracing, do any one of these:                          │
+│  • Set tracing=True in your Crew/Flow code                        │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env file    │
+│  • Run: crewai traces enable                                      │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+╭──────────────────── 🚀 Crew Execution Started ────────────────────╮
+│                                                                   │
+│  Crew Execution Started                                           │
+│  Name: crew                                                       │
+│  ID: c04ca14f-deac-41a4-afd6-3af31e818026                         │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────── 📋 Task Started ─────────────────────────╮
+│                                                                   │
+│  Task Started                                                     │
+│  Name: Search the knowledge base for 'Turing Test' in course      │
+│  'Agentic_AI'.                                                    │
+│  ID: f5d7eb97-bdae-4e17-8135-ed3966a24dc6                         │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────── 🤖 Agent Started ─────────────────────────╮
+│                                                                   │
+│  Agent: Retrieval Agent (Librarian)                               │
+│                                                                   │
+│  Task: Search the knowledge base for 'Turing Test' in course      │
+│  'Agentic_AI'.                                                    │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭─────────────── 🔧 Tool Execution Started (#2) ────────────────╮
+│                                                               │
+│  Tool: search_usf_knowledge_base                              │
+│  Args: {'query': 'Turing Test', 'course': 'Agentic_AI'}       │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+[32mTool search_usf_knowledge_base executed with result: --- Passage 1 (relevance: 0.73) ---
+# 1.1.1 Acting humanly: The Turing test approach
+
+Turing test
+
+
+
+
+
+
+# The Turing Test
+
+The Turing test, proposed by Alan Turing (1950), was designed as a thought ex...[0m
+╭────────────── ✅ Tool Execution Completed (#2) ───────────────╮
+│                                                               │
+│  Tool Completed                                               │
+│  Tool: search_usf_knowledge_base                              │
+│  Output: --- Passage 1 (relevance: 0.73) ---                  │
+│  # 1.1.1 Acting humanly: The Turing test approach             │
+│                                                               │
+│  Turing test                                                  │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│  # The Turing Test                                            │
+│                                                               │
+│  The Turing test, proposed by Alan Turing (1950), was         │
+│  designed as a thought experiment that would sidestep the     │
+│  philosophical vagueness of the question “Can a machine       │
+│  think?” A computer passes the test if a human interrogator,  │
+│  after posing some written questions, cannot tell whether     │
+│  the written responses come from a person or from a           │
+│  computer. Chapter 27 discusses the details of the test and   │
+│  whether a computer would really be intelligent if it         │
+│  passed. For now, we note that programming a computer to      │
+│  pass a rigorously applied test provides plenty to work on.   │
+│  The computer would need the following capabilities:          │
+│                                                               │
+│  - Natural language processing to communicate successfully    │
+│  in a human language;                                         │
+│  - Knowledge representation to store what it knows or hears;  │
+│  - Automated reasoning to answer questions and to draw new    │
+│  conclusions;                                                 │
+│  - Machine learning to adapt to new circumstances and to      │
+│  detect and extrapolate patterns.                             │
+│                                                               │
+│  --- Passage 2 (relevance: 0.72) ---                          │
+│  # Capabilities                                               │
+│                                                               │
+│  - Natural language processing                                │
+│  - Knowledge representation                                   │
+│  - Automated reasoning                                        │
+│  - Machine learning                                           │
+│                                                               │
+│  # Total Turing test                                          │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│  Turing viewed the physical simulation of a person as         │
+│  unnecessary to demonstrate intelligence. However, other      │
+│  researchers have proposed a total Turing test, which         │
+│  requires interaction with objects and people in the real     │
+│  world. To pass the total Turing test, a robot will need:     │
+│                                                               │
+│  - computer vision and speech recognition to perceive the     │
+│  world;                                                       │
+│  - robotics to manipulate objects and move about.             │
+│                                                               │
+│  # Computer vision                                            │
+│                                                               │
+│  # Robotics                                                   │
+│                                                               │
+│  --- Passage 3 (relevance: 0.71) ---                          │
+│  # Do the right thing                                         │
+│                                                               │
+│  Example, recoiling from a hot stove is a reflex action that  │
+│  is usually more successful than a slower action taken after  │
+│  careful deliberation.                                        │
+│                                                               │
+│  All the skills needed for the Turing test also allow an      │
+│  agent to act rationally. Knowledge representation and        │
+│  reasoning enable agents to reach good decisions. We need to  │
+│  be able to generate comprehensible sentences in natural      │
+│  language to get by in a complex society. We need learning    │
+│  not only for erudition, but also because it improves our     │
+│  ability to generate effective behavior, especially in        │
+│  circumstances that are new.                                  │
+│                                                               │
+│  --- Passage 4 (relevance: 0.69) ---                          │
+│  # Rationality                                                │
+│                                                               │
+│  From these two dimensions—human vs. rational2 and thought    │
+│  vs. behavior—there are four possible combinations, and       │
+│  there have been adherents and research programs for all      │
+│  four. The methods used are necessarily different: the        │
+│  pursuit of human-like intelligence must be in part an        │
+│  empirical science related to psychology, involving           │
+│  observations and hypotheses about actual human behavior and  │
+│  thought processes; a rationalist approach, on the other      │
+│  hand, involves a combination of mathematics and              │
+│  engineering, and connects to statistics, control theory,     │
+│  and economics. The various groups have both disparaged and   │
+│  helped each other. Let us look at the four approaches in     │
+│  more detail.                                                 │
+│                                                               │
+│  We are not suggesting that humans are “irrational” in the    │
+│  dictionary sense of “deprived of normal mental clarity.” We  │
+│  are merely conceding that human decisions are not always     │
+│  mathematically perfect.                                      │
+│                                                               │
+│  # 1.1.1 Acting humanly: The Turing test approach             │
+│                                                               │
+│  Turing test                                                  │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│  # The Turing Test                                            │
+│                                                               │
+│  --- Passage 5 (relevance: 0.69) ---                          │
+│  There were a number of other examples of early work that     │
+│  can be characterized as AI, including two checkers-playing   │
+│  programs developed independently in 1952 by Christopher      │
+│  Strachey at the University of Manchester and by Arthur       │
+│  Samuel at IBM. However, Alan Turing’s vision was the most    │
+│  influential. He gave lectures on the topic as early as 1947  │
+│  at the London Mathematical Society and articulated a         │
+│  persuasive agenda in his 1950 article “Computing Machinery   │
+│  and Intelligence.” Therein, he introduced the Turing test,   │
+│  machine learning, genetic algorithms, and reinforcement      │
+│  learning. He dealt with many of the objections raised to     │
+│  the possibility of AI, as described in Chapter 27. He also   │
+│  suggested that it would be easier to create human-level AI   │
+│  by developing learning algorithms and then teaching the      │
+│  machine rather than by programming its intelligence by       │
+│  hand. In subsequent lectures he warned that achieving this   │
+│  goal might not be the best thing for the human race.         │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭──────────────────── ✅ Agent Final Answer ────────────────────╮
+│                                                               │
+│  Agent: Retrieval Agent (Librarian)                           │
+│                                                               │
+│  Final Answer:                                                │
+│  --- Passage 1 (relevance: 0.73) ---                          │
+│  # 1.1.1 Acting humanly: The Turing test approach             │
+│                                                               │
+│  Turing test                                                  │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│  # The Turing Test                                            │
+│                                                               │
+│  The Turing test, proposed by Alan Turing (1950), was         │
+│  designed as a thought experiment that would sidestep the     │
+│  philosophical vagueness of the question “Can a machine       │
+│  think?” A computer passes the test if a human interrogator,  │
+│  after posing some written questions, cannot tell whether     │
+│  the written responses come from a person or from a           │
+│  computer. Chapter 27 discusses the details of the test and   │
+│  whether a computer would really be intelligent if it         │
+│  passed. For now, we note that programming a computer to      │
+│  pass a rigorously applied test provides plenty to work on.   │
+│  The computer would need the following capabilities:          │
+│                                                               │
+│  - Natural language processing to communicate successfully    │
+│  in a human language;                                         │
+│  - Knowledge representation to store what it knows or hears;  │
+│  - Automated reasoning to answer questions and to draw new    │
+│  conclusions;                                                 │
+│  - Machine learning to adapt to new circumstances and to      │
+│  detect and extrapolate patterns.                             │
+│                                                               │
+│  --- Passage 2 (relevance: 0.72) ---                          │
+│  # Capabilities                                               │
+│                                                               │
+│  - Natural language processing                                │
+│  - Knowledge representation                                   │
+│  - Automated reasoning                                        │
+│  - Machine learning                                           │
+│                                                               │
+│  # Total Turing test                                          │
+│                                                               │
+│                                                               │
+│                                                               │
+│  Turing viewed the physical simulation of a person as         │
+│  unnecessary to demonstrate intelligence. However, other      │
+│  researchers have proposed a total Turing test, which         │
+│  requires interaction with objects and people in the real     │
+│  world. To pass the total Turing test, a robot will need:     │
+│                                                               │
+│  - computer vision and speech recognition to perceive the     │
+│  world;                                                       │
+│  - robotics to manipulate objects and move about.             │
+│                                                               │
+│  # Computer vision                                            │
+│                                                               │
+│  # Robotics                                                   │
+│                                                               │
+│  --- Passage 3 (relevance: 0.71) ---                          │
+│  # Do the right thing                                         │
+│                                                               │
+│  Example, recoiling from a hot stove is a reflex action that  │
+│  is usually more successful than a slower action taken after  │
+│  careful deliberation.                                        │
+│                                                               │
+│  All the skills needed for the Turing test also allow an      │
+│  agent to act rationally. Knowledge representation and        │
+│  reasoning enable agents to reach good decisions. We need to  │
+│  be able to generate comprehensible sentences in natural      │
+│  language to get by in a complex society. We need learning    │
+│  not only for erudition, but also because it improves our     │
+│  ability to generate effective behavior, especially in        │
+│  circumstances that are new.                                  │
+│                                                               │
+│  --- Passage 4 (relevance: 0.69) ---                          │
+│  # Rationality                                                │
+│                                                               │
+│  From these two dimensions—human vs. rational2 and thought    │
+│  vs. behavior—there are four possible combinations, and       │
+│  there have been adherents and research programs for all      │
+│  four. The methods used are necessarily different: the        │
+│  pursuit of human-like intelligence must be in part an        │
+│  empirical science related to psychology, involving           │
+│  observations and hypotheses about actual human behavior and  │
+│  thought processes; a rationalist approach, on the other      │
+│  hand, involves a combination of mathematics and              │
+│  engineering, and connects to statistics, control theory,     │
+│  and economics. The various groups have both disparaged and   │
+│  helped each other. Let us look at the four approaches in     │
+│  more detail.                                                 │
+│                                                               │
+│  We are not suggesting that humans are “irrational” in the    │
+│  dictionary sense of “deprived of normal mental clarity.” We  │
+│  are merely conceding that human decisions are not always     │
+│  mathematically perfect.                                      │
+│                                                               │
+│  # 1.1.1 Acting humanly: The Turing test approach             │
+│                                                               │
+│  Turing test                                                  │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│  # The Turing Test                                            │
+│                                                               │
+│  --- Passage 5 (relevance: 0.69) ---                          │
+│  There were a number of other examples of early work that     │
+│  can be characterized as AI, including two checkers-playing   │
+│  programs developed independently in 1952 by Christopher      │
+│  Strachey at the University of Manchester and by Arthur       │
+│  Samuel at IBM. However, Alan Turing’s vision was the most    │
+│  influential. He gave lectures on the topic as early as 1947  │
+│  at the London Mathematical Society and articulated a         │
+│  persuasive agenda in his 1950 article “Computing Machinery   │
+│  and Intelligence.” Therein, he introduced the Turing test,   │
+│  machine learning, genetic algorithms, and reinforcement      │
+│  learning. He dealt with many of the objections raised to     │
+│  the possibility of AI, as described in Chapter 27. He also   │
+│  suggested that it would be easier to create human-level AI   │
+│  by developing learning algorithms and then teaching the      │
+│  machine rather than by programming its intelligence by       │
+│  hand. In subsequent lectures he warned that achieving this   │
+│  goal might not be the best thing for the human race.         │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭───────────────────── 📋 Task Completion ──────────────────────╮
+│                                                               │
+│  Task Completed                                               │
+│  Name: Search the knowledge base for 'Turing Test' in course  │
+│  'Agentic_AI'.                                                │
+│  Agent: Retrieval Agent (Librarian)                           │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 📋 Task Started ───────────────────────╮
+│                                                               │
+│  Task Started                                                 │
+│  Name: Using the retrieved passages, write a concise summary  │
+│  (TL;DR) of 'Turing Test'.                                    │
+│  History: No prior conversation.                              │
+│                                                               │
+│  CRITICAL: You MUST output a valid JSON object with EXACTLY   │
+│  two keys: 'response' and 'suggested_prompts'.                │
+│  - 'response': Your bulleted summary string (markdown         │
+│  supported).                                                  │
+│  - 'suggested_prompts': An array of 3 highly relevant         │
+│  follow-up question strings.                                  │
+│  Do not include any other text outside the JSON.              │
+│  ID: f16a9a87-c68e-4077-9351-eaf1dd7794b3                     │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭────────────────────── 🤖 Agent Started ───────────────────────╮
+│                                                               │
+│  Agent: Tutor Agent (Teacher)                                 │
+│                                                               │
+│  Task: Using the retrieved passages, write a concise summary  │
+│  (TL;DR) of 'Turing Test'.                                    │
+│  History: No prior conversation.                              │
+│                                                               │
+│  CRITICAL: You MUST output a valid JSON object with EXACTLY   │
+│  two keys: 'response' and 'suggested_prompts'.                │
+│  - 'response': Your bulleted summary string (markdown         │
+│  supported).                                                  │
+│  - 'suggested_prompts': An array of 3 highly relevant         │
+│  follow-up question strings.                                  │
+│  Do not include any other text outside the JSON.              │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭──────────────────── ✅ Agent Final Answer ────────────────────╮
+│                                                               │
+│  Agent: Tutor Agent (Teacher)                                 │
+│                                                               │
+│  Final Answer:                                                │
+│  ```json                                                      │
+│  {                                                            │
+│    "response": "Alright, let's get straight to the point      │
+│  about the Turing Test! It's a really famous idea proposed    │
+│  by Alan Turing in 1950, designed to answer a big question    │
+│  in a practical way:\n\n*   **The Big Idea:** Imagine you're  │
+│  chatting (through text, not face-to-face) with two hidden    │
+│  entities. One is a real person, and the other is a computer  │
+│  program. If, after asking them a bunch of questions, you     │
+│  *can't tell the difference* between the human and the        │
+│  computer, then the computer has passed the Turing Test.\n*   │
+│  **Why it Matters:** Its main goal was to sidestep the        │
+│  complex philosophical debate of \"Can a machine truly        │
+│  *think*?\" Instead, it focuses on whether a machine can      │
+│  *act* intelligently enough to fool a human.\n*   **What a    │
+│  Computer Needs to Pass:** To succeed, a computer would need  │
+│  a lot of sophisticated abilities:\n    *   **Natural         │
+│  Language Processing:** To understand and speak human         │
+│  languages naturally.\n    *   **Knowledge Representation:**  │
+│  To store and remember all the information it knows or        │
+│  hears.\n    *   **Automated Reasoning:** To use that stored  │
+│  knowledge to answer questions logically and draw new         │
+│  conclusions.\n    *   **Machine Learning:** To adapt to new  │
+│  situations, learn from conversations, and improve over       │
+│  time.\n*   **The 'Total' Turing Test:** Some researchers     │
+│  have proposed an even tougher version called the \"Total     │
+│  Turing Test.\" This would require the computer to also       │
+│  interact physically with the real world, using things like   │
+│  computer vision (to see) and robotics (to move and           │
+│  manipulate objects).\n\nEssentially, it's a test of whether  │
+│  a machine can exhibit human-like intelligence in             │
+│  communication.",                                             │
+│    "suggested_prompts": [                                     │
+│      "Has any computer ever truly passed the Turing Test?",   │
+│      "What are some common criticisms or limitations of the   │
+│  Turing Test?",                                               │
+│      "How does the Turing Test relate to modern AI like       │
+│  ChatGPT?"                                                    │
+│    ]                                                          │
+│  }                                                            │
+│  ```                                                          │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭───────────────────── 📋 Task Completion ──────────────────────╮
+│                                                               │
+│  Task Completed                                               │
+│  Name: Using the retrieved passages, write a concise summary  │
+│  (TL;DR) of 'Turing Test'.                                    │
+│  History: No prior conversation.                              │
+│                                                               │
+│  CRITICAL: You MUST output a valid JSON object with EXACTLY   │
+│  two keys: 'response' and 'suggested_prompts'.                │
+│  - 'response': Your bulleted summary string (markdown         │
+│  supported).                                                  │
+│  - 'suggested_prompts': An array of 3 highly relevant         │
+│  follow-up question strings.                                  │
+│  Do not include any other text outside the JSON.              │
+│  Agent: Tutor Agent (Teacher)                                 │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+INFO:     127.0.0.1:54940 - "POST /api/chat HTTP/1.1" 200 OK
+╭─────────────────────── Crew Completion ───────────────────────╮
+│                                                               │
+│  Crew Execution Completed                                     │
+│  Name: crew                                                   │
+│  ID: c04ca14f-deac-41a4-afd6-3af31e818026                     │
+│  Final Output: ```json                                        │
+│  {                                                            │
+│    "response": "Alright, let's get straight to the point      │
+│  about the Turing Test! It's a really famous idea proposed    │
+│  by Alan Turing in 1950, designed to answer a big question    │
+│  in a practical way:\n\n*   **The Big Idea:** Imagine you're  │
+│  chatting (through text, not face-to-face) with two hidden    │
+│  entities. One is a real person, and the other is a computer  │
+│  program. If, after asking them a bunch of questions, you     │
+│  *can't tell the difference* between the human and the        │
+│  computer, then the computer has passed the Turing Test.\n*   │
+│  **Why it Matters:** Its main goal was to sidestep the        │
+│  complex philosophical debate of \"Can a machine truly        │
+│  *think*?\" Instead, it focuses on whether a machine can      │
+│  *act* intelligently enough to fool a human.\n*   **What a    │
+│  Computer Needs to Pass:** To succeed, a computer would need  │
+│  a lot of sophisticated abilities:\n    *   **Natural         │
+│  Language Processing:** To understand and speak human         │
+│  languages naturally.\n    *   **Knowledge Representation:**  │
+│  To store and remember all the information it knows or        │
+│  hears.\n    *   **Automated Reasoning:** To use that stored  │
+│  knowledge to answer questions logically and draw new         │
+│  conclusions.\n    *   **Machine Learning:** To adapt to new  │
+│  situations, learn from conversations, and improve over       │
+│  time.\n*   **The 'Total' Turing Test:** Some researchers     │
+│  have proposed an even tougher version called the \"Total     │
+│  Turing Test.\" This would require the computer to also       │
+│  interact physically with the real world, using things like   │
+│  computer vision (to see) and robotics (to move and           │
+│  manipulate objects).\n\nEssentially, it's a test of whether  │
+│  a machine can exhibit human-like intelligence in             │
+│  communication.",                                             │
+│    "suggested_prompts": [                                     │
+│      "Has any computer ever truly passed the Turing Test?",   │
+│      "What are some common criticisms or limitations of the   │
+│  Turing Test?",                                               │
+│      "How does the Turing Test relate to modern AI like       │
+│  ChatGPT?"                                                    │
+│    ]                                                          │
+│  }                                                            │
+│  ```                                                          │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── Tracing Status ────────────────────────╮
+│                                                               │
+│  Info: Tracing is disabled.                                   │
+│                                                               │
+│  To enable tracing, do any one of these:                      │
+│  • Set tracing=True in your Crew/Flow code                    │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env     │
+│  file                                                         │
+│  • Run: crewai traces enable                                  │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+╭────────────────── 🚀 Crew Execution Started ──────────────────╮
+│                                                               │
+│  Crew Execution Started                                       │
+│  Name: crew                                                   │
+│  ID: 22095047-96fd-44f1-a46d-b34506ad92aa                     │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 📋 Task Started ───────────────────────╮
+│                                                               │
+│  Task Started                                                 │
+│  Name: Search the knowledge base for comprehensive details    │
+│  on 'Kinematics' (Course: 'Conceptual_Physics'). Retrieve as  │
+│  much detailed context as possible.                           │
+│  ID: cd0d0f6a-97bf-4800-919e-e781fd09d4cd                     │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭────────────────────── 🤖 Agent Started ───────────────────────╮
+│                                                               │
+│  Agent: Retrieval Agent (Librarian)                           │
+│                                                               │
+│  Task: Search the knowledge base for comprehensive details    │
+│  on 'Kinematics' (Course: 'Conceptual_Physics'). Retrieve as  │
+│  much detailed context as possible.                           │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭─────────────── 🔧 Tool Execution Started (#3) ────────────────╮
+│                                                               │
+│  Tool: search_usf_knowledge_base                              │
+│  Args: {'course': 'Conceptual_Physics', 'query':              │
+│  'Kinematics'}                                                │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+[32mTool search_usf_knowledge_base executed with result: --- Passage 1 (relevance: 0.70) ---
+Chapter 3, “Linear Motion,” is the only chapter in Part One that is devoid of physics laws. Kinematics has no laws, only definitions, mainly for speed, velocity, an...[0m
+╭────────────── ✅ Tool Execution Completed (#3) ───────────────╮
+│                                                               │
+│  Tool Completed                                               │
+│  Tool: search_usf_knowledge_base                              │
+│  Output: --- Passage 1 (relevance: 0.70) ---                  │
+│  Chapter 3, “Linear Motion,” is the only chapter in Part One  │
+│  that is devoid of physics laws. Kinematics has no laws,      │
+│  only definitions, mainly for speed, velocity, and            │
+│  acceleration—likely the least exciting concepts that your    │
+│  course has to offer. Too often kinematics becomes a          │
+│  pedagogical “black hole” of instruction—too much time for    │
+│  too little physics. Being more math than physics, the        │
+│  kinematics equations can appear to the student as the most   │
+│  intimidating in the book. Although the experienced eye       │
+│  doesn’t see them as such, this is how students first see     │
+│  them:                                                        │
+│                                                               │
+│  % = %0 + d∍                                                  │
+│                                                               │
+│  % = %0∍ + 12 d∍2                                             │
+│                                                               │
+│  %2 = %02 + 2d%                                               │
+│                                                               │
+│  %a = 211%0 + %2                                              │
+│                                                               │
+│  If you wish to reduce class size, display these equations    │
+│  on the first day and announce that class effort for much of  │
+│  the term will be on making sense of them. Don’t we do much   │
+│  the same with the standard symbols?                          │
+│                                                               │
+│  --- Passage 2 (relevance: 0.70) ---                          │
+│  1. What is the instantaneous velocity of a freely falling    │
+│  object 10 s after it is released from a position of rest?    │
+│  1. What is its average velocity during this 10-s interval?   │
+│  2. How far will it fall during this time?                    │
+│  2. A car takes 10 s to go from 0 m/s to 25 m/s at constant   │
+│  acceleration. If you wish to find the distance traveled      │
+│  using the equation d = 1/2 at², what value should you use    │
+│  for a?                                                       │
+│  3. A ball is tossed with enough speed straight up so that    │
+│  it is in the air for several seconds.                        │
+│  1. What is the velocity of the ball when it reaches its      │
+│  highest point?                                               │
+│  2. What is its velocity 1 s before it reaches its highest    │
+│  point?                                                       │
+│  3. What is the change in its velocity during this 1-s        │
+│  interval?                                                    │
+│  4. What is its velocity 1 s after it reaches its highest     │
+│  point?                                                       │
+│  5. What is the change in velocity during this 1-s interval?  │
+│  6. What is the change in velocity during the 2-s interval?   │
+│  (Careful!)                                                   │
+│                                                               │
+│  --- Passage 3 (relevance: 0.69) ---                          │
+│  A ball released at the left end of the channel iron track    │
+│  continues past the various points as shown. Rank the speed   │
+│  of the ball at points A, B, C, and D, from fastest to        │
+│  slowest. (Watch for tie scores.)                             │
+│  | A | B      | C      | D     |                              │
+│  | - | ------ | ------ | ----- |                              │
+│  |   | 15 m/s | 10 m/s | 3 m/s |                              │
+│                                                               │
+│  A ball is released at the left end of these different        │
+│  tracks bent from equal-length pieces of channel iron.        │
+│  | A      | B      | C      |                                 │
+│  | ------ | ------ | ------ |                                 │
+│  | 1.0 kg | 1.5 kg | 0.8 kg |                                 │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│                                                               │
+│  # CHAPTER 3 Review                                           │
+│                                                               │
+│  1. (a) Rank the speeds of the balls 1 s after being thrown   │
+│  from fastest to slowest.                                     │
+│                                                               │
+│  (b) Rank the accelerations of the balls 1 s after being      │
+│  thrown from greatest to least. (Or are the accelerations     │
+│  the same?)                                                   │
+│  2. # THINK AND EXPLAIN (SYNTHESIS)                           │
+│                                                               │
+│  --- Passage 4 (relevance: 0.69) ---                          │
+│  - (a) The one thrown upward.                                 │
+│  - (b) The one thrown downward.                               │
+│  - (c) neither, both hit with the same speed.                 │
+│  - (d) need more information.                                 │
+│  9. Nellie steps off the edge of a table and lands on the     │
+│  floor below in ¼ second. The height of the table top above   │
+│  the floor is about                                           │
+│  - (a) 1/3 m.                                                 │
+│  - (b) 1/2 m.                                                 │
+│  - (c) 3/4 m.                                                 │
+│  - (d) 1 m.                                                   │
+│  10. The vertical height attained by a basketball player who  │
+│  achieves a hang time of a full 1 s is about                  │
+│  - (a) 0.8 m.                                                 │
+│  - (b) 1 m.                                                   │
+│  - (c) 1.2 m.                                                 │
+│  - (d) 2.5 m.                                                 │
+│                                                               │
+│  --- Passage 5 (relevance: 0.69) ---                          │
+│  1. If an object moves along a straight-line path at          │
+│  constant speed, then it must be                              │
+│  - (a) accelerating.                                          │
+│  - (b) acted on by a force.                                   │
+│  - (c) both of these.                                         │
+│  - (d) neither of these.                                      │
+│  2. The average speed of a ball rolling along a horizontal    │
+│  track will be increased if the track has a                   │
+│  - (a) small upward hump along it.                            │
+│  - (b) downward dip along it.                                 │
+│  - (c) both the same if the hump and dip are opposites of     │
+│  each other.                                                  │
+│  - (d) not enough information.                                │
+│  3. A mosquito flying at 2 m/s encounters a 2-m/s breeze      │
+│  blowing in the opposite direction, giving it a resulting     │
+│  speed over the ground of                                     │
+│  - (a) 0 m/s.                                                 │
+│  - (b) 3 m/s.                                                 │
+│  - (c) 4 m/s.                                                 │
+│  - (d) 6 m/s.                                                 │
+│  4. Neglecting air resistance, when you toss a ball upward,   │
+│  by how much does its upward speed decrease each second?      │
+│  - (a) 10 m/s.                                                │
+│  - (b) 2. 10 m/s2.                                            │
+│  - (c) The answer depends on the initial speed.               │
+│  - (d) None of these.                                         │
+│  5. The acceleration of a block of ice sliding down an        │
+│  inclined plane                                               │
+│  - (a) increases with time.                                   │
+│  - (b) decreases with time.                                   │
+│  - (c) is practically constant.                               │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭──────────────────── ✅ Agent Final Answer ────────────────────╮
+│                                                               │
+│  Agent: Retrieval Agent (Librarian)                           │
+│                                                               │
+│  Final Answer:                                                │
+│  --- Passage 1 (relevance: 0.70) ---                          │
+│  Chapter 3, “Linear Motion,” is the only chapter in Part One  │
+│  that is devoid of physics laws. Kinematics has no laws,      │
+│  only definitions, mainly for speed, velocity, and            │
+│  acceleration—likely the least exciting concepts that your    │
+│  course has to offer. Too often kinematics becomes a          │
+│  pedagogical “black hole” of instruction—too much time for    │
+│  too little physics. Being more math than physics, the        │
+│  kinematics equations can appear to the student as the most   │
+│  intimidating in the book. Although the experienced eye       │
+│  doesn’t see them as such, this is how students first see     │
+│  them:                                                        │
+│                                                               │
+│  % = %0 + d∍                                                  │
+│                                                               │
+│  % = %0∍ + 12 d∍2                                             │
+│                                                               │
+│  %2 = %02 + 2d%                                               │
+│                                                               │
+│  %a = 211%0 + %2                                              │
+│                                                               │
+│  If you wish to reduce class size, display these equations    │
+│  on the first day and announce that class effort for much of  │
+│  the term will be on making sense of them. Don’t we do much   │
+│  the same with the standard symbols?                          │
+│                                                               │
+│  --- Passage 2 (relevance: 0.70) ---                          │
+│  1. What is the instantaneous velocity of a freely falling    │
+│  object 10 s after it is released from a position of rest?    │
+│  1. What is its average velocity during this 10-s interval?   │
+│  2. How far will it fall during this time?                    │
+│  2. A car takes 10 s to go from 0 m/s to 25 m/s at constant   │
+│  acceleration. If you wish to find the distance traveled      │
+│  using the equation d = 1/2 at², what value should you use    │
+│  for a?                                                       │
+│  3. A ball is tossed with enough speed straight up so that    │
+│  it is in the air for several seconds.                        │
+│  1. What is the velocity of the ball when it reaches its      │
+│  highest point?                                               │
+│  2. What is its velocity 1 s before it reaches its highest    │
+│  point?                                                       │
+│  3. What is the change in its velocity during this 1-s        │
+│  interval?                                                    │
+│  4. What is its velocity 1 s after it reaches its highest     │
+│  point?                                                       │
+│  5. What is the change in velocity during this 1-s interval?  │
+│  6. What is the change in velocity during the 2-s interval?   │
+│  (Careful!)                                                   │
+│                                                               │
+│  --- Passage 3 (relevance: 0.69) ---                          │
+│  A ball released at the left end of the channel iron track    │
+│  continues past the various points as shown. Rank the speed   │
+│  of the ball at points A, B, C, and D, from fastest to        │
+│  slowest. (Watch for tie scores.)                             │
+│  | A | B | C | D |                                            │
+│  | - | --- | --- | --- |                                      │
+│  | | 15 m/s | 10 m/s | 3 m/s |                                │
+│                                                               │
+│  A ball is released at the left end of these different        │
+│  tracks bent from equal-length pieces of channel iron.        │
+│  | A | B | C |                                                │
+│  | --- | --- | --- |                                          │
+│  | 1.0 kg | 1.5 kg | 0.8 kg |                                 │
+│                                                               │
+│                                                               │
+│                                                               │
+│  # CHAPTER 3 Review                                           │
+│                                                               │
+│  1. (a) Rank the speeds of the balls 1 s after being thrown   │
+│  from fastest to slowest.                                     │
+│                                                               │
+│  (b) Rank the accelerations of the balls 1 s after being      │
+│  thrown from greatest to least. (Or are the accelerations     │
+│  the same?)                                                   │
+│  2. # THINK AND EXPLAIN (SYNTHESIS)                           │
+│                                                               │
+│  --- Passage 4 (relevance: 0.69) ---                          │
+│  - (a) The one thrown upward.                                 │
+│  - (b) The one thrown downward.                               │
+│  - (c) neither, both hit with the same speed.                 │
+│  - (d) need more information.                                 │
+│  9. Nellie steps off the edge of a table and lands on the     │
+│  floor below in ¼ second. The height of the table top above   │
+│  the floor is about                                           │
+│  - (a) 1/3 m.                                                 │
+│  - (b) 1/2 m.                                                 │
+│  - (c) 3/4 m.                                                 │
+│  - (d) 1 m.                                                   │
+│  10. The vertical height attained by a basketball player who  │
+│  achieves a hang time of a full 1 s is about                  │
+│  - (a) 0.8 m.                                                 │
+│  - (b) 1 m.                                                   │
+│  - (c) 1.2 m.                                                 │
+│  - (d) 2.5 m.                                                 │
+│                                                               │
+│  --- Passage 5 (relevance: 0.69) ---                          │
+│  1. If an object moves along a straight-line path at          │
+│  constant speed, then it must be                              │
+│  - (a) accelerating.                                          │
+│  - (b) acted on by a force.                                   │
+│  - (c) both of these.                                         │
+│  - (d) neither of these.                                      │
+│  2. The average speed of a ball rolling along a horizontal    │
+│  track will be increased if the track has a                   │
+│  - (a) small upward hump along it.                            │
+│  - (b) downward dip along it.                                 │
+│  - (c) both the same if the hump and dip are opposites of     │
+│  each other.                                                  │
+│  - (d) not enough information.                                │
+│  3. A mosquito flying at 2 m/s encounters a 2-m/s breeze      │
+│  blowing in the opposite direction, giving it a resulting     │
+│  speed over the ground of                                     │
+│  - (a) 0 m/s.                                                 │
+│  - (b) 3 m/s.                                                 │
+│  - (c) 4 m/s.                                                 │
+│  - (d) 6 m/s.                                                 │
+│  4. Neglecting air resistance, when you toss a ball upward,   │
+│  by how much does its upward speed decrease each second?      │
+│  - (a) 10 m/s.                                                │
+│  - (b) 2. 10 m/s2.                                            │
+│  - (c) The answer depends on the initial speed.               │
+│  - (d) None of these.                                         │
+│  5. The acceleration of a block of ice sliding down an        │
+│  inclined plane                                               │
+│  - (a) increases with time.                                   │
+│  - (b) decreases with time.                                   │
+│  - (c) is practically constant.                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭───────────────────── 📋 Task Completion ──────────────────────╮
+│                                                               │
+│  Task Completed                                               │
+│  Name: Search the knowledge base for comprehensive details    │
+│  on 'Kinematics' (Course: 'Conceptual_Physics'). Retrieve as  │
+│  much detailed context as possible.                           │
+│  Agent: Retrieval Agent (Librarian)                           │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 📋 Task Started ───────────────────────╮
+│                                                               │
+│  Task Started                                                 │
+│  Name: Using the retrieved passages, generate a highly        │
+│  structured, comprehensive Study Guide for 'Kinematics'.      │
+│  Format as Professional Markdown ready to be printed to PDF.  │
+│  Include:                                                     │
+│  1. A Title and Introduction                                  │
+│  2. Core Concepts with Definitions                            │
+│  3. Key Formulas or Rules (if any)                            │
+│  4. A 'Quick Review' concluding section.                      │
+│  Do NOT output JSON, just pure Markdown text.                 │
+│  ID: b858621b-c23d-4904-ba63-12c6d825b1f4                     │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭────────────────────── 🤖 Agent Started ───────────────────────╮
+│                                                               │
+│  Agent: Tutor Agent (Teacher)                                 │
+│                                                               │
+│  Task: Using the retrieved passages, generate a highly        │
+│  structured, comprehensive Study Guide for 'Kinematics'.      │
+│  Format as Professional Markdown ready to be printed to PDF.  │
+│  Include:                                                     │
+│  1. A Title and Introduction                                  │
+│  2. Core Concepts with Definitions                            │
+│  3. Key Formulas or Rules (if any)                            │
+│  4. A 'Quick Review' concluding section.                      │
+│  Do NOT output JSON, just pure Markdown text.                 │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭──────────────────── ✅ Agent Final Answer ────────────────────╮
+│                                                               │
+│  Agent: Tutor Agent (Teacher)                                 │
+│                                                               │
+│  Final Answer:                                                │
+│  # Kinematics Study Guide: Understanding Motion               │
+│                                                               │
+│  Welcome to your study guide on Kinematics! This branch of    │
+│  physics is all about describing *how* objects move, without  │
+│  worrying about *why* they move (that's for later chapters    │
+│  on forces!). Think of it as learning the vocabulary and      │
+│  grammar to talk about movement. While it might seem a bit    │
+│  math-heavy at first, kinematics provides the fundamental     │
+│  tools for understanding everything from a ball rolling down  │
+│  a ramp to planets orbiting the sun.                          │
+│                                                               │
+│  Unlike some other areas of physics, kinematics doesn't       │
+│  introduce new "laws" of nature. Instead, it focuses on       │
+│  defining key concepts and providing equations to relate      │
+│  them, giving us a powerful way to analyze motion.            │
+│                                                               │
+│  ---                                                          │
+│                                                               │
+│  ### Core Concepts with Definitions                           │
+│                                                               │
+│  To talk about motion effectively, we need precise            │
+│  definitions for a few key terms:                             │
+│                                                               │
+│  *   **Speed:**                                               │
+│      *   **Definition:** Speed tells you how fast an object   │
+│  is moving. It's the rate at which an object covers           │
+│  distance.                                                    │
+│      *   **Example:** If you drive 60 miles in 1 hour, your   │
+│  average speed is 60 miles per hour.                          │
+│      *   **Nature:** Speed is a **scalar** quantity, meaning  │
+│  it only has magnitude (a number and a unit, like 10 m/s)     │
+│  but no direction.                                            │
+│                                                               │
+│  *   **Velocity:**                                            │
+│      *   **Definition:** Velocity is like speed, but with an  │
+│  important addition: it also tells you the *direction* of     │
+│  motion. It's the rate at which an object changes its         │
+│  *position*.                                                  │
+│      *   **Example:** 10 m/s *north* is a velocity. If you    │
+│  turn around and go 10 m/s *south*, your speed is the same,   │
+│  but your velocity has changed because your direction is      │
+│  different.                                                   │
+│      *   **Nature:** Velocity is a **vector** quantity,       │
+│  meaning it has both magnitude and direction.                 │
+│                                                               │
+│  *   **Acceleration:**                                        │
+│      *   **Definition:** Acceleration is the rate at which    │
+│  an object's *velocity* changes. This means an object can     │
+│  accelerate by speeding up, slowing down, or changing         │
+│  direction.                                                   │
+│      *   **Example:** A car pressing the gas pedal is         │
+│  accelerating (speeding up). A car pressing the brakes is     │
+│  also accelerating (slowing down, which is often called       │
+│  deceleration or negative acceleration). A car going around   │
+│  a curve at a constant speed is also accelerating because     │
+│  its *direction* of velocity is changing.                     │
+│      *   **Nature:** Acceleration is also a **vector**        │
+│  quantity, having both magnitude and direction.               │
+│                                                               │
+│  ---                                                          │
+│                                                               │
+│  ### Key Kinematic Formulas (Equations of Motion)             │
+│                                                               │
+│  These equations are your main tools for solving problems in  │
+│  kinematics, especially when dealing with objects moving      │
+│  with *constant acceleration* in a straight line.             │
+│                                                               │
+│  Here are the standard kinematic equations:                   │
+│                                                               │
+│  1.  **`v = v₀ + at`**                                        │
+│      *   **What it means:** This equation relates final       │
+│  velocity (`v`) to initial velocity (`v₀`), acceleration      │
+│  (`a`), and time (`t`). It tells you how fast something is    │
+│  going after a certain amount of time if it's accelerating    │
+│  uniformly.                                                   │
+│                                                               │
+│  2.  **`x = x₀ + v₀t + ½at²`** (Sometimes seen as `Δx = v₀t   │
+│  + ½at²` where `Δx` is displacement)                          │
+│      *   **What it means:** This equation calculates the      │
+│  final position (`x`) or total displacement (`Δx`) of an      │
+│  object given its initial position (`x₀`), initial velocity   │
+│  (`v₀`), acceleration (`a`), and time (`t`).                  │
+│                                                               │
+│  3.  **`v² = v₀² + 2ax`** (Sometimes seen as `v² = v₀² +      │
+│  2aΔx`)                                                       │
+│      *   **What it means:** This equation is handy when you   │
+│  don't know the time (`t`). It relates final velocity (`v`),  │
+│  initial velocity (`v₀`), acceleration (`a`), and             │
+│  displacement (`x` or `Δx`).                                  │
+│                                                               │
+│  4.  **`v_avg = ½(v₀ + v)`**                                  │
+│      *   **What it means:** This equation gives you the       │
+│  average velocity (`v_avg`) of an object when it's            │
+│  undergoing constant acceleration. It's simply the average    │
+│  of its initial and final velocities.                         │
+│                                                               │
+│  **Key for Variables:**                                       │
+│  *   `v` = final velocity                                     │
+│  *   `v₀` = initial velocity                                  │
+│  *   `a` = acceleration                                       │
+│  *   `t` = time                                               │
+│  *   `x` or `Δx` = displacement (change in position)          │
+│  *   `x₀` = initial position                                  │
+│  *   `v_avg` = average velocity                               │
+│                                                               │
+│  ---                                                          │
+│                                                               │
+│  ### Quick Review                                             │
+│                                                               │
+│  Kinematics is the foundational study of **motion itself**.   │
+│  It focuses on *describing* how objects move, using precise   │
+│  **definitions** for speed, velocity, and acceleration.       │
+│  These concepts are then tied together by a set of powerful   │
+│  **kinematic equations**, which allow us to calculate things  │
+│  like an object's final speed, how far it traveled, or how    │
+│  long it took, especially when acceleration is constant.      │
+│  Remember, kinematics is all about the 'how,' not the         │
+│  'why'—forces come later!                                     │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭───────────────────── 📋 Task Completion ──────────────────────╮
+│                                                               │
+│  Task Completed                                               │
+│  Name: Using the retrieved passages, generate a highly        │
+│  structured, comprehensive Study Guide for 'Kinematics'.      │
+│  Format as Professional Markdown ready to be printed to PDF.  │
+│  Include:                                                     │
+│  1. A Title and Introduction                                  │
+│  2. Core Concepts with Definitions                            │
+│  3. Key Formulas or Rules (if any)                            │
+│  4. A 'Quick Review' concluding section.                      │
+│  Do NOT output JSON, just pure Markdown text.                 │
+│  Agent: Tutor Agent (Teacher)                                 │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+INFO:     127.0.0.1:54949 - "POST /api/chat HTTP/1.1" 200 OK
+╭─────────────────────── Crew Completion ───────────────────────╮
+│                                                               │
+│  Crew Execution Completed                                     │
+│  Name: crew                                                   │
+│  ID: 22095047-96fd-44f1-a46d-b34506ad92aa                     │
+│  Final Output: # Kinematics Study Guide: Understanding        │
+│  Motion                                                       │
+│                                                               │
+│  Welcome to your study guide on Kinematics! This branch of    │
+│  physics is all about describing *how* objects move, without  │
+│  worrying about *why* they move (that's for later chapters    │
+│  on forces!). Think of it as learning the vocabulary and      │
+│  grammar to talk about movement. While it might seem a bit    │
+│  math-heavy at first, kinematics provides the fundamental     │
+│  tools for understanding everything from a ball rolling down  │
+│  a ramp to planets orbiting the sun.                          │
+│                                                               │
+│  Unlike some other areas of physics, kinematics doesn't       │
+│  introduce new "laws" of nature. Instead, it focuses on       │
+│  defining key concepts and providing equations to relate      │
+│  them, giving us a powerful way to analyze motion.            │
+│                                                               │
+│  ---                                                          │
+│                                                               │
+│  ### Core Concepts with Definitions                           │
+│                                                               │
+│  To talk about motion effectively, we need precise            │
+│  definitions for a few key terms:                             │
+│                                                               │
+│  *   **Speed:**                                               │
+│      *   **Definition:** Speed tells you how fast an object   │
+│  is moving. It's the rate at which an object covers           │
+│  distance.                                                    │
+│      *   **Example:** If you drive 60 miles in 1 hour, your   │
+│  average speed is 60 miles per hour.                          │
+│      *   **Nature:** Speed is a **scalar** quantity, meaning  │
+│  it only has magnitude (a number and a unit, like 10 m/s)     │
+│  but no direction.                                            │
+│                                                               │
+│  *   **Velocity:**                                            │
+│      *   **Definition:** Velocity is like speed, but with an  │
+│  important addition: it also tells you the *direction* of     │
+│  motion. It's the rate at which an object changes its         │
+│  *position*.                                                  │
+│      *   **Example:** 10 m/s *north* is a velocity. If you    │
+│  turn around and go 10 m/s *south*, your speed is the same,   │
+│  but your velocity has changed because your direction is      │
+│  different.                                                   │
+│      *   **Nature:** Velocity is a **vector** quantity,       │
+│  meaning it has both magnitude and direction.                 │
+│                                                               │
+│  *   **Acceleration:**                                        │
+│      *   **Definition:** Acceleration is the rate at which    │
+│  an object's *velocity* changes. This means an object can     │
+│  accelerate by speeding up, slowing down, or changing         │
+│  direction.                                                   │
+│      *   **Example:** A car pressing the gas pedal is         │
+│  accelerating (speeding up). A car pressing the brakes is     │
+│  also accelerating (slowing down, which is often called       │
+│  deceleration or negative acceleration). A car going around   │
+│  a curve at a constant speed is also accelerating because     │
+│  its *direction* of velocity is changing.                     │
+│      *   **Nature:** Acceleration is also a **vector**        │
+│  quantity, having both magnitude and direction.               │
+│                                                               │
+│  ---                                                          │
+│                                                               │
+│  ### Key Kinematic Formulas (Equations of Motion)             │
+│                                                               │
+│  These equations are your main tools for solving problems in  │
+│  kinematics, especially when dealing with objects moving      │
+│  with *constant acceleration* in a straight line.             │
+│                                                               │
+│  Here are the standard kinematic equations:                   │
+│                                                               │
+│  1.  **`v = v₀ + at`**                                        │
+│      *   **What it means:** This equation relates final       │
+│  velocity (`v`) to initial velocity (`v₀`), acceleration      │
+│  (`a`), and time (`t`). It tells you how fast something is    │
+│  going after a certain amount of time if it's accelerating    │
+│  uniformly.                                                   │
+│                                                               │
+│  2.  **`x = x₀ + v₀t + ½at²`** (Sometimes seen as `Δx = v₀t   │
+│  + ½at²` where `Δx` is displacement)                          │
+│      *   **What it means:** This equation calculates the      │
+│  final position (`x`) or total displacement (`Δx`) of an      │
+│  object given its initial position (`x₀`), initial velocity   │
+│  (`v₀`), acceleration (`a`), and time (`t`).                  │
+│                                                               │
+│  3.  **`v² = v₀² + 2ax`** (Sometimes seen as `v² = v₀² +      │
+│  2aΔx`)                                                       │
+│      *   **What it means:** This equation is handy when you   │
+│  don't know the time (`t`). It relates final velocity (`v`),  │
+│  initial velocity (`v₀`), acceleration (`a`), and             │
+│  displacement (`x` or `Δx`).                                  │
+│                                                               │
+│  4.  **`v_avg = ½(v₀ + v)`**                                  │
+│      *   **What it means:** This equation gives you the       │
+│  average velocity (`v_avg`) of an object when it's            │
+│  undergoing constant acceleration. It's simply the average    │
+│  of its initial and final velocities.                         │
+│                                                               │
+│  **Key for Variables:**                                       │
+│  *   `v` = final velocity                                     │
+│  *   `v₀` = initial velocity                                  │
+│  *   `a` = acceleration                                       │
+│  *   `t` = time                                               │
+│  *   `x` or `Δx` = displacement (change in position)          │
+│  *   `x₀` = initial position                                  │
+│  *   `v_avg` = average velocity                               │
+│                                                               │
+│  ---                                                          │
+│                                                               │
+│  ### Quick Review                                             │
+│                                                               │
+│  Kinematics is the foundational study of **motion itself**.   │
+│  It focuses on *describing* how objects move, using precise   │
+│  **definitions** for speed, velocity, and acceleration.       │
+│  These concepts are then tied together by a set of powerful   │
+│  **kinematic equations**, which allow us to calculate things  │
+│  like an object's final speed, how far it traveled, or how    │
+│  long it took, especially when acceleration is constant.      │
+│  Remember, kinematics is all about the 'how,' not the         │
+│  'why'—forces come later!                                     │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── Tracing Status ────────────────────────╮
+│                                                               │
+│  Info: Tracing is disabled.                                   │
+│                                                               │
+│  To enable tracing, do any one of these:                      │
+│  • Set tracing=True in your Crew/Flow code                    │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env     │
+│  file                                                         │
+│  • Run: crewai traces enable                                  │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+╭────────────────── 🚀 Crew Execution Started ───────────────────╮
+│                                                                │
+│  Crew Execution Started                                        │
+│  Name: crew                                                    │
+│  ID: 4f598a58-7295-4fbc-b90e-0141b12cea24                      │
+│                                                                │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 📋 Task Started ────────────────────────╮
+│                                                                │
+│  Task Started                                                  │
+│  Name: Search the knowledge base for 'Looping structures' in   │
+│  course 'Intro_to_Programming'.                                │
+│  ID: c895dd12-b36a-49dd-b2d5-7808bd6f017d                      │
+│                                                                │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🤖 Agent Started ───────────────────────╮
+│                                                                │
+│  Agent: Retrieval Agent (Librarian)                            │
+│                                                                │
+│  Task: Search the knowledge base for 'Looping structures' in   │
+│  course 'Intro_to_Programming'.                                │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+╭──────────────── 🔧 Tool Execution Started (#4) ────────────────╮
+│                                                                │
+│  Tool: search_usf_knowledge_base                               │
+│  Args: {'course': 'Intro_to_Programming', 'query': 'Looping    │
+│  structures'}                                                  │
+│                                                                │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+[32mTool search_usf_knowledge_base executed with result: --- Passage 1 (relevance: 0.74) ---
+And this code goes on and on...
+
+As you can see, this code is one long sequence structure containing a lot of duplicated code. There are several disadvantages to th...[0m
+╭─────────────── ✅ Tool Execution Completed (#4) ───────────────╮
+│                                                                │
+│  Tool Completed                                                │
+│  Tool: search_usf_knowledge_base                               │
+│  Output: --- Passage 1 (relevance: 0.74) ---                   │
+│  And this code goes on and on...                               │
+│                                                                │
+│  As you can see, this code is one long sequence structure      │
+│  containing a lot of duplicated code. There are several        │
+│  disadvantages to this approach, including the following:      │
+│                                                                │
+│  - The duplicated code makes the program large.                │
+│  - Writing a long sequence of statements can be time           │
+│  consuming.                                                    │
+│  - If part of the duplicated code has to be corrected or       │
+│  changed then the correction or change has to be done many     │
+│  times.                                                        │
+│                                                                │
+│  Instead of writing the same sequence of statements over and   │
+│  over, a better way to repeatedly perform an operation is to   │
+│  write the code for the operation once, and then place that    │
+│  code in a structure that makes the computer repeat it as      │
+│  many times as necessary. This can be done with a repetition   │
+│  structure, which is more commonly known as a loop.            │
+│                                                                │
+│  # Condition-Controlled and Count-Controlled Loops             │
+│                                                                │
+│  --- Passage 2 (relevance: 0.72) ---                           │
+│  # 5.1 - Repetition Structures                                 │
+│                                                                │
+│  CONCEPT: A repetition structure causes a statement or set of  │
+│  statements to execute repeatedly.                             │
+│                                                                │
+│  Programmers commonly have to write code that performs the     │
+│  same task over and over. For example, suppose you have been   │
+│  asked to write a program that calculates a 10 percent sales   │
+│  commission for several sales people. Although it would not    │
+│  be a good design, one approach would be to write the code to  │
+│  calculate one sales person's commission, and then repeat      │
+│  that code for each sales person. For example, look at the     │
+│  following:                                                    │
+│                                                                │
+│  --- Passage 3 (relevance: 0.71) ---                           │
+│  Program 5-3 demonstrates an infinite loop. This is a          │
+│  modified version of the commission calculating program shown  │
+│  in Program 5‑1. In this version, we have removed the code     │
+│  that modifies the keep-going variable in the body of the      │
+│  loop. Each time the expression keep-going == 'y' is tested    │
+│  in line 7, keep-going will reference the string 'y'. As a     │
+│  consequence, the loop has no way of stopping.                 │
+│                                                                │
+│  # Program 5-3 (infinite.py)                                   │
+│                                                                │
+│  1    #   This program demonstrates an infinite loop.          │
+│  2.   def main #   ( ) :                                       │
+│  Create a variable to control the loop.                        │
+│  keep-going = 'y '                                             │
+│  -C        #     Warning!  Infinite loop!                      │
+│                                                                │
+│  --- Passage 4 (relevance: 0.71) ---                           │
+│  # Flowchart for a clock simulator                             │
+│                                                                │
+│  Start                                                         │
+│                                                                │
+│  Is there another Yes (True)                                   │
+│  value in the hours                                            │
+│  list?                                                         │
+│  Assign the next value in                                      │
+│  the hours list to the                                         │
+│  No (False)    hour variable.                                  │
+│                                                                │
+│  End                                                           │
+│  Is there another Yes (True)                                   │
+│  value in the                                                  │
+│  minutes list?                                                 │
+│  Assign the next value                                         │
+│  in the minutes list to                                        │
+│  No (False)    the minute variable.                            │
+│                                                                │
+│  Is there another  Yes (True)                                  │
+│  value in the                                                  │
+│  seconds list?                                                 │
+│  Assign the next value in                                      │
+│  the seconds list to the                                       │
+│  No (False)    second variable.                                │
+│  print hours,                                                  │
+│  minutes, seconds                                              │
+│                                                                │
+│                                                                │
+│                                                                │
+│                                                                │
+│  # Chapter 5                                                   │
+│                                                                │
+│  # Repetition Structures                                       │
+│                                                                │
+│  The simulated clock example brings up a few points about      │
+│  nested loops:                                                 │
+│                                                                │
+│  - An inner loop goes through all of its iterations for every  │
+│  single iteration of an outer loop.                            │
+│  - Inner loops complete their iterations faster than outer     │
+│  loops.                                                        │
+│  - To get the total number of iterations of a nested loop,     │
+│  multiply the number of iterations of all the loops.           │
+│                                                                │
+│  # Review Questions                                            │
+│                                                                │
+│  # Multiple Choice                                             │
+│                                                                │
+│  --- Passage 5 (relevance: 0.71) ---                           │
+│  Program Output (with input shown in bold)                     │
+│                                                                │
+│  ice's Ct     cemperature: 102.1 [Enter]                       │
+│  Enter the substar                                             │
+│  The tempe rature . .  j is acceptable.                        │
+│  Check it again in i5 minutes.                                 │
+│                                                                │
+│  # Infinite Loops                                              │
+│                                                                │
+│  In all but rare cases, loops must contain within themselves   │
+│  a way to terminate. This means that something inside the      │
+│  loop must eventually make the test condition false. The loop  │
+│  in Program 5‑1 stops when the expression keep going == y is   │
+│  false. If a loop does not have a way of stopping, it is       │
+│  called an infinite loop. An infinite loop continues to        │
+│  repeat until the program is interrupted. Infinite loops       │
+│  usually occur when the programmer forgets to write code       │
+│  inside the loop that makes the test condition false. In most  │
+│  circumstances you should avoid writing infinite loops.        │
+│                                                                │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+╭──────────────────── ✅ Agent Final Answer ─────────────────────╮
+│                                                                │
+│  Agent: Retrieval Agent (Librarian)                            │
+│                                                                │
+│  Final Answer:                                                 │
+│  --- Passage 1 (relevance: 0.74) ---                           │
+│  And this code goes on and on...                               │
+│                                                                │
+│  As you can see, this code is one long sequence structure      │
+│  containing a lot of duplicated code. There are several        │
+│  disadvantages to this approach, including the following:      │
+│                                                                │
+│  - The duplicated code makes the program large.                │
+│  - Writing a long sequence of statements can be time           │
+│  consuming.                                                    │
+│  - If part of the duplicated code has to be corrected or       │
+│  changed then the correction or change has to be done many     │
+│  times.                                                        │
+│                                                                │
+│  Instead of writing the same sequence of statements over and   │
+│  over, a better way to repeatedly perform an operation is to   │
+│  write the code for the operation once, and then place that    │
+│  code in a structure that makes the computer repeat it as      │
+│  many times as necessary. This can be done with a repetition   │
+│  structure, which is more commonly known as a loop.            │
+│                                                                │
+│  # Condition-Controlled and Count-Controlled Loops             │
+│                                                                │
+│  --- Passage 2 (relevance: 0.72) ---                           │
+│  # 5.1 - Repetition Structures                                 │
+│                                                                │
+│  CONCEPT: A repetition structure causes a statement or set of  │
+│  statements to execute repeatedly.                             │
+│                                                                │
+│  Programmers commonly have to write code that performs the     │
+│  same task over and over. For example, suppose you have been   │
+│  asked to write a program that calculates a 10 percent sales   │
+│  commission for several sales people. Although it would not    │
+│  be a good design, one approach would be to write the code to  │
+│  calculate one sales person's commission, and then repeat      │
+│  that code for each sales person. For example, look at the     │
+│  following:                                                    │
+│                                                                │
+│  --- Passage 3 (relevance: 0.71) ---                           │
+│  Program 5-3 demonstrates an infinite loop. This is a          │
+│  modified version of the commission calculating program shown  │
+│  in Program 5‑1. In this version, we have removed the code     │
+│  that modifies the keep-going variable in the body of the      │
+│  loop. Each time the expression keep-going == 'y' is tested    │
+│  in line 7, keep-going will reference the string 'y'. As a     │
+│  consequence, the loop has no way of stopping.                 │
+│                                                                │
+│  # Program 5-3 (infinite.py)                                   │
+│                                                                │
+│  1 # This program demonstrates an infinite loop.               │
+│  2. def main # ( ) :                                           │
+│  Create a variable to control the loop.                        │
+│  keep-going = 'y '                                             │
+│  -C # Warning! Infinite loop!                                  │
+│                                                                │
+│  --- Passage 4 (relevance: 0.71) ---                           │
+│  # Flowchart for a clock simulator                             │
+│                                                                │
+│  Start                                                         │
+│                                                                │
+│  Is there another Yes (True)                                   │
+│  value in the hours                                            │
+│  list?                                                         │
+│  Assign the next value in                                      │
+│  the hours list to the                                         │
+│  No (False) hour variable.                                     │
+│                                                                │
+│  End                                                           │
+│  Is there another Yes (True)                                   │
+│  value in the                                                  │
+│  minutes list?                                                 │
+│  Assign the next value                                         │
+│  in the minutes list to                                        │
+│  No (False) the minute variable.                               │
+│                                                                │
+│  Is there another Yes (True)                                   │
+│  value in the                                                  │
+│  seconds list?                                                 │
+│  Assign the next value in                                      │
+│  the seconds list to the                                       │
+│  No (False) second variable.                                   │
+│  print hours,                                                  │
+│  minutes, seconds                                              │
+│                                                                │
+│                                                                │
+│                                                                │
+│  # Chapter 5                                                   │
+│                                                                │
+│  # Repetition Structures                                       │
+│                                                                │
+│  The simulated clock example brings up a few points about      │
+│  nested loops:                                                 │
+│                                                                │
+│  - An inner loop goes through all of its iterations for every  │
+│  single iteration of an outer loop.                            │
+│  - Inner loops complete their iterations faster than outer     │
+│  loops.                                                        │
+│  - To get the total number of iterations of a nested loop,     │
+│  multiply the number of iterations of all the loops.           │
+│                                                                │
+│  # Review Questions                                            │
+│                                                                │
+│  # Multiple Choice                                             │
+│                                                                │
+│  --- Passage 5 (relevance: 0.71) ---                           │
+│  Program Output (with input shown in bold)                     │
+│                                                                │
+│  ice's Ct cemperature: 102.1 [Enter]                           │
+│  Enter the substar                                             │
+│  The tempe rature . . j is acceptable.                         │
+│  Check it again in i5 minutes.                                 │
+│                                                                │
+│  # Infinite Loops                                              │
+│                                                                │
+│  In all but rare cases, loops must contain within themselves   │
+│  a way to terminate. This means that something inside the      │
+│  loop must eventually make the test condition false. The loop  │
+│  in Program 5‑1 stops when the expression keep going == y is   │
+│  false. If a loop does not have a way of stopping, it is       │
+│  called an infinite loop. An infinite loop continues to        │
+│  repeat until the program is interrupted. Infinite loops       │
+│  usually occur when the programmer forgets to write code       │
+│  inside the loop that makes the test condition false. In most  │
+│  circumstances you should avoid writing infinite loops.        │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── 📋 Task Completion ──────────────────────╮
+│                                                                │
+│  Task Completed                                                │
+│  Name: Search the knowledge base for 'Looping structures' in   │
+│  course 'Intro_to_Programming'.                                │
+│  Agent: Retrieval Agent (Librarian)                            │
+│                                                                │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 📋 Task Started ────────────────────────╮
+│                                                                │
+│  Task Started                                                  │
+│  Name: Using the retrieved passages, create a 5-question       │
+│  multiple-choice quiz about 'Looping structures'.              │
+│  Format the output as valid JSON:                              │
+│  {"quiz": [{"question": "...", "options": {"A": "...", "B":    │
+│  "...", "C": "...", "D": "..."}, "correct": "A",               │
+│  "explanation": "..."}]}                                       │
+│  ID: 89547827-55cf-4d95-bebd-ad0fae3aa29f                      │
+│                                                                │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🤖 Agent Started ───────────────────────╮
+│                                                                │
+│  Agent: Assessment Agent (Grader)                              │
+│                                                                │
+│  Task: Using the retrieved passages, create a 5-question       │
+│  multiple-choice quiz about 'Looping structures'.              │
+│  Format the output as valid JSON:                              │
+│  {"quiz": [{"question": "...", "options": {"A": "...", "B":    │
+│  "...", "C": "...", "D": "..."}, "correct": "A",               │
+│  "explanation": "..."}]}                                       │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+╭──────────────────── ✅ Agent Final Answer ─────────────────────╮
+│                                                                │
+│  Agent: Assessment Agent (Grader)                              │
+│                                                                │
+│  Final Answer:                                                 │
+│  ```json                                                       │
+│  {                                                             │
+│    "quiz": [                                                   │
+│      {                                                         │
+│        "question": "What is the primary benefit of using a     │
+│  repetition structure (loop) instead of writing duplicated     │
+│  code?",                                                       │
+│        "options": {                                            │
+│          "A": "It makes the program larger and more            │
+│  complex.",                                                    │
+│          "B": "It allows a statement or set of statements to   │
+│  execute repeatedly without rewriting them.",                  │
+│          "C": "It removes the need for any conditional         │
+│  statements.",                                                 │
+│          "D": "It automatically corrects syntax errors in the  │
+│  code."                                                        │
+│        },                                                      │
+│        "correct": "B",                                         │
+│        "explanation": "Passage 1 states that instead of        │
+│  writing the same sequence of statements over and over, a      │
+│  repetition structure (loop) allows the computer to repeat     │
+│  code as many times as necessary, thus avoiding duplication    │
+│  and making the code more efficient."                          │
+│      },                                                        │
+│      {                                                         │
+│        "question": "According to the provided passages, which  │
+│  of the following is a significant disadvantage of using       │
+│  duplicated code instead of a loop?",                          │
+│        "options": {                                            │
+│          "A": "It makes the program smaller and more           │
+│  efficient.",                                                  │
+│          "B": "It simplifies debugging and changes to the      │
+│  program.",                                                    │
+│          "C": "It makes the program large, time-consuming to   │
+│  write, and requires corrections/changes to be done many       │
+│  times.",                                                      │
+│          "D": "It enhances the readability and                 │
+│  maintainability of the code."                                 │
+│        },                                                      │
+│        "correct": "C",                                         │
+│        "explanation": "Passage 1 explicitly lists              │
+│  disadvantages of duplicated code: 'The duplicated code makes  │
+│  the program large.', 'Writing a long sequence of statements   │
+│  can be time consuming.', and 'If part of the duplicated code  │
+│  has to be corrected or changed then the correction or change  │
+│  has to be done many times.'"                                  │
+│      },                                                        │
+│      {                                                         │
+│        "question": "An infinite loop primarily occurs when:",  │
+│        "options": {                                            │
+│          "A": "The loop's test condition is intentionally set  │
+│  to `false` from the start.",                                  │
+│          "B": "The programmer forgets to write code inside     │
+│  the loop that makes the test condition `false`.",             │
+│          "C": "The program successfully reaches its intended   │
+│  termination point.",                                          │
+│          "D": "All variables used in the loop are declared as  │
+│  constants."                                                   │
+│        },                                                      │
+│        "correct": "B",                                         │
+│        "explanation": "Passage 5 states, 'Infinite loops       │
+│  usually occur when the programmer forgets to write code       │
+│  inside the loop that makes the test condition false.'         │
+│  Passage 3 gives an example where the `keep-going` variable    │
+│  is not modified, keeping the condition `true` indefinitely."  │
+│      },                                                        │
+│      {                                                         │
+│        "question": "Which statement accurately describes the   │
+│  behavior of an inner loop within a nested loop structure?",   │
+│        "options": {                                            │
+│          "A": "An inner loop executes only once per entire     │
+│  program execution.",                                          │
+│          "B": "An inner loop completes all of its iterations   │
+│  for every single iteration of an outer loop.",                │
+│          "C": "An inner loop always executes slower than an    │
+│  outer loop.",                                                 │
+│          "D": "An inner loop can run independently without     │
+│  any relation to the outer loop."                              │
+│        },                                                      │
+│        "correct": "B",                                         │
+│        "explanation": "Passage 4 explicitly states, 'An inner  │
+│  loop goes through all of its iterations for every single      │
+│  iteration of an outer loop.'"                                 │
+│      },                                                        │
+│      {                                                         │
+│        "question": "What is crucial for a loop to terminate    │
+│  correctly, thereby avoiding an infinite loop?",               │
+│        "options": {                                            │
+│          "A": "The loop must always contain a `print`          │
+│  statement to display its progress.",                          │
+│          "B": "The loop must contain code that eventually      │
+│  makes its test condition `false`.",                           │
+│          "C": "The loop should be designed to be interrupted   │
+│  manually by the user.",                                       │
+│          "D": "All variables used in the loop must be          │
+│  initialized to zero before the loop starts."                  │
+│        },                                                      │
+│        "correct": "B",                                         │
+│        "explanation": "Passage 5 emphasizes, 'In all but rare  │
+│  cases, loops must contain within themselves a way to          │
+│  terminate. This means that something inside the loop must     │
+│  eventually make the test condition false.'"                   │
+│      }                                                         │
+│    ]                                                           │
+│  }                                                             │
+│  ```                                                           │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── 📋 Task Completion ──────────────────────╮
+│                                                                │
+│  Task Completed                                                │
+│  Name: Using the retrieved passages, create a 5-question       │
+│  multiple-choice quiz about 'Looping structures'.              │
+│  Format the output as valid JSON:                              │
+│  {"quiz": [{"question": "...", "options": {"A": "...", "B":    │
+│  "...", "C": "...", "D": "..."}, "correct": "A",               │
+│  "explanation": "..."}]}                                       │
+│  Agent: Assessment Agent (Grader)                              │
+│                                                                │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+INFO:     127.0.0.1:54958 - "POST /api/chat HTTP/1.1" 200 OK
+╭─────────────────────── Crew Completion ────────────────────────╮
+│                                                                │
+│  Crew Execution Completed                                      │
+│  Name: crew                                                    │
+│  ID: 4f598a58-7295-4fbc-b90e-0141b12cea24                      │
+│  Final Output: ```json                                         │
+│  {                                                             │
+│    "quiz": [                                                   │
+│      {                                                         │
+│        "question": "What is the primary benefit of using a     │
+│  repetition structure (loop) instead of writing duplicated     │
+│  code?",                                                       │
+│        "options": {                                            │
+│          "A": "It makes the program larger and more            │
+│  complex.",                                                    │
+│          "B": "It allows a statement or set of statements to   │
+│  execute repeatedly without rewriting them.",                  │
+│          "C": "It removes the need for any conditional         │
+│  statements.",                                                 │
+│          "D": "It automatically corrects syntax errors in the  │
+│  code."                                                        │
+│        },                                                      │
+│        "correct": "B",                                         │
+│        "explanation": "Passage 1 states that instead of        │
+│  writing the same sequence of statements over and over, a      │
+│  repetition structure (loop) allows the computer to repeat     │
+│  code as many times as necessary, thus avoiding duplication    │
+│  and making the code more efficient."                          │
+│      },                                                        │
+│      {                                                         │
+│        "question": "According to the provided passages, which  │
+│  of the following is a significant disadvantage of using       │
+│  duplicated code instead of a loop?",                          │
+│        "options": {                                            │
+│          "A": "It makes the program smaller and more           │
+│  efficient.",                                                  │
+│          "B": "It simplifies debugging and changes to the      │
+│  program.",                                                    │
+│          "C": "It makes the program large, time-consuming to   │
+│  write, and requires corrections/changes to be done many       │
+│  times.",                                                      │
+│          "D": "It enhances the readability and                 │
+│  maintainability of the code."                                 │
+│        },                                                      │
+│        "correct": "C",                                         │
+│        "explanation": "Passage 1 explicitly lists              │
+│  disadvantages of duplicated code: 'The duplicated code makes  │
+│  the program large.', 'Writing a long sequence of statements   │
+│  can be time consuming.', and 'If part of the duplicated code  │
+│  has to be corrected or changed then the correction or change  │
+│  has to be done many times.'"                                  │
+│      },                                                        │
+│      {                                                         │
+│        "question": "An infinite loop primarily occurs when:",  │
+│        "options": {                                            │
+│          "A": "The loop's test condition is intentionally set  │
+│  to `false` from the start.",                                  │
+│          "B": "The programmer forgets to write code inside     │
+│  the loop that makes the test condition `false`.",             │
+│          "C": "The program successfully reaches its intended   │
+│  termination point.",                                          │
+│          "D": "All variables used in the loop are declared as  │
+│  constants."                                                   │
+│        },                                                      │
+│        "correct": "B",                                         │
+│        "explanation": "Passage 5 states, 'Infinite loops       │
+│  usually occur when the programmer forgets to write code       │
+│  inside the loop that makes the test condition false.'         │
+│  Passage 3 gives an example where the `keep-going` variable    │
+│  is not modified, keeping the condition `true` indefinitely."  │
+│      },                                                        │
+│      {                                                         │
+│        "question": "Which statement accurately describes the   │
+│  behavior of an inner loop within a nested loop structure?",   │
+│        "options": {                                            │
+│          "A": "An inner loop executes only once per entire     │
+│  program execution.",                                          │
+│          "B": "An inner loop completes all of its iterations   │
+│  for every single iteration of an outer loop.",                │
+│          "C": "An inner loop always executes slower than an    │
+│  outer loop.",                                                 │
+│          "D": "An inner loop can run independently without     │
+│  any relation to the outer loop."                              │
+│        },                                                      │
+│        "correct": "B",                                         │
+│        "explanation": "Passage 4 explicitly states, 'An inner  │
+│  loop goes through all of its iterations for every single      │
+│  iteration of an outer loop.'"                                 │
+│      },                                                        │
+│      {                                                         │
+│        "question": "What is crucial for a loop to terminate    │
+│  correctly, thereby avoiding an infinite loop?",               │
+│        "options": {                                            │
+│          "A": "The loop must always contain a `print`          │
+│  statement to display its progress.",                          │
+│          "B": "The loop must contain code that eventually      │
+│  makes its test condition `false`.",                           │
+│          "C": "The loop should be designed to be interrupted   │
+│  manually by the user.",                                       │
+│          "D": "All variables used in the loop must be          │
+│  initialized to zero before the loop starts."                  │
+│        },                                                      │
+│        "correct": "B",                                         │
+│        "explanation": "Passage 5 emphasizes, 'In all but rare  │
+│  cases, loops must contain within themselves a way to          │
+│  terminate. This means that something inside the loop must     │
+│  eventually make the test condition false.'"                   │
+│      }                                                         │
+│    ]                                                           │
+│  }                                                             │
+│  ```                                                           │
+│                                                                │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────── Tracing Status ────────────────────────╮
+│                                                                │
+│  Info: Tracing is disabled.                                    │
+│                                                                │
+│  To enable tracing, do any one of these:                       │
+│  • Set tracing=True in your Crew/Flow code                     │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env      │
+│  file                                                          │
+│  • Run: crewai traces enable                                   │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+╭────────────────── 🚀 Crew Execution Started ──────────────────╮
+│                                                               │
+│  Crew Execution Started                                       │
+│  Name: crew                                                   │
+│  ID: f75d119f-cda4-40dc-8a51-5f9347eba8d0                     │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 📋 Task Started ───────────────────────╮
+│                                                               │
+│  Task Started                                                 │
+│  Name: The student has submitted the following quiz answers   │
+│  for grading: Q1: A, Q2: B, Q3: C                             │
+│                                                               │
+│  Review the Chat History below to find the original quiz      │
+│  questions and correct answers:                               │
+│  History: user: I answered A for question 1, B for question   │
+│  2.                                                           │
+│                                                               │
+│  Evaluate their answers. Provide a score (e.g., '4/5') and    │
+│  specific feedback on what they got wrong and what they       │
+│  should review.                                               │
+│  CRITICAL: Output valid JSON exactly like this:               │
+│  {"score": "X/Y", "feedback": "Your detailed feedback string  │
+│  (markdown supported).", "review_topics": ["topic1",          │
+│  "topic2"]}                                                   │
+│  ID: 129e2a47-9515-412f-bd3e-0acb7fa02705                     │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭────────────────────── 🤖 Agent Started ───────────────────────╮
+│                                                               │
+│  Agent: Assessment Agent (Grader)                             │
+│                                                               │
+│  Task: The student has submitted the following quiz answers   │
+│  for grading: Q1: A, Q2: B, Q3: C                             │
+│                                                               │
+│  Review the Chat History below to find the original quiz      │
+│  questions and correct answers:                               │
+│  History: user: I answered A for question 1, B for question   │
+│  2.                                                           │
+│                                                               │
+│  Evaluate their answers. Provide a score (e.g., '4/5') and    │
+│  specific feedback on what they got wrong and what they       │
+│  should review.                                               │
+│  CRITICAL: Output valid JSON exactly like this:               │
+│  {"score": "X/Y", "feedback": "Your detailed feedback string  │
+│  (markdown supported).", "review_topics": ["topic1",          │
+│  "topic2"]}                                                   │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭──────────────────── ✅ Agent Final Answer ────────────────────╮
+│                                                               │
+│  Agent: Assessment Agent (Grader)                             │
+│                                                               │
+│  Final Answer:                                                │
+│  ```json                                                      │
+│  {                                                            │
+│    "score": "0/3",                                            │
+│    "feedback": "Hello! Let's go through your answers for the  │
+│  quiz on 'Looping structures'.\n\n**Question 1: What is the   │
+│  primary benefit of using a repetition structure (loop)       │
+│  instead of writing duplicated code?**\n*   **Your Answer:**  │
+│  A (It makes the program larger and more complex.)\n*         │
+│  **Correct Answer:** B (It allows a statement or set of       │
+│  statements to execute repeatedly without rewriting           │
+│  them.)\n*   **Feedback:** Your answer is incorrect. One of   │
+│  the main reasons to use a loop is to *avoid* duplicated      │
+│  code, which in turn makes the program *smaller* and *less    │
+│  complex* than a long sequence of repeated statements. Loops  │
+│  are designed to make code more concise and efficient by      │
+│  executing the same code multiple times without explicitly    │
+│  writing it over and over.\n\n**Question 2: According to the  │
+│  provided passages, which of the following is a significant   │
+│  disadvantage of using duplicated code instead of a           │
+│  loop?**\n*   **Your Answer:** B (It simplifies debugging     │
+│  and changes to the program.)\n*   **Correct Answer:** C (It  │
+│  makes the program large, time-consuming to write, and        │
+│  requires corrections/changes to be done many times.)\n*      │
+│  **Feedback:** Your answer is incorrect. Duplicated code      │
+│  does *not* simplify debugging or changes; in fact, it does   │
+│  the opposite. If you have the same code copied multiple      │
+│  times, any correction or change must be applied to *each     │
+│  instance* of that code, making the process much more prone   │
+│  to errors and time-consuming. This is explicitly mentioned   │
+│  as a disadvantage in Passage 1.\n\n**Question 3: An          │
+│  infinite loop primarily occurs when:**\n*   **Your           │
+│  Answer:** C (The program successfully reaches its intended   │
+│  termination point.)\n*   **Correct Answer:** B (The          │
+│  programmer forgets to write code inside the loop that makes  │
+│  the test condition `false`.)\n*   **Feedback:** Your answer  │
+│  is incorrect. An infinite loop, by definition, is a loop     │
+│  that *never* reaches its intended termination point. It      │
+│  continues to execute indefinitely because the condition      │
+│  that would normally cause it to stop (making the test        │
+│  condition `false`) is never met. This usually happens when   │
+│  a programmer overlooks including code to modify the loop     │
+│  control variable within the loop body, as explained in       │
+│  Passage 5.\n\nIt seems there might be some fundamental       │
+│  misunderstandings about the purpose and behavior of loops,   │
+│  especially regarding their benefits over duplicated code     │
+│  and how they terminate. Please review the provided passages  │
+│  carefully, paying close attention to the definitions and     │
+│  explanations of repetition structures, their advantages,     │
+│  and the concept of infinite loops.\n\nKeep up the hard       │
+│  work!",                                                      │
+│    "review_topics": [                                         │
+│      "Repetition Structures (Loops) vs. Duplicated Code",     │
+│      "Advantages and Disadvantages of Looping",               │
+│      "Causes and Characteristics of Infinite Loops",          │
+│      "Loop Termination Conditions"                            │
+│    ]                                                          │
+│  }                                                            │
+│  ```                                                          │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭───────────────────── 📋 Task Completion ──────────────────────╮
+│                                                               │
+│  Task Completed                                               │
+│  Name: The student has submitted the following quiz answers   │
+│  for grading: Q1: A, Q2: B, Q3: C                             │
+│                                                               │
+│  Review the Chat History below to find the original quiz      │
+│  questions and correct answers:                               │
+│  History: user: I answered A for question 1, B for question   │
+│  2.                                                           │
+│                                                               │
+│  Evaluate their answers. Provide a score (e.g., '4/5') and    │
+│  specific feedback on what they got wrong and what they       │
+│  should review.                                               │
+│  CRITICAL: Output valid JSON exactly like this:               │
+│  {"score": "X/Y", "feedback": "Your detailed feedback string  │
+│  (markdown supported).", "review_topics": ["topic1",          │
+│  "topic2"]}                                                   │
+│  Agent: Assessment Agent (Grader)                             │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+INFO:     127.0.0.1:54968 - "POST /api/chat HTTP/1.1" 200 OK
+╭─────────────────────── Crew Completion ───────────────────────╮
+│                                                               │
+│  Crew Execution Completed                                     │
+│  Name: crew                                                   │
+│  ID: f75d119f-cda4-40dc-8a51-5f9347eba8d0                     │
+│  Final Output: ```json                                        │
+│  {                                                            │
+│    "score": "0/3",                                            │
+│    "feedback": "Hello! Let's go through your answers for the  │
+│  quiz on 'Looping structures'.\n\n**Question 1: What is the   │
+│  primary benefit of using a repetition structure (loop)       │
+│  instead of writing duplicated code?**\n*   **Your Answer:**  │
+│  A (It makes the program larger and more complex.)\n*         │
+│  **Correct Answer:** B (It allows a statement or set of       │
+│  statements to execute repeatedly without rewriting           │
+│  them.)\n*   **Feedback:** Your answer is incorrect. One of   │
+│  the main reasons to use a loop is to *avoid* duplicated      │
+│  code, which in turn makes the program *smaller* and *less    │
+│  complex* than a long sequence of repeated statements. Loops  │
+│  are designed to make code more concise and efficient by      │
+│  executing the same code multiple times without explicitly    │
+│  writing it over and over.\n\n**Question 2: According to the  │
+│  provided passages, which of the following is a significant   │
+│  disadvantage of using duplicated code instead of a           │
+│  loop?**\n*   **Your Answer:** B (It simplifies debugging     │
+│  and changes to the program.)\n*   **Correct Answer:** C (It  │
+│  makes the program large, time-consuming to write, and        │
+│  requires corrections/changes to be done many times.)\n*      │
+│  **Feedback:** Your answer is incorrect. Duplicated code      │
+│  does *not* simplify debugging or changes; in fact, it does   │
+│  the opposite. If you have the same code copied multiple      │
+│  times, any correction or change must be applied to *each     │
+│  instance* of that code, making the process much more prone   │
+│  to errors and time-consuming. This is explicitly mentioned   │
+│  as a disadvantage in Passage 1.\n\n**Question 3: An          │
+│  infinite loop primarily occurs when:**\n*   **Your           │
+│  Answer:** C (The program successfully reaches its intended   │
+│  termination point.)\n*   **Correct Answer:** B (The          │
+│  programmer forgets to write code inside the loop that makes  │
+│  the test condition `false`.)\n*   **Feedback:** Your answer  │
+│  is incorrect. An infinite loop, by definition, is a loop     │
+│  that *never* reaches its intended termination point. It      │
+│  continues to execute indefinitely because the condition      │
+│  that would normally cause it to stop (making the test        │
+│  condition `false`) is never met. This usually happens when   │
+│  a programmer overlooks including code to modify the loop     │
+│  control variable within the loop body, as explained in       │
+│  Passage 5.\n\nIt seems there might be some fundamental       │
+│  misunderstandings about the purpose and behavior of loops,   │
+│  especially regarding their benefits over duplicated code     │
+│  and how they terminate. Please review the provided passages  │
+│  carefully, paying close attention to the definitions and     │
+│  explanations of repetition structures, their advantages,     │
+│  and the concept of infinite loops.\n\nKeep up the hard       │
+│  work!",                                                      │
+│    "review_topics": [                                         │
+│      "Repetition Structures (Loops) vs. Duplicated Code",     │
+│      "Advantages and Disadvantages of Looping",               │
+│      "Causes and Characteristics of Infinite Loops",          │
+│      "Loop Termination Conditions"                            │
+│    ]                                                          │
+│  }                                                            │
+│  ```                                                          │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── Tracing Status ────────────────────────╮
+│                                                               │
+│  Info: Tracing is disabled.                                   │
+│                                                               │
+│  To enable tracing, do any one of these:                      │
+│  • Set tracing=True in your Crew/Flow code                    │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env     │
+│  file                                                         │
+│  • Run: crewai traces enable                                  │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+╭────────────────── 🚀 Crew Execution Started ──────────────────╮
+│                                                               │
+│  Crew Execution Started                                       │
+│  Name: crew                                                   │
+│  ID: c0d73708-df16-4cad-8517-fbd6bc1644d5                     │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 📋 Task Started ───────────────────────╮
+│                                                               │
+│  Task Started                                                 │
+│  Name: Analyse the student's chat history and quiz            │
+│  performance (if any).                                        │
+│  History: user: I got 100% on the looping quiz!               │
+│                                                               │
+│  CRITICAL: Output valid JSON exactly like this:               │
+│  {"overall_strength": "Needs Work / Good / Excellent",        │
+│  "strengths": ["...", "..."], "weaknesses": ["...", "..."],   │
+│  "recommendations": ["...", "..."], "encouragement": "..."}   │
+│  ID: 624c0639-5992-4c78-bff9-ead7e1c57db7                     │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭────────────────────── 🤖 Agent Started ───────────────────────╮
+│                                                               │
+│  Agent: Analytics Agent (Tracker)                             │
+│                                                               │
+│  Task: Analyse the student's chat history and quiz            │
+│  performance (if any).                                        │
+│  History: user: I got 100% on the looping quiz!               │
+│                                                               │
+│  CRITICAL: Output valid JSON exactly like this:               │
+│  {"overall_strength": "Needs Work / Good / Excellent",        │
+│  "strengths": ["...", "..."], "weaknesses": ["...", "..."],   │
+│  "recommendations": ["...", "..."], "encouragement": "..."}   │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭──────────────────── ✅ Agent Final Answer ────────────────────╮
+│                                                               │
+│  Agent: Analytics Agent (Tracker)                             │
+│                                                               │
+│  Final Answer:                                                │
+│  ```json                                                      │
+│  {                                                            │
+│    "overall_strength": "Good",                                │
+│    "strengths": [                                             │
+│      "Strong understanding of looping concepts"               │
+│    ],                                                         │
+│    "weaknesses": [                                            │
+│      "No specific weaknesses identified from current data.    │
+│  Other topics (e.g., conditionals, data structures,           │
+│  functions) are yet to be assessed."                          │
+│    ],                                                         │
+│    "recommendations": [                                       │
+│      "Continue to the next module to learn about a new        │
+│  topic.",                                                     │
+│      "Practice applying looping in more complex               │
+│  problem-solving scenarios if available."                     │
+│    ],                                                         │
+│    "encouragement": "Fantastic job getting 100% on the        │
+│  looping quiz! That's excellent progress and shows you've     │
+│  really grasped the concepts. Keep up the great work!"        │
+│  }                                                            │
+│  ```                                                          │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭───────────────────── 📋 Task Completion ──────────────────────╮
+│                                                               │
+│  Task Completed                                               │
+│  Name: Analyse the student's chat history and quiz            │
+│  performance (if any).                                        │
+│  History: user: I got 100% on the looping quiz!               │
+│                                                               │
+│  CRITICAL: Output valid JSON exactly like this:               │
+│  {"overall_strength": "Needs Work / Good / Excellent",        │
+│  "strengths": ["...", "..."], "weaknesses": ["...", "..."],   │
+│  "recommendations": ["...", "..."], "encouragement": "..."}   │
+│  Agent: Analytics Agent (Tracker)                             │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+INFO:     127.0.0.1:54970 - "POST /api/chat HTTP/1.1" 200 OK
+╭─────────────────────── Crew Completion ───────────────────────╮
+│                                                               │
+│  Crew Execution Completed                                     │
+│  Name: crew                                                   │
+│  ID: c0d73708-df16-4cad-8517-fbd6bc1644d5                     │
+│  Final Output: ```json                                        │
+│  {                                                            │
+│    "overall_strength": "Good",                                │
+│    "strengths": [                                             │
+│      "Strong understanding of looping concepts"               │
+│    ],                                                         │
+│    "weaknesses": [                                            │
+│      "No specific weaknesses identified from current data.    │
+│  Other topics (e.g., conditionals, data structures,           │
+│  functions) are yet to be assessed."                          │
+│    ],                                                         │
+│    "recommendations": [                                       │
+│      "Continue to the next module to learn about a new        │
+│  topic.",                                                     │
+│      "Practice applying looping in more complex               │
+│  problem-solving scenarios if available."                     │
+│    ],                                                         │
+│    "encouragement": "Fantastic job getting 100% on the        │
+│  looping quiz! That's excellent progress and shows you've     │
+│  really grasped the concepts. Keep up the great work!"        │
+│  }                                                            │
+│  ```                                                          │
+│                                                               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── Tracing Status ────────────────────────╮
+│                                                               │
+│  Info: Tracing is disabled.                                   │
+│                                                               │
+│  To enable tracing, do any one of these:                      │
+│  • Set tracing=True in your Crew/Flow code                    │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env     │
+│  file                                                         │
+│  • Run: crewai traces enable                                  │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
