@@ -1,0 +1,12 @@
+python-dotenv
+llama-index-core
+llama-parse
+langchain
+langchain-text-splitters
+langchain-google-genai
+langchain-pinecone
+pinecone-client
+crewai
+crewai-tools
+fastapi
+uvicorn[standard]
