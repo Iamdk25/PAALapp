@@ -72,17 +72,15 @@ def ensure_index(pc: Pinecone):
 
 
 # ── Step 4: Batch Upload to Pinecone ──────────────────────────────────────────
-BATCH_SIZE = 50   # chunks per batch to respect rate limits
-BATCH_DELAY = 62  # seconds cooldown
-
+BATCH_SIZE = 100   # Doubled since we have no rate limits
 
 def upload_to_pinecone(all_chunks: list):
-    """Embed chunks and upsert into Pinecone in rate-limited batches."""
+    """Embed chunks and upsert into Pinecone."""
     if not all_chunks:
         print("⚠️   No chunks to upload!")
         return
 
-    print(f"\n🚀  Uploading {len(all_chunks)} total chunks to Pinecone ...")
+    print(f"\n🚀  Uploading {len(all_chunks)} total chunks to Pinecone (paid tier speed) ...")
 
     embeddings = GoogleGenerativeAIEmbeddings(
         model="models/gemini-embedding-001",
@@ -106,10 +104,6 @@ def upload_to_pinecone(all_chunks: list):
         )
 
         print(f"   ✅  Batch {batch_num} uploaded.")
-
-        if i + BATCH_SIZE < total:
-            print(f"   ⏳  Waiting {BATCH_DELAY}s for rate-limit cooldown ...")
-            time.sleep(BATCH_DELAY)
 
     print(f"\n🎉  Successfully uploaded all {total} chunks!")
 
