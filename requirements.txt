@@ -10,3 +10,7 @@ crewai
 crewai-tools
 fastapi
 uvicorn[standard]
+sqlalchemy
+pyjwt
+cryptography
+httpx

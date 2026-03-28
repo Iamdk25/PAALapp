@@ -5,8 +5,9 @@ Wraps the CrewAI multi-agent system behind a single /api/chat endpoint.
 
 import os
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from crewai import Crew, Process
 
@@ -18,8 +19,14 @@ from agents import (
     analytics_agent,
 )
 from tasks import TASK_BUILDERS
+import models
+from database import engine, get_db
+from auth import get_current_user
 
 load_dotenv()
+
+# Initialize Database Tables
+models.Base.metadata.create_all(bind=engine)
 
 # ── FastAPI App ───────────────────────────────────────────────────────────────
 app = FastAPI(
@@ -60,11 +67,17 @@ AGENT_ROSTER = [
 ]
 
 
-# ── Endpoint ──────────────────────────────────────────────────────────────────
+# ── Endpoints ─────────────────────────────────────────────────────────────────
+
 @app.post("/api/chat", response_model=ChatResponse)
-async def chat(req: ChatRequest):
+async def chat(
+    req: ChatRequest,
+    user_id: str = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
     """
-    Accept a student action and return the AI-generated response.
+    Accept a student action, verify their Clerk JWT token, return the AI response,
+    and automatically log the interaction to the SQLite database.
     """
     action = req.action.lower().strip()
 
@@ -77,7 +90,24 @@ async def chat(req: ChatRequest):
             ),
         )
 
-    # Build the task list for this action
+    # 1. Ensure user exists in our local DB
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+    if not user:
+        new_user = models.User(id=user_id)
+        db.add(new_user)
+        db.commit()
+
+    # 2. Save User Query to Chat History
+    user_msg = models.ChatHistory(
+        user_id=user_id,
+        course=req.course,
+        role="user",
+        content=f"Action: {action} | Topic: {req.topic}"
+    )
+    db.add(user_msg)
+    db.commit()
+
+    # 3. Build CrewAI tasks
     builder = TASK_BUILDERS[action]
     if action == "progress":
         tasks = builder(chat_history=req.chat_history)
@@ -88,7 +118,7 @@ async def chat(req: ChatRequest):
             chat_history=req.chat_history,
         )
 
-    # Assemble and kick off the crew
+    # 4. Kick off the crew
     crew = Crew(
         agents=AGENT_ROSTER,
         tasks=tasks,
@@ -96,10 +126,37 @@ async def chat(req: ChatRequest):
         verbose=True,
     )
 
-    result = crew.kickoff()
+    result = str(crew.kickoff())
 
-    return ChatResponse(action=action, answer=str(result))
+    # 5. Save AI Response to Chat History
+    ai_msg = models.ChatHistory(
+        user_id=user_id,
+        course=req.course,
+        role="assistant",
+        content=result
+    )
+    db.add(ai_msg)
+    db.commit()
 
+    return ChatResponse(action=action, answer=result)
+
+
+@app.get("/api/history/{course}")
+async def get_history(
+    course: str,
+    user_id: str = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Fetch past chat messages for a specific user and course."""
+    history = db.query(models.ChatHistory)\
+                .filter(models.ChatHistory.user_id == user_id, models.ChatHistory.course == course)\
+                .order_by(models.ChatHistory.timestamp.asc())\
+                .all()
+    
+    return [
+        {"role": msg.role, "content": msg.content, "timestamp": msg.timestamp}
+        for msg in history
+    ]
 
 # ── Health check ──────────────────────────────────────────────────────────────
 @app.get("/health")
