@@ -2587,3 +2587,7 @@ INFO:     127.0.0.1:54970 - "POST /api/chat HTTP/1.1" 200 OK
 │  • Run: crewai traces enable                                  │
 │                                                               │
 ╰───────────────────────────────────────────────────────────────╯
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [78707]
