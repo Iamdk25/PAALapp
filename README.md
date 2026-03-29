@@ -88,8 +88,8 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-# Boot up the Uvicorn server (Default port: 8000)
-uvicorn main:app --reload --port 8000
+# Boot up the Uvicorn server (Default port: 8001)
+uvicorn main:app --reload --port 8001
 ```
 
 ### 2. Start the Frontend (Vite + React)
