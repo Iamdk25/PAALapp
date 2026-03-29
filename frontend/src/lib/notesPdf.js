@@ -49,29 +49,37 @@ export async function openNotesPdfFromMarkdown(markdown, meta) {
   const htmlBody = marked.parse(md, { async: false })
 
   const shell = document.createElement('div')
+  // Map 1px to 1pt exactly for A4 (595.28pt wide). With 40pt margins, inner width is 515pt.
+  // Using 515px strictly ensures no text is scaled up (preventing huge text) and avoids boundary truncation.
   shell.style.cssText =
-    'position:fixed;left:-12000px;top:0;width:820px;background:#fff;color:#0f172a;font-family:system-ui,Segoe UI,sans-serif;'
+    'position:fixed;left:-12000px;top:0;width:515px;max-width:515px;background:#ffffff;color:#0f172a;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word;word-break:break-word;overflow-x:hidden;'
 
-  const title = escapeHtml(meta.title || 'Study notes')
+  const title = escapeHtml(meta.title || 'Study Material')
+  const course = escapeHtml(meta.courseCode || '')
+
   shell.innerHTML = `
-    <div style="padding:28px 36px 40px;box-sizing:border-box;">
-      <div style="border-bottom:2px solid #006747;padding-bottom:12px;margin-bottom:22px;">
-        <div style="font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:0.06em;">PAAL study notes</div>
-        <h1 style="font-size:22px;font-weight:700;margin:10px 0 0;color:#006747;line-height:1.25;">${title}</h1>
+    <div style="width:515px; max-width:515px; box-sizing:border-box; overflow:hidden;">
+      <div style="border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 20px;">
+        ${course ? `<div style="font-size: 10px; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">${course}</div>` : ''}
+        <h1 style="font-size: 20px; font-weight: 700; margin: 0; color: #0f172a; line-height: 1.3;">${title}</h1>
       </div>
-      <div class="paal-md" style="font-size:13px;line-height:1.65;color:#1e293b;">
+      <div class="paal-md" style="font-size: 11.5px; line-height: 1.6; color: #1e293b;">
         <style>
-          .paal-md h1 { font-size: 18px; margin: 18px 0 8px; color: #0f172a; }
-          .paal-md h2 { font-size: 16px; margin: 16px 0 6px; color: #14532d; }
-          .paal-md h3 { font-size: 14px; margin: 14px 0 6px; color: #334155; }
-          .paal-md p { margin: 0 0 10px; }
-          .paal-md ul, .paal-md ol { margin: 0 0 10px; padding-left: 1.35em; }
-          .paal-md li { margin: 4px 0; }
-          .paal-md code { font-family: ui-monospace, monospace; font-size: 12px; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
-          .paal-md pre { background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px; border-radius: 8px; overflow: hidden; font-size: 12px; white-space: pre-wrap; }
-          .paal-md pre code { background: none; padding: 0; }
-          .paal-md strong { color: #0f172a; }
-          .paal-md blockquote { border-left: 3px solid #006747; margin: 10px 0; padding-left: 12px; color: #475569; }
+          .paal-md h1 { font-size: 16px; font-weight: 700; margin: 20px 0 10px; color: #0f172a; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; page-break-after: avoid; }
+          .paal-md h2 { font-size: 14px; font-weight: 600; margin: 16px 0 8px; color: #0f172a; page-break-after: avoid; }
+          .paal-md h3 { font-size: 12px; font-weight: 600; margin: 14px 0 6px; color: #1e293b; page-break-after: avoid; }
+          .paal-md p { margin: 0 0 12px; text-align: justify; page-break-inside: avoid; }
+          .paal-md ul, .paal-md ol { margin: 0 0 12px; padding-left: 20px; }
+          .paal-md li { margin: 4px 0; page-break-inside: avoid; }
+          .paal-md code { font-family: ui-monospace, monospace; font-size: 10px; background: #f1f5f9; padding: 2px 4px; border-radius: 4px; color: #0f172a; break-inside: avoid; }
+          .paal-md pre { background: #f8fafc; color: #0f172a; border: 1px solid #e2e8f0; padding: 12px; border-radius: 6px; overflow: hidden; font-size: 10px; white-space: pre-wrap; word-wrap: break-word; line-height: 1.4; margin: 16px 0; page-break-inside: avoid; }
+          .paal-md pre code { background: none; padding: 0; color: inherit; }
+          .paal-md strong { color: #0f172a; font-weight: 600; }
+          .paal-md blockquote { border-left: 3px solid #3b82f6; background: #f8fafc; margin: 16px 0; padding: 12px 16px; color: #475569; border-radius: 0 6px 6px 0; font-style: italic; page-break-inside: avoid; }
+          .paal-md table { width: 100%; border-collapse: collapse; margin: 16px 0; page-break-inside: avoid; }
+          .paal-md th, .paal-md td { border: 1px solid #e2e8f0; padding: 8px; text-align: left; }
+          .paal-md th { background: #f8fafc; font-weight: 600; color: #0f172a; }
+          .paal-md img { max-width: 100%; height: auto; border-radius: 6px; margin: 16px 0; page-break-inside: avoid; }
         </style>
         ${htmlBody}
       </div>
@@ -85,25 +93,19 @@ export async function openNotesPdfFromMarkdown(markdown, meta) {
     if (!inner) throw new Error('Could not build notes layout.')
 
     await new Promise((resolve) => requestAnimationFrame(() => resolve()))
-    const fullHeight = Math.max(inner.scrollHeight, inner.getBoundingClientRect().height, 400)
-    const fullWidth = Math.max(inner.scrollWidth, 820)
 
-    const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4', compress: true })
+    const doc = new jsPDF({ orientation: 'p', unit: 'pt', format: 'a4', compress: true })
 
     await doc.html(inner, {
-      x: 12,
-      y: 12,
-      width: 186,
-      windowWidth: fullWidth,
+      margin: [40, 40, 40, 40],
       autoPaging: 'text',
+      width: 515,
+      windowWidth: 515,
       html2canvas: {
-        scale: 0.85,
+        scale: 2,
         useCORS: true,
         logging: false,
         backgroundColor: '#ffffff',
-        windowHeight: fullHeight,
-        height: fullHeight,
-        width: fullWidth,
       },
     })
 
