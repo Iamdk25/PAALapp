@@ -62,6 +62,54 @@ def search_usf_knowledge_base(query: str, course: str = "test_course_101") -> st
     return "\n\n".join(passages)
 
 
+def sync_retrieve_passages(course: str, query: str, top_k: int = 8) -> str:
+    """
+    Deterministic Pinecone query with an exact course metadata filter.
+    Used by tasks.py so RAG does not depend on the LLM calling the tool correctly.
+    """
+    if not course or not str(course).strip():
+        return "No course id provided for retrieval."
+    q = (query or "").strip() or "course materials key concepts"
+    if not GOOGLE_API_KEY or not PINECONE_API_KEY:
+        return (
+            "Knowledge base search is unavailable (missing GOOGLE_API_KEY or PINECONE_API_KEY in environment)."
+        )
+    try:
+        embeddings = GoogleGenerativeAIEmbeddings(
+            model="models/gemini-embedding-001",
+            google_api_key=GOOGLE_API_KEY,
+        )
+        pc = Pinecone(api_key=PINECONE_API_KEY)
+        index = pc.Index(INDEX_NAME)
+        query_vector = embeddings.embed_query(q[:8000])
+        results = index.query(
+            vector=query_vector,
+            top_k=top_k,
+            include_metadata=True,
+            filter={"course": course},
+        )
+    except Exception as e:
+        return f"Retrieval error: {e!s}"
+
+    if not results.get("matches"):
+        return (
+            "No relevant content found in the knowledge base for this query. "
+            "Try a different topic or confirm PDFs are indexed for this course."
+        )
+
+    passages = []
+    for i, match in enumerate(results["matches"], 1):
+        text = match.get("metadata", {}).get("text", "No text available")
+        score = match.get("score", 0)
+        passages.append(f"--- Passage {i} (relevance: {score:.2f}) ---\n{text}")
+
+    combined = "\n\n".join(passages)
+    max_chars = 14_000
+    if len(combined) > max_chars:
+        combined = combined[:max_chars] + "\n\n[...truncated for length...]"
+    return combined
+
+
 # ── Agent Definitions ─────────────────────────────────────────────────────────
 
 orchestrator_agent = Agent(
@@ -102,14 +150,13 @@ retrieval_agent = Agent(
 tutor_agent = Agent(
     role="Tutor Agent (Teacher)",
     goal=(
-        "Take raw textbook content and rewrite it as a clear, simple "
-        "explanation that a freshman can understand."
+        "Turn retrieved course material into a clear, well-structured Markdown "
+        "lesson a first-year student can follow."
     ),
     backstory=(
-        "You are a patient and enthusiastic university tutor who specialises "
-        "in explaining complex topics to first-year students.  You use "
-        "analogies, bullet points, and examples.  You never use jargon "
-        "without defining it first."
+        "You are a patient university tutor. You explain ideas in plain language, "
+        "define terms before using them, and organize every answer with headings, "
+        "short paragraphs, and bullet lists—never dense unstructured prose."
     ),
     llm=gemini_llm,
     verbose=True,
@@ -122,10 +169,11 @@ assessment_agent = Agent(
         "answers with detailed feedback."
     ),
     backstory=(
-        "You are a university teaching assistant who writes fair but "
-        "challenging multiple-choice quizzes.  Each quiz has 5 questions. "
-        "For every question you provide 4 options, the correct answer, and "
-        "a short explanation of why it is correct."
+        "You are a university teaching assistant who writes fair quizzes. "
+        "You follow the task instructions exactly for question count, difficulty, "
+        "and question types (multiple choice, true/false, short answer). "
+        "You output valid JSON only when asked. When grading, you compare "
+        "student answers to keys and rubrics from the quiz in the conversation."
     ),
     llm=gemini_llm,
     verbose=True,

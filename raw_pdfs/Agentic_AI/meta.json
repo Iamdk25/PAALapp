@@ -1,0 +1,109 @@
+{
+  "id": "agentic_ai",
+  "code": "CIS 4930",
+  "title": "Agentic AI",
+  "description": "Advanced topics in autonomous AI agents, tool use, and LLM-driven workflows. Study support is based on your course readings and uploaded materials.",
+  "dept": "Computer Science & Engineering",
+  "students": 0,
+  "lessons": 0,
+  "chapters": [
+    {
+      "id": "aa_welcome",
+      "title": "Course orientation & foundations",
+      "topics": [
+        "What is an AI agent vs a chatbot?",
+        "Course goals, projects, and grading expectations",
+        "Python / tooling setup for agent labs",
+        "Reading the syllabus and schedule"
+      ]
+    },
+    {
+      "id": "aa_llm_core",
+      "title": "LLMs, prompts, and context",
+      "topics": [
+        "How transformers encode text (intuition)",
+        "Tokens, context windows, and truncation",
+        "Prompting patterns: zero-shot, few-shot, chain-of-thought",
+        "Hallucinations, grounding, and when to trust outputs",
+        "Evaluating answers: rubrics and spot checks"
+      ]
+    },
+    {
+      "id": "aa_agent_loop",
+      "title": "Agent architectures & control flow",
+      "topics": [
+        "Perceive → plan → act loops",
+        "ReAct and tool-augmented reasoning",
+        "Memory: short-term vs long-term / retrieval",
+        "Multi-step tasks and stopping conditions",
+        "Failure modes: loops, tool spam, brittle plans"
+      ]
+    },
+    {
+      "id": "aa_tools",
+      "title": "Tool use, APIs, and function calling",
+      "topics": [
+        "Structured outputs and JSON schemas",
+        "Calling REST APIs safely (timeouts, retries)",
+        "Function / tool registration patterns",
+        "Sandboxing and least privilege",
+        "Human-in-the-loop approvals"
+      ]
+    },
+    {
+      "id": "aa_rag",
+      "title": "Retrieval, embeddings, and knowledge bases",
+      "topics": [
+        "Embeddings and vector similarity (conceptual)",
+        "Chunking strategies for documents",
+        "RAG pipeline: ingest → retrieve → generate",
+        "Citation and attribution to sources",
+        "When RAG helps vs hurts"
+      ]
+    },
+    {
+      "id": "aa_frameworks",
+      "title": "Frameworks & orchestration (e.g. CrewAI-style patterns)",
+      "topics": [
+        "Roles, crews, and sequential vs hierarchical flows",
+        "Tasks, dependencies, and handoffs",
+        "Debugging agent runs (logs, traces)",
+        "Comparing frameworks at a high level",
+        "Building a minimal agent from scratch"
+      ]
+    },
+    {
+      "id": "aa_multi",
+      "title": "Multi-agent systems & collaboration",
+      "topics": [
+        "When to use multiple specialized agents",
+        "Coordination, messaging, and shared state",
+        "Debate, critique, and verifier patterns",
+        "Cost and latency tradeoffs",
+        "Designing for clear responsibilities"
+      ]
+    },
+    {
+      "id": "aa_safety",
+      "title": "Safety, ethics, and deployment",
+      "topics": [
+        "Prompt injection and data leakage risks",
+        "PII, secrets, and redaction",
+        "Bias, fairness, and misuse",
+        "Monitoring, logging, and incident response",
+        "Responsible release checklist"
+      ]
+    },
+    {
+      "id": "aa_apps",
+      "title": "Applications & capstone themes",
+      "topics": [
+        "Research assistants and literature workflows",
+        "Coding agents and test-driven iteration",
+        "Customer-support style agents",
+        "Course project ideation and milestones",
+        "Demo day: presenting agent behavior clearly"
+      ]
+    }
+  ]
+}

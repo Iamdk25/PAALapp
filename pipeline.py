@@ -16,6 +16,13 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from pinecone import Pinecone, ServerlessSpec
 from langchain_pinecone import PineconeVectorStore
 
+from outline import (
+    extract_outline_from_markdown,
+    load_outline_json,
+    merge_outline_json,
+    write_outline_json,
+)
+
 # ── Config ────────────────────────────────────────────────────────────────────
 load_dotenv()
 
@@ -137,6 +144,21 @@ async def main():
         
         # Parse and chunk
         markdown = await parse_pdf(pdf_path)
+        course_dir = pdf_path.parent
+        cache_dir = course_dir / "_cache"
+        cache_dir.mkdir(exist_ok=True)
+        md_file = cache_dir / f"{pdf_path.stem}.md"
+        md_file.write_text(markdown, encoding="utf-8")
+        print(f"   💾  Saved Markdown → {md_file.relative_to(RAW_PDF_DIR)}")
+
+        piece = extract_outline_from_markdown(markdown)
+        prev = load_outline_json(course_dir)
+        merged = merge_outline_json(prev, piece)
+        write_outline_json(course_dir, merged)
+        print(
+            f"   📑  outline.json → {len(merged.get('chapters', []))} chapter(s)."
+        )
+
         chunks = chunk_text(markdown, course_code)
         all_chunks.extend(chunks)
 

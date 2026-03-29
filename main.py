@@ -4,26 +4,45 @@ Wraps the CrewAI multi-agent system behind a single /api/chat endpoint.
 """
 
 import os
+import re
 from dotenv import load_dotenv
+
+# Default: Vite dev server (explicit list works reliably with credentialed / credentialed-like requests)
+_default_cors = "http://localhost:5173,http://127.0.0.1:5173"
+CORS_ORIGINS = [o.strip() for o in os.getenv("CORS_ORIGINS", _default_cors).split(",") if o.strip()]
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from crewai import Crew, Process
 
-from agents import (
-    orchestrator_agent,
-    retrieval_agent,
-    tutor_agent,
-    assessment_agent,
-    analytics_agent,
-)
+from agents import tutor_agent, assessment_agent, analytics_agent
 from tasks import TASK_BUILDERS
 import models
 from database import engine, get_db
 from auth import get_current_user
+from course_catalog import allowed_pinecone_courses, get_course_by_id, load_courses
 
 load_dotenv()
+
+# CrewAI stringifies console output with Unicode box-drawing; strip column "│" so JSON/Markdown parses.
+_CREW_LEAD_PIPE = re.compile(r"^[\s\u2500-\u257F]*\u2502")
+_CREW_TRAIL_PIPE = re.compile(r"\u2502[\s\u2500-\u257F]*$")
+
+
+def strip_crew_console_formatting(text: str) -> str:
+    if not text:
+        return text
+    lines = []
+    for line in text.splitlines():
+        s = _CREW_LEAD_PIPE.sub("", line)
+        s = _CREW_TRAIL_PIPE.sub("", s)
+        lines.append(s)
+    return "\n".join(lines)
+
+
+# Chat actions that still send a course string but are not tied to textbook folders
+_COURSE_CHECK_SKIP = frozenset({"analytics", "test_course_101"})
 
 # Initialize Database Tables
 models.Base.metadata.create_all(bind=engine)
@@ -37,7 +56,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],        # tighten in production
+    allow_origins=CORS_ORIGINS or ["http://localhost:5173"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -45,11 +64,22 @@ app.add_middleware(
 
 
 # ── Request / Response Models ─────────────────────────────────────────────────
+class QuizOptions(BaseModel):
+    """Structured quiz preferences (action=quiz). Ignored for other actions."""
+
+    num_questions: int = 10
+    multiple_choice: bool = True
+    true_false: bool = False
+    short_answer: bool = False
+    difficulty: str = "Medium"
+
+
 class ChatRequest(BaseModel):
     action: str                          # "explain" | "quiz" | "summarize" | "progress"
     topic: str = ""                      # e.g. "derivatives", "photosynthesis"
     course: str = "test_course_101"      # course code
     chat_history: list[dict] = []        # [{"role": "user", "content": "..."}]
+    quiz_options: QuizOptions | None = None
 
 
 class ChatResponse(BaseModel):
@@ -57,10 +87,8 @@ class ChatResponse(BaseModel):
     answer: str
 
 
-# ── Agent roster (used by the Crew) ──────────────────────────────────────────
+# ── Agent roster (must include every agent referenced in tasks.py) ─────────────
 AGENT_ROSTER = [
-    orchestrator_agent,
-    retrieval_agent,
     tutor_agent,
     assessment_agent,
     analytics_agent,
@@ -68,6 +96,25 @@ AGENT_ROSTER = [
 
 
 # ── Endpoints ─────────────────────────────────────────────────────────────────
+
+
+@app.get("/api/courses")
+def api_list_courses():
+    """
+    Courses with uploaded PDFs under raw_pdfs/<FolderName>/.
+    ChatRequest.course must equal 'pineconeCourse' here (same string as Pinecone metadata filter).
+    """
+    return load_courses()
+
+
+@app.get("/api/courses/{course_id}/outline")
+def api_course_outline(course_id: str):
+    """Chapter/topic dropdown data: from outline.json (pipeline) when present, else meta/defaults."""
+    c = get_course_by_id(course_id)
+    if not c:
+        raise HTTPException(status_code=404, detail="Course not found")
+    return {"chapters": c.get("chapters") or []}
+
 
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(
@@ -90,6 +137,23 @@ async def chat(
             ),
         )
 
+    # Require course id to match indexed materials (when any exist)
+    if action != "progress":
+        allowed = allowed_pinecone_courses()
+        if (
+            allowed
+            and req.course not in allowed
+            and req.course not in _COURSE_CHECK_SKIP
+        ):
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    f"No uploaded materials are registered for course '{req.course}'. "
+                    f"Use GET /api/courses and send 'pineconeCourse' as ChatRequest.course. "
+                    f"Available: {sorted(allowed)}."
+                ),
+            )
+
     # 1. Ensure user exists in our local DB
     user = db.query(models.User).filter(models.User.id == user_id).first()
     if not user:
@@ -111,6 +175,15 @@ async def chat(
     builder = TASK_BUILDERS[action]
     if action == "progress":
         tasks = builder(chat_history=req.chat_history)
+    elif action == "quiz":
+        tasks = builder(
+            topic=req.topic,
+            course=req.course,
+            chat_history=req.chat_history,
+            quiz_options=(
+                req.quiz_options.model_dump() if req.quiz_options is not None else None
+            ),
+        )
     else:
         tasks = builder(
             topic=req.topic,
@@ -126,7 +199,7 @@ async def chat(
         verbose=True,
     )
 
-    result = str(crew.kickoff())
+    result = strip_crew_console_formatting(str(crew.kickoff()))
 
     # 5. Save AI Response to Chat History
     ai_msg = models.ChatHistory(

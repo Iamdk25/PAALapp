@@ -1,0 +1,121 @@
+{
+  "id": "intro_to_programming",
+  "code": "COP 2510",
+  "title": "Intro to Programming",
+  "description": "Foundations of problem solving and programming in a high-level language: logic, control flow, functions, and basic data structures. Aligned with your textbook and lecture materials.",
+  "dept": "Computer Science & Engineering",
+  "students": 0,
+  "lessons": 0,
+  "chapters": [
+    {
+      "id": "cop_intro",
+      "title": "Introduction to computing & your environment",
+      "topics": [
+        "What is a program? Compilers vs interpreters",
+        "IDE / editor, terminal, and running code",
+        "Syntax, semantics, and reading error messages",
+        "Style, naming, and commenting for beginners",
+        "Academic integrity and collaboration rules"
+      ]
+    },
+    {
+      "id": "cop_basics",
+      "title": "Variables, types, and expressions",
+      "topics": [
+        "Primitive types (int, float, bool, char/string basics)",
+        "Variables, assignment, and immutability (language-dependent)",
+        "Arithmetic and operator precedence",
+        "Type conversion and rounding pitfalls",
+        "Simple input and output (console I/O)"
+      ]
+    },
+    {
+      "id": "cop_strings",
+      "title": "Strings and text processing",
+      "topics": [
+        "String literals and escape sequences",
+        "Indexing, slicing, and length",
+        "Common string methods / library helpers",
+        "Formatting output (f-strings, printf-style, etc.)",
+        "Character encoding basics (ASCII / Unicode intuition)"
+      ]
+    },
+    {
+      "id": "cop_decisions",
+      "title": "Boolean logic & selection (if / else)",
+      "topics": [
+        "Relational and logical operators",
+        "If, else-if, and nested conditions",
+        "Truth tables and simplifying conditions",
+        "Common bugs: = vs ==, off-by-one, boundary cases",
+        "Switch / match patterns where applicable"
+      ]
+    },
+    {
+      "id": "cop_loops",
+      "title": "Repetition: loops",
+      "topics": [
+        "While loops and loop invariants (informally)",
+        "For loops and range-style iteration",
+        "Nested loops and complexity intuition",
+        "Break, continue, and when to avoid them",
+        "Tracing loops on paper"
+      ]
+    },
+    {
+      "id": "cop_functions",
+      "title": "Functions / methods & decomposition",
+      "topics": [
+        "Defining and calling functions",
+        "Parameters, return values, and scope",
+        "Call stack intuition (frames)",
+        "Top-down design and stepwise refinement",
+        "Unit testing mindset (even without a framework)"
+      ]
+    },
+    {
+      "id": "cop_lists",
+      "title": "Lists, arrays, and sequential collections",
+      "topics": [
+        "Creating and indexing lists / arrays",
+        "Iterating with for-each patterns",
+        "Mutating vs copying (aliasing)",
+        "Common algorithms: search, find max/min",
+        "2D structures (tables / grids) as nested lists"
+      ]
+    },
+    {
+      "id": "cop_files",
+      "title": "Files and exceptions (basics)",
+      "topics": [
+        "Reading and writing text files",
+        "Paths, working directory, and file not found",
+        "Try / catch or equivalent error handling",
+        "Parsing lines and CSV-style data (intro)",
+        "Defensive programming habits"
+      ]
+    },
+    {
+      "id": "cop_structs",
+      "title": "Structs, classes, or records (intro OOP)",
+      "topics": [
+        "Grouping data: structs / simple classes / dictionaries (contextual)",
+        "Constructors and object identity",
+        "Methods vs free functions",
+        "Encapsulation and getters/setters (light)",
+        "Designing small ADTs for assignments"
+      ]
+    },
+    {
+      "id": "cop_algo",
+      "title": "Problem solving, debugging & complexity intro",
+      "topics": [
+        "Breaking problems into subproblems",
+        "Using print/logging to debug",
+        "Big-O intuition for nested loops",
+        "Sorting and searching overview",
+        "Preparing for the final project / exam"
+      ]
+    }
+  ]
+}

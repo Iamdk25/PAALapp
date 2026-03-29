@@ -1,0 +1,470 @@
+{
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Chapter 1: About Science",
+      "topics": [
+        "1.1 Scientific Measurements",
+        "1.2 Scientific Methods",
+        "1.3 Science, Art, and Religion",
+        "1.4 Science and Technology",
+        "1.5 Physics—The Basic Science",
+        "1.6 In Perspective"
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Chapter 2: Newton’s First Law of Motion–Inertia",
+      "topics": [
+        "2.1 Aristotle on Motion",
+        "2.2 Galileo’s Experiments",
+        "2.3 Newton’s First Law of Motion",
+        "2.4 Net Force and Vectors",
+        "2.5 The Equilibrium Rule",
+        "2.6 Support Force",
+        "2.7 Equilibrium of Moving Things",
+        "2.8 The Moving Earth"
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Chapter 3: Linear Motion",
+      "topics": [
+        "3.1 Speed",
+        "3.2 Velocity",
+        "3.3 Acceleration",
+        "3.4 Free Fall",
+        "3.5 Velocity Vectors"
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Chapter 4: Newton’s Second Law of Motion",
+      "topics": [
+        "4.1 Forces",
+        "4.2 Friction",
+        "4.3 Mass and Weight",
+        "4.4 Newton’s Second Law of Motion",
+        "4.5 When Acceleration Is g—Free Fall"
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Chapter 5: Newton’s Third Law of Motion",
+      "topics": [
+        "5.1 Forces and Interactions",
+        "5.2 Newton’s Third Law of Motion",
+        "5.3 Action and Reaction on Different Masses",
+        "5.4 Vectors and the Third Law",
+        "5.5 Summary of Newton’s Three Laws"
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Chapter 6: Momentum",
+      "topics": [
+        "6.1 Momentum",
+        "6.2 Impulse",
+        "6.3 Impulse-Momentum Relationship",
+        "6.4 Bouncing",
+        "6.5 Conservation of Momentum",
+        "6.6 Collisions",
+        "6.7 More Complicated Collisions"
+      ]
+    },
+    {
+      "id": "ch7",
+      "title": "Chapter 7: Energy",
+      "topics": [
+        "7.1 Work",
+        "7.2 Power",
+        "7.3 Potential Energy",
+        "7.4 Kinetic Energy",
+        "7.5 Work–Energy Theorem",
+        "7.6 Conservation of Energy",
+        "7.7 Machines",
+        "7.8 Efficiency",
+        "7.9 Major Sources of Energy"
+      ]
+    },
+    {
+      "id": "ch8",
+      "title": "Chapter 8: Rotational Motion",
+      "topics": [
+        "8.1 Circular Motion",
+        "8.2 Centripetal Force",
+        "8.3 Centrifugal Force",
+        "8.4 Rotational Inertia",
+        "8.5 Torque",
+        "8.7 Angular Momentum"
+      ]
+    },
+    {
+      "id": "ch9",
+      "title": "Chapter 9: Gravity",
+      "topics": [
+        "9.1 The Universal Law of Gravity",
+        "9.4 Weight and Weightlessness",
+        "9.5 Ocean Tides",
+        "9.6 Gravitational Fields",
+        "9.7 Black Holes",
+        "9.8 Universal Gravitation"
+      ]
+    },
+    {
+      "id": "ch10",
+      "title": "Chapter 10: Projectile and Satellite Motion",
+      "topics": [
+        "10.1 Projectile Motion",
+        "10.2 Fast-Moving Projectiles—Satellites",
+        "10.3 Circular Satellite Orbits",
+        "10.4 Elliptical Orbits",
+        "10.5 Kepler’s Laws of Planetary Motion",
+        "10.7 Escape Speed"
+      ]
+    },
+    {
+      "id": "ch11",
+      "title": "Chapter 11: The Atomic Nature of Matter",
+      "topics": [
+        "11.1 The Atomic Hypothesis",
+        "11.2 Characteristics of Atoms",
+        "11.3 Atomic Imagery",
+        "11.4 Atomic Structure",
+        "11.5 The Periodic Table of the Elements",
+        "11.6 Isotopes",
+        "11.7 Molecules",
+        "11.8 Compounds and Mixtures",
+        "11.9 Antimatter"
+      ]
+    },
+    {
+      "id": "ch12",
+      "title": "Chapter 12: Solids",
+      "topics": [
+        "12.1 Crystal Structure",
+        "12.2 Density",
+        "12.3 Elasticity",
+        "12.4 Tension and Compression",
+        "12.5 Arches",
+        "12.6 Scaling"
+      ]
+    },
+    {
+      "id": "ch13",
+      "title": "Chapter 13: Liquids",
+      "topics": [
+        "13.1 Pressure",
+        "13.2 Pressure in a Liquid",
+        "13.3 Buoyancy",
+        "13.4 Archimedes’ Principle",
+        "13.5 What Makes an Object Sink or Float?",
+        "13.6 Flotation",
+        "13.7 Pascal’s Principle",
+        "13.8 Surface Tension",
+        "13.9 Capillarity"
+      ]
+    },
+    {
+      "id": "ch14",
+      "title": "Chapter 14: Gases",
+      "topics": [
+        "14.1 The Atmosphere",
+        "14.2 Atmospheric Pressure",
+        "14.3 Boyle’s Law",
+        "14.4 Buoyancy of Air",
+        "14.5 Bernoulli’s Principle",
+        "14.6 Plasma"
+      ]
+    },
+    {
+      "id": "ch15",
+      "title": "Chapter 15: Temperature, Heat, and Expansion",
+      "topics": [
+        "15.1 Temperature",
+        "15.2 Heat",
+        "15.3 Specific Heat Capacity",
+        "15.5 Thermal Expansion"
+      ]
+    },
+    {
+      "id": "ch16",
+      "title": "Chapter 16: Heat Transfer",
+      "topics": [
+        "16.1 Conduction",
+        "16.2 Convection",
+        "16.3 Radiation",
+        "16.4 Newton’s Law of Cooling",
+        "16.5 The Greenhouse Effect",
+        "16.6 Climate Change",
+        "16.7 Solar Power",
+        "16.8 Controlling Heat Transfer"
+      ]
+    },
+    {
+      "id": "ch17",
+      "title": "Chapter 17: Change of Phase",
+      "topics": [
+        "17.1 Evaporation",
+        "17.2 Condensation",
+        "17.3 Boiling",
+        "17.4 Melting and Freezing",
+        "17.5 Energy and Changes of Phase"
+      ]
+    },
+    {
+      "id": "ch18",
+      "title": "Chapter 18: Thermodynamics",
+      "topics": [
+        "18.1 Absolute Zero",
+        "18.2 First Law of Thermodynamics",
+        "18.3 Adiabatic Processes",
+        "18.4 Meteorology and the First Law",
+        "18.5 Second Law of Thermodynamics",
+        "18.6 Energy Tends to Disperse",
+        "18.7 Entropy"
+      ]
+    },
+    {
+      "id": "ch19",
+      "title": "Chapter 19: Vibrations and Waves",
+      "topics": [
+        "19.1 Good Vibrations",
+        "19.2 Wave Description",
+        "19.3 Wave Motion",
+        "19.4 Wave Speed",
+        "19.5 Wave Interference",
+        "19.6 Doppler Effect",
+        "19.7 Bow Waves",
+        "19.8 Shock Waves"
+      ]
+    },
+    {
+      "id": "ch20",
+      "title": "Chapter 20: Sound",
+      "topics": [
+        "20.1 Nature of Sound",
+        "20.2 Sound in Air",
+        "20.3 Reflection of Sound",
+        "20.4 Refraction of Sound",
+        "20.5 Forced Vibrations",
+        "20.6 Resonance",
+        "20.7 Interference",
+        "20.8 Beats"
+      ]
+    },
+    {
+      "id": "ch21",
+      "title": "Chapter 21: Musical Sounds",
+      "topics": [
+        "21.1 Noise and Music",
+        "21.2 Pitch",
+        "21.3 Sound Intensity and Loudness",
+        "21.4 Quality",
+        "21.5 Musical Instruments",
+        "21.6 Fourier Analysis",
+        "21.7 From Analog to Digital"
+      ]
+    },
+    {
+      "id": "ch22",
+      "title": "Chapter 22: Electrostatics",
+      "topics": [
+        "22.1 Electric Forces",
+        "22.2 Electric Charges",
+        "22.3 Conservation of Charge",
+        "22.4 Coulomb’s Law",
+        "22.5 Conductors and Insulators",
+        "22.6 Charging",
+        "22.7 Charge Polarization",
+        "22.8 Electric Field",
+        "22.9 Electric Potential"
+      ]
+    },
+    {
+      "id": "ch23",
+      "title": "Chapter 23: Electric Current",
+      "topics": [
+        "23.1 Flow of Charge and Electric Current",
+        "23.2 Voltage Sources",
+        "23.3 Electrical Resistance",
+        "23.4 Ohm’s Law",
+        "23.7 Electric Power",
+        "23.8 Electric Circuits"
+      ]
+    },
+    {
+      "id": "ch24",
+      "title": "Chapter 24: Magnetism",
+      "topics": [
+        "24.1 Magnetism",
+        "24.2 Magnetic Poles",
+        "24.3 Magnetic Fields",
+        "24.4 Magnetic Domains",
+        "24.5 Electric Currents and Magnetic Fields",
+        "24.6 Electromagnets",
+        "24.7 Magnetic Forces",
+        "24.8 Earth’s Magnetic Field",
+        "24.9 Biomagnetism"
+      ]
+    },
+    {
+      "id": "ch25",
+      "title": "Chapter 25: Electromagnetic Induction",
+      "topics": [
+        "25.1 Electromagnetic Induction",
+        "25.2 Faraday’s Law",
+        "25.3 Generators and Alternating Current",
+        "25.4 Power Production",
+        "25.5 Transformers",
+        "25.6 Self-Induction",
+        "25.7 Magnetic Braking",
+        "25.8 Power Transmission",
+        "25.9 Field Induction"
+      ]
+    },
+    {
+      "id": "ch26",
+      "title": "Chapter 26: Properties of Light",
+      "topics": [
+        "26.1 Electromagnetic Waves",
+        "26.2 Electromagnetic Wave Velocity",
+        "26.3 The Electromagnetic Spectrum",
+        "26.4 Transparent Materials",
+        "26.6 Opaque Materials",
+        "26.7 Solar and Lunar Eclipses",
+        "26.8 Seeing Light—The Eye"
+      ]
+    },
+    {
+      "id": "ch27",
+      "title": "Chapter 27: Color",
+      "topics": [
+        "27.1 Color in Our World",
+        "27.2 Selective Reflection",
+        "27.3 Selective Transmission",
+        "27.4 Mixing Colored Lights",
+        "27.5 Mixing Colored Pigments",
+        "27.6 Sky Colors",
+        "27.7 Water Colors"
+      ]
+    },
+    {
+      "id": "ch28",
+      "title": "Chapter 28: Reflection and Refraction",
+      "topics": [
+        "28.1 Reflection",
+        "28.2 Law of Reflection",
+        "28.3 Refraction",
+        "28.4 Cause of Refraction",
+        "28.5 Dispersion",
+        "28.6 The Rainbow",
+        "28.7 Total Internal Reflection",
+        "28.8 Lenses",
+        "28.9 Lens Defects"
+      ]
+    },
+    {
+      "id": "ch29",
+      "title": "Chapter 29: Light Waves",
+      "topics": [
+        "29.1 Huygens’ Principle",
+        "29.2 Diffraction",
+        "29.3 Superposition and Interference",
+        "29.4 Single-Color Thin-Film Interference",
+        "29.5 Polarization",
+        "29.6 Holography"
+      ]
+    },
+    {
+      "id": "ch30",
+      "title": "Chapter 30: Light Emission",
+      "topics": [
+        "30.7 Phosphorescence",
+        "30.8 Lamps",
+        "30.9 Lasers",
+        "30.1 Light Emission",
+        "30.2 Excitation",
+        "30.3 Emission Spectra",
+        "30.4 Incandescence",
+        "30.5 Absorption Spectra",
+        "30.6 Fluorescence"
+      ]
+    },
+    {
+      "id": "ch31",
+      "title": "Chapter 31: Light Quanta",
+      "topics": [
+        "31.1 Birth of the Quantum Theory",
+        "31.2 Quantization and Planck’s Constant",
+        "31.3 Photoelectric Effect",
+        "31.4 Wave–Particle Duality",
+        "31.5 Double-Slit Experiment",
+        "31.7 Uncertainty Principle",
+        "31.8 Complementarity"
+      ]
+    },
+    {
+      "id": "ch32",
+      "title": "Chapter 32: The Atom and the Quantum",
+      "topics": [
+        "32.1 Discovery of the Atomic Nucleus",
+        "32.2 Discovery of the Electron",
+        "32.4 Bohr Model of the Atom",
+        "32.6 Quantum Mechanics",
+        "32.7 Correspondence Principle"
+      ]
+    },
+    {
+      "id": "ch33",
+      "title": "Chapter 33: The Atomic Nucleus and Radioactivity",
+      "topics": [
+        "33.1 X-rays and Radioactivity",
+        "33.2 Alpha, Beta, and Gamma Rays",
+        "33.3 Neutrinos",
+        "33.4 Environmental Radiation",
+        "33.6 Radioactive Half-Life",
+        "33.7 Radiation Detectors",
+        "33.8 Transmutation of Elements",
+        "33.9 Radiometric Dating"
+      ]
+    },
+    {
+      "id": "ch34",
+      "title": "Chapter 34: Nuclear Fission and Fusion",
+      "topics": [
+        "34.1 Nuclear Fission",
+        "34.2 Nuclear Fission Reactors",
+        "34.3 The Breeder Reactor",
+        "34.4 Fission Power",
+        "34.5 Mass–Energy Equivalence",
+        "34.6 Nuclear Fusion",
+        "34.7 Controlling Fusion"
+      ]
+    },
+    {
+      "id": "ch35",
+      "title": "Chapter 35: Special Theory of Relativity",
+      "topics": [
+        "35.1 Motion Is Relative",
+        "35.3 Simultaneity",
+        "35.4 Spacetime and Time Dilation",
+        "35.5 Addition of Velocities",
+        "35.6 Length Contraction",
+        "35.7 Relativistic Momentum",
+        "35.8 Mass, Energy, and E 5 mc 2",
+        "35.9 The Correspondence Principle"
+      ]
+    },
+    {
+      "id": "ch36",
+      "title": "Chapter 36: General Theory of Relativity",
+      "topics": [
+        "36.1 Principle of Equivalence",
+        "36.2 Bending of Light by Gravity",
+        "36.5 Gravity, Space, and a New Geometry",
+        "36.6 Gravitational Waves"
+      ]
+    }
+  ]
+}
