@@ -16,6 +16,26 @@ GOOGLE_API_KEY   = os.getenv("GOOGLE_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 INDEX_NAME       = "paal-index"
 
+# ── Shared Singletons for Retrieval ──────────────────────────────────────────
+_embeddings = None
+_index = None
+
+def _get_embeddings():
+    global _embeddings
+    if _embeddings is None:
+        _embeddings = GoogleGenerativeAIEmbeddings(
+            model="models/gemini-embedding-001",
+            google_api_key=GOOGLE_API_KEY,
+        )
+    return _embeddings
+
+def _get_index():
+    global _index
+    if _index is None:
+        pc = Pinecone(api_key=PINECONE_API_KEY)
+        _index = pc.Index(INDEX_NAME)
+    return _index
+
 # ── Gemini LLM for all agents ────────────────────────────────────────────────
 gemini_llm = LLM(
     model="gemini/gemini-2.5-flash",
@@ -35,12 +55,8 @@ def search_usf_knowledge_base(query: str, course: str = "test_course_101") -> st
     Returns:
         A string containing the most relevant textbook passages.
     """
-    embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/gemini-embedding-001",
-        google_api_key=GOOGLE_API_KEY,
-    )
-    pc = Pinecone(api_key=PINECONE_API_KEY)
-    index = pc.Index(INDEX_NAME)
+    embeddings = _get_embeddings()
+    index = _get_index()
 
     query_vector = embeddings.embed_query(query)
     results = index.query(
@@ -75,12 +91,8 @@ def sync_retrieve_passages(course: str, query: str, top_k: int = 8) -> str:
             "Knowledge base search is unavailable (missing GOOGLE_API_KEY or PINECONE_API_KEY in environment)."
         )
     try:
-        embeddings = GoogleGenerativeAIEmbeddings(
-            model="models/gemini-embedding-001",
-            google_api_key=GOOGLE_API_KEY,
-        )
-        pc = Pinecone(api_key=PINECONE_API_KEY)
-        index = pc.Index(INDEX_NAME)
+        embeddings = _get_embeddings()
+        index = _get_index()
         query_vector = embeddings.embed_query(q[:8000])
         results = index.query(
             vector=query_vector,

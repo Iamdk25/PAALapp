@@ -196,7 +196,7 @@ async def chat(
         agents=AGENT_ROSTER,
         tasks=tasks,
         process=Process.sequential,
-        verbose=True,
+        verbose=False,
     )
 
     result = strip_crew_console_formatting(str(crew.kickoff()))

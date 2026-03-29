@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
+import ReactMarkdown from 'react-markdown'
 import { PageShell } from '../components/PageShell'
 import { useCourses } from '../hooks/useCourses'
 import { postChat } from '../lib/api'
@@ -118,14 +119,14 @@ export default function AnalyticsPage() {
               <div className="mt-4 space-y-4 text-sm text-slate-700">
                 <p>
                   <span className="font-semibold text-slate-900">Overall: </span>
-                  {insight.overall_strength}
+                  <ReactMarkdown components={{ p: 'span' }}>{insight.overall_strength}</ReactMarkdown>
                 </p>
                 {insight.strengths?.length > 0 && (
                   <div>
                     <p className="font-semibold text-usf-green">Strengths</p>
                     <ul className="mt-1 list-disc pl-5">
-                      {insight.strengths.map((s) => (
-                        <li key={s}>{s}</li>
+                      {insight.strengths.map((s, idx) => (
+                        <li key={idx}><ReactMarkdown components={{ p: 'span' }}>{s}</ReactMarkdown></li>
                       ))}
                     </ul>
                   </div>
@@ -134,8 +135,8 @@ export default function AnalyticsPage() {
                   <div>
                     <p className="font-semibold text-usf-green">Focus areas</p>
                     <ul className="mt-1 list-disc pl-5">
-                      {insight.weaknesses.map((s) => (
-                        <li key={s}>{s}</li>
+                      {insight.weaknesses.map((s, idx) => (
+                        <li key={idx}><ReactMarkdown components={{ p: 'span' }}>{s}</ReactMarkdown></li>
                       ))}
                     </ul>
                   </div>
@@ -144,13 +145,17 @@ export default function AnalyticsPage() {
                   <div>
                     <p className="font-semibold text-usf-green">Next steps</p>
                     <ul className="mt-1 list-disc pl-5">
-                      {insight.recommendations.map((s) => (
-                        <li key={s}>{s}</li>
+                      {insight.recommendations.map((s, idx) => (
+                        <li key={idx}><ReactMarkdown components={{ p: 'span' }}>{s}</ReactMarkdown></li>
                       ))}
                     </ul>
                   </div>
                 )}
-                {insight.encouragement && <p className="rounded-lg bg-slate-50 p-3 italic">{insight.encouragement}</p>}
+                {insight.encouragement && (
+                  <div className="rounded-lg bg-slate-50 p-3 italic">
+                    <ReactMarkdown components={{ p: 'span' }}>{insight.encouragement}</ReactMarkdown>
+                  </div>
+                )}
               </div>
             )}
             {!insight && !loading && !error && <p className="mt-4 text-sm text-slate-600">No insight yet.</p>}

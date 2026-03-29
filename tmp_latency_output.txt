@@ -1,0 +1,1134 @@
+Starting quiz test...
+Task building took: 1.18 seconds
+╭──────────────────── 🚀 Crew Execution Started ────────────────────╮
+│                                                                   │
+│  Crew Execution Started                                           │
+│  Name: crew                                                       │
+│  ID: e7b20a67-3e3a-46af-ae2d-ba3840778e7d                         │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────── 📋 Task Started ─────────────────────────╮
+│                                                                   │
+│  Task Started                                                     │
+│  Name: === RETRIEVED TEXTBOOK MATERIAL FOR COURSE                 │
+│  'test_course_101' (you MUST base your answer only on this; do    │
+│  not invent other sources) ===                                    │
+│  --- Passage 1 (relevance: 0.62) ---                              │
+│  # Cost function                                                  │
+│                                                                   │
+│  # 1.2.8 Linguistics                                              │
+│                                                                   │
+│  # How does language relate to thought?                           │
+│                                                                   │
+│  In 1957, B. F. Skinner published *Verbal Behavior. This was a    │
+│  comprehensive, detailed account of the behaviorist approach to   │
+│  language learning, written by the foremost expert in the field.  │
+│  But curiously, a review of the book became as well known as the  │
+│  book itself, and served to almost kill off interest in           │
+│  behaviorism. The author of the review was the linguist Noam      │
+│  Chomsky, who had just published a book on his own theory,        │
+│  Syntactic Structures*. Chomsky pointed out that the behaviorist  │
+│  theory did not address the notion of creativity in language—it   │
+│  did not explain how children could understand and make up        │
+│  sentences that they had never heard before. Chomsky’s            │
+│  theory—based on syntactic models going back to the Indian        │
+│  linguist Panini (c. 350 BCE)—could explain this, and unlike      │
+│  previous theories, it was formal enough that it could in         │
+│  principle be programmed.                                         │
+│                                                                   │
+│  # Computational linguistics                                      │
+│                                                                   │
+│  --- Passage 2 (relevance: 0.62) ---                              │
+│  # Cost function                                                  │
+│                                                                   │
+│  # 1.2.8 Linguistics                                              │
+│                                                                   │
+│  # How does language relate to thought?                           │
+│                                                                   │
+│  In 1957, B. F. Skinner published *Verbal Behavior. This was a    │
+│  comprehensive, detailed account of the behaviorist approach to   │
+│  language learning, written by the foremost expert in the field.  │
+│  But curiously, a review of the book became as well known as the  │
+│  book itself, and served to almost kill off interest in           │
+│  behaviorism. The author of the review was the linguist Noam      │
+│  Chomsky, who had just published a book on his own theory,        │
+│  Syntactic Structures*. Chomsky pointed out that the behaviorist  │
+│  theory did not address the notion of creativity in language—it   │
+│  did not explain how children could understand and make up        │
+│  sentences that they had never heard before. Chomsky’s            │
+│  theory—based on syntactic models going back to the Indian        │
+│  linguist Panini (c. 350 BCE)—could explain this, and unlike      │
+│  previous theories, it was formal enough that it could in         │
+│  principle be programmed.                                         │
+│                                                                   │
+│  # Computational linguistics                                      │
+│                                                                   │
+│  --- Passage 3 (relevance: 0.60) ---                              │
+│  Many cultures have myths of humans who ask gods, genies,         │
+│  magicians, or devils for something. Invariably, in these         │
+│  stories, they get what they literally ask for, and then regret   │
+│  it. The third wish, if there is one, is to undo the first two.   │
+│  We will call this the King Midas problem: Midas, a legendary     │
+│  King in Greek mythology, asked that everything he touched        │
+│  should turn to gold, but then regretted it after touching his    │
+│  food, drink, and family members.16                               │
+│                                                                   │
+│  16 Midas would have done better if he had followed basic         │
+│  principles of safety and included an “undo” button and a         │
+│  “pause” button in his wish.                                      │
+│                                                                   │
+│  # King Midas problem                                             │
+│                                                                   │
+│  --- Passage 4 (relevance: 0.60) ---                              │
+│  Many cultures have myths of humans who ask gods, genies,         │
+│  magicians, or devils for something. Invariably, in these         │
+│  stories, they get what they literally ask for, and then regret   │
+│  it. The third wish, if there is one, is to undo the first two.   │
+│  We will call this the King Midas problem: Midas, a legendary     │
+│  King in Greek mythology, asked that everything he touched        │
+│  should turn to gold, but then regretted it after touching his    │
+│  food, drink, and family members.16                               │
+│                                                                   │
+│  16 Midas would have done better if he had followed basic         │
+│  principles of safety and included an “undo” button and a         │
+│  “pause” button in his wish.                                      │
+│                                                                   │
+│  # King Midas problem                                             │
+│                                                                   │
+│  --- Passage 5 (relevance: 0.60) ---                              │
+│  # Assistance game                                                │
+│                                                                   │
+│  # Inverse reinforcement learning                                 │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # Summary                                                        │
+│                                                                   │
+│  This chapter defines AI and establishes the cultural background  │
+│  against which it has developed. Some of the important points     │
+│  are as follows:                                                  │
+│                                                                   │
+│  Different people approach AI with different goals in mind. Two   │
+│  important questions to ask are: Are you concerned with           │
+│  thinking, or behavior? Do you want to model humans, or try to    │
+│  achieve the optimal results?                                     │
+│                                                                   │
+│  According to what we have called the standard model, AI is       │
+│  concerned mainly with rational action. An ideal intelligent      │
+│  agent takes the best possible action in a situation. We study    │
+│  the problem of building agents that are intelligent in this      │
+│  sense.                                                           │
+│                                                                   │
+│  --- Passage 6 (relevance: 0.60) ---                              │
+│  # Assistance game                                                │
+│                                                                   │
+│  # Inverse reinforcement learning                                 │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # Summary                                                        │
+│                                                                   │
+│  This chapter defines AI and establishes the cultural background  │
+│  against which it has developed. Some of the important points     │
+│  are as follows:                                                  │
+│                                                                   │
+│  Different people approach AI with different goals in mind. Two   │
+│  important questions to ask are: Are you concerned with           │
+│  thinking, or behavior? Do you want to model humans, or try to    │
+│  achieve the optimal results?                                     │
+│                                                                   │
+│  According to what we have called the standard model, AI is       │
+│  concerned mainly with rational action. An ideal intelligent      │
+│  agent takes the best possible action in a situation. We study    │
+│  the problem of building agents that are intelligent in this      │
+│  sense.                                                           │
+│                                                                   │
+│  --- Passage 7 (relevance: 0.60) ---                              │
+│  # Utilitarianism                                                 │
+│                                                                   │
+│  In contrast, Immanuel Kant, in 1875 proposed a theory of         │
+│  rule-based or deontological ethics, in which “doing the right    │
+│  thing” is determined not by outcomes but by universal social     │
+│  laws that govern allowable actions, such as “don’t lie” or       │
+│  “don’t kill.” Thus, a utilitarian could tell a white lie if the  │
+│  expected good outweighs the bad, but a Kantian would be bound    │
+│  not to, because lying is inherently wrong. Mill acknowledged     │
+│  the value of rules, but understood them as efficient decision    │
+│  procedures compiled from first-principles reasoning about        │
+│  consequences. Many modern AI systems adopt exactly this          │
+│  approach.                                                        │
+│                                                                   │
+│  # Deontological ethics                                           │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # 1.2.2 Mathematics                                              │
+│                                                                   │
+│  What are the formal rules to draw valid conclusions?             │
+│                                                                   │
+│  What can be computed?                                            │
+│                                                                   │
+│  How do we reason with uncertain information?                     │
+│                                                                   │
+│  --- Passage 8 (relevance: 0.60) ---                              │
+│  # Utilitarianism                                                 │
+│                                                                   │
+│  In contrast, Immanuel Kant, in 1875 proposed a theory of         │
+│  rule-based or deontological ethics, in which “doing the right    │
+│  thing” is determined not by outcomes but by universal social     │
+│  laws that govern allowable actions, such as “don’t lie” or       │
+│  “don’t kill.” Thus, a utilitarian could tell a white lie if the  │
+│  expected good outweighs the bad, but a Kantian would be bound    │
+│  not to, because lying is inherently wrong. Mill acknowledged     │
+│  the value of rules, but understood them as efficient decision    │
+│  procedures compiled from first-principles reasoning about        │
+│  consequences. Many modern AI systems adopt exactly this          │
+│  approach.                                                        │
+│                                                                   │
+│  # Deontological ethics                                           │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # 1.2.2 Mathematics                                              │
+│                                                                   │
+│  What are the formal rules to draw valid conclusions?             │
+│                                                                   │
+│  What can be computed?                                            │
+│                                                                   │
+│  How do we reason with uncertain information?                     │
+│  === END OF RETRIEVED MATERIAL ===                                │
+│                                                                   │
+│  Quiz focus (chapter/topic label for search context):             │
+│  derivatives                                                      │
+│  Difficulty: Medium.                                              │
+│                                                                   │
+│  You MUST create EXACTLY 10 questions in total, with these        │
+│  counts by type:                                                  │
+│  - multiple_choice: 10                                            │
+│  - true_false: 0                                                  │
+│  - short_answer: 0                                                │
+│                                                                   │
+│  Do not add extra questions. Do not omit questions. If you        │
+│  cannot fulfill a type from the passages, still output 10 items:  │
+│  substitute with the closest fair question from the same          │
+│  material, or return JSON with an empty quiz and a short message  │
+│  only if there is truly no usable content.                        │
+│                                                                   │
+│  Use ONLY the retrieved passages above. Output a single JSON      │
+│  object with key 'quiz' (array of exactly 10 objects). Each       │
+│  object MUST include a string field 'type': "mc" | "tf" | "sa".   │
+│                                                                   │
+│  For type "mc":                                                   │
+│  {"type":"mc","question":"...","options":{"A":"...","B":"...","C  │
+│  ":"...","D":"..."},"correct":"A"|"B"|"C"|"D","explanation":"...  │
+│  "}                                                               │
+│  For type "tf": {"type":"tf","question":"... (a single            │
+│  declarative                                                      │
+│  statement)","correct":"true"|"false","explanation":"..."}        │
+│  For type "sa":                                                   │
+│  {"type":"sa","question":"...","sample_answer":"... (ideal        │
+│  concise answer)","explanation":"what a good answer should        │
+│  include"}                                                        │
+│                                                                   │
+│  Order: emit all multiple_choice items first (in order), then     │
+│  all true_false, then all short_answer — total length must be     │
+│  10.                                                              │
+│  ID: 58fdd7db-32c9-44b7-a0e4-b3d172487716                         │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────── 🤖 Agent Started ─────────────────────────╮
+│                                                                   │
+│  Agent: Assessment Agent (Grader)                                 │
+│                                                                   │
+│  Task: === RETRIEVED TEXTBOOK MATERIAL FOR COURSE                 │
+│  'test_course_101' (you MUST base your answer only on this; do    │
+│  not invent other sources) ===                                    │
+│  --- Passage 1 (relevance: 0.62) ---                              │
+│  # Cost function                                                  │
+│                                                                   │
+│  # 1.2.8 Linguistics                                              │
+│                                                                   │
+│  # How does language relate to thought?                           │
+│                                                                   │
+│  In 1957, B. F. Skinner published *Verbal Behavior. This was a    │
+│  comprehensive, detailed account of the behaviorist approach to   │
+│  language learning, written by the foremost expert in the field.  │
+│  But curiously, a review of the book became as well known as the  │
+│  book itself, and served to almost kill off interest in           │
+│  behaviorism. The author of the review was the linguist Noam      │
+│  Chomsky, who had just published a book on his own theory,        │
+│  Syntactic Structures*. Chomsky pointed out that the behaviorist  │
+│  theory did not address the notion of creativity in language—it   │
+│  did not explain how children could understand and make up        │
+│  sentences that they had never heard before. Chomsky’s            │
+│  theory—based on syntactic models going back to the Indian        │
+│  linguist Panini (c. 350 BCE)—could explain this, and unlike      │
+│  previous theories, it was formal enough that it could in         │
+│  principle be programmed.                                         │
+│                                                                   │
+│  # Computational linguistics                                      │
+│                                                                   │
+│  --- Passage 2 (relevance: 0.62) ---                              │
+│  # Cost function                                                  │
+│                                                                   │
+│  # 1.2.8 Linguistics                                              │
+│                                                                   │
+│  # How does language relate to thought?                           │
+│                                                                   │
+│  In 1957, B. F. Skinner published *Verbal Behavior. This was a    │
+│  comprehensive, detailed account of the behaviorist approach to   │
+│  language learning, written by the foremost expert in the field.  │
+│  But curiously, a review of the book became as well known as the  │
+│  book itself, and served to almost kill off interest in           │
+│  behaviorism. The author of the review was the linguist Noam      │
+│  Chomsky, who had just published a book on his own theory,        │
+│  Syntactic Structures*. Chomsky pointed out that the behaviorist  │
+│  theory did not address the notion of creativity in language—it   │
+│  did not explain how children could understand and make up        │
+│  sentences that they had never heard before. Chomsky’s            │
+│  theory—based on syntactic models going back to the Indian        │
+│  linguist Panini (c. 350 BCE)—could explain this, and unlike      │
+│  previous theories, it was formal enough that it could in         │
+│  principle be programmed.                                         │
+│                                                                   │
+│  # Computational linguistics                                      │
+│                                                                   │
+│  --- Passage 3 (relevance: 0.60) ---                              │
+│  Many cultures have myths of humans who ask gods, genies,         │
+│  magicians, or devils for something. Invariably, in these         │
+│  stories, they get what they literally ask for, and then regret   │
+│  it. The third wish, if there is one, is to undo the first two.   │
+│  We will call this the King Midas problem: Midas, a legendary     │
+│  King in Greek mythology, asked that everything he touched        │
+│  should turn to gold, but then regretted it after touching his    │
+│  food, drink, and family members.16                               │
+│                                                                   │
+│  16 Midas would have done better if he had followed basic         │
+│  principles of safety and included an “undo” button and a         │
+│  “pause” button in his wish.                                      │
+│                                                                   │
+│  # King Midas problem                                             │
+│                                                                   │
+│  --- Passage 4 (relevance: 0.60) ---                              │
+│  Many cultures have myths of humans who ask gods, genies,         │
+│  magicians, or devils for something. Invariably, in these         │
+│  stories, they get what they literally ask for, and then regret   │
+│  it. The third wish, if there is one, is to undo the first two.   │
+│  We will call this the King Midas problem: Midas, a legendary     │
+│  King in Greek mythology, asked that everything he touched        │
+│  should turn to gold, but then regretted it after touching his    │
+│  food, drink, and family members.16                               │
+│                                                                   │
+│  16 Midas would have done better if he had followed basic         │
+│  principles of safety and included an “undo” button and a         │
+│  “pause” button in his wish.                                      │
+│                                                                   │
+│  # King Midas problem                                             │
+│                                                                   │
+│  --- Passage 5 (relevance: 0.60) ---                              │
+│  # Assistance game                                                │
+│                                                                   │
+│  # Inverse reinforcement learning                                 │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # Summary                                                        │
+│                                                                   │
+│  This chapter defines AI and establishes the cultural background  │
+│  against which it has developed. Some of the important points     │
+│  are as follows:                                                  │
+│                                                                   │
+│  Different people approach AI with different goals in mind. Two   │
+│  important questions to ask are: Are you concerned with           │
+│  thinking, or behavior? Do you want to model humans, or try to    │
+│  achieve the optimal results?                                     │
+│                                                                   │
+│  According to what we have called the standard model, AI is       │
+│  concerned mainly with rational action. An ideal intelligent      │
+│  agent takes the best possible action in a situation. We study    │
+│  the problem of building agents that are intelligent in this      │
+│  sense.                                                           │
+│                                                                   │
+│  --- Passage 6 (relevance: 0.60) ---                              │
+│  # Assistance game                                                │
+│                                                                   │
+│  # Inverse reinforcement learning                                 │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # Summary                                                        │
+│                                                                   │
+│  This chapter defines AI and establishes the cultural background  │
+│  against which it has developed. Some of the important points     │
+│  are as follows:                                                  │
+│                                                                   │
+│  Different people approach AI with different goals in mind. Two   │
+│  important questions to ask are: Are you concerned with           │
+│  thinking, or behavior? Do you want to model humans, or try to    │
+│  achieve the optimal results?                                     │
+│                                                                   │
+│  According to what we have called the standard model, AI is       │
+│  concerned mainly with rational action. An ideal intelligent      │
+│  agent takes the best possible action in a situation. We study    │
+│  the problem of building agents that are intelligent in this      │
+│  sense.                                                           │
+│                                                                   │
+│  --- Passage 7 (relevance: 0.60) ---                              │
+│  # Utilitarianism                                                 │
+│                                                                   │
+│  In contrast, Immanuel Kant, in 1875 proposed a theory of         │
+│  rule-based or deontological ethics, in which “doing the right    │
+│  thing” is determined not by outcomes but by universal social     │
+│  laws that govern allowable actions, such as “don’t lie” or       │
+│  “don’t kill.” Thus, a utilitarian could tell a white lie if the  │
+│  expected good outweighs the bad, but a Kantian would be bound    │
+│  not to, because lying is inherently wrong. Mill acknowledged     │
+│  the value of rules, but understood them as efficient decision    │
+│  procedures compiled from first-principles reasoning about        │
+│  consequences. Many modern AI systems adopt exactly this          │
+│  approach.                                                        │
+│                                                                   │
+│  # Deontological ethics                                           │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # 1.2.2 Mathematics                                              │
+│                                                                   │
+│  What are the formal rules to draw valid conclusions?             │
+│                                                                   │
+│  What can be computed?                                            │
+│                                                                   │
+│  How do we reason with uncertain information?                     │
+│                                                                   │
+│  --- Passage 8 (relevance: 0.60) ---                              │
+│  # Utilitarianism                                                 │
+│                                                                   │
+│  In contrast, Immanuel Kant, in 1875 proposed a theory of         │
+│  rule-based or deontological ethics, in which “doing the right    │
+│  thing” is determined not by outcomes but by universal social     │
+│  laws that govern allowable actions, such as “don’t lie” or       │
+│  “don’t kill.” Thus, a utilitarian could tell a white lie if the  │
+│  expected good outweighs the bad, but a Kantian would be bound    │
+│  not to, because lying is inherently wrong. Mill acknowledged     │
+│  the value of rules, but understood them as efficient decision    │
+│  procedures compiled from first-principles reasoning about        │
+│  consequences. Many modern AI systems adopt exactly this          │
+│  approach.                                                        │
+│                                                                   │
+│  # Deontological ethics                                           │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # 1.2.2 Mathematics                                              │
+│                                                                   │
+│  What are the formal rules to draw valid conclusions?             │
+│                                                                   │
+│  What can be computed?                                            │
+│                                                                   │
+│  How do we reason with uncertain information?                     │
+│  === END OF RETRIEVED MATERIAL ===                                │
+│                                                                   │
+│  Quiz focus (chapter/topic label for search context):             │
+│  derivatives                                                      │
+│  Difficulty: Medium.                                              │
+│                                                                   │
+│  You MUST create EXACTLY 10 questions in total, with these        │
+│  counts by type:                                                  │
+│  - multiple_choice: 10                                            │
+│  - true_false: 0                                                  │
+│  - short_answer: 0                                                │
+│                                                                   │
+│  Do not add extra questions. Do not omit questions. If you        │
+│  cannot fulfill a type from the passages, still output 10 items:  │
+│  substitute with the closest fair question from the same          │
+│  material, or return JSON with an empty quiz and a short message  │
+│  only if there is truly no usable content.                        │
+│                                                                   │
+│  Use ONLY the retrieved passages above. Output a single JSON      │
+│  object with key 'quiz' (array of exactly 10 objects). Each       │
+│  object MUST include a string field 'type': "mc" | "tf" | "sa".   │
+│                                                                   │
+│  For type "mc":                                                   │
+│  {"type":"mc","question":"...","options":{"A":"...","B":"...","C  │
+│  ":"...","D":"..."},"correct":"A"|"B"|"C"|"D","explanation":"...  │
+│  "}                                                               │
+│  For type "tf": {"type":"tf","question":"... (a single            │
+│  declarative                                                      │
+│  statement)","correct":"true"|"false","explanation":"..."}        │
+│  For type "sa":                                                   │
+│  {"type":"sa","question":"...","sample_answer":"... (ideal        │
+│  concise answer)","explanation":"what a good answer should        │
+│  include"}                                                        │
+│                                                                   │
+│  Order: emit all multiple_choice items first (in order), then     │
+│  all true_false, then all short_answer — total length must be     │
+│  10.                                                              │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── ✅ Agent Final Answer ──────────────────────╮
+│                                                                   │
+│  Agent: Assessment Agent (Grader)                                 │
+│                                                                   │
+│  Final Answer:                                                    │
+│  ```json                                                          │
+│  {                                                                │
+│    "quiz": [                                                      │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "Which linguist published a comprehensive      │
+│  account of the behaviorist approach to language learning in      │
+│  1957 titled *Verbal Behavior*?",                                 │
+│        "options": {                                               │
+│          "A": "Noam Chomsky",                                     │
+│          "B": "B. F. Skinner",                                    │
+│          "C": "Panini",                                           │
+│          "D": "Immanuel Kant"                                     │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 1 states, 'In 1957, B. F. Skinner  │
+│  published *Verbal Behavior. This was a comprehensive, detailed   │
+│  account of the behaviorist approach to language learning...'"    │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "What was Noam Chomsky's primary criticism of  │
+│  the behaviorist theory of language learning, as detailed in his  │
+│  review of *Verbal Behavior*?",                                   │
+│        "options": {                                               │
+│          "A": "It was too formal and complex to be programmed.",  │
+│          "B": "It did not address the notion of creativity in     │
+│  language.",                                                      │
+│          "C": "It relied too heavily on syntactic models from     │
+│  ancient linguists.",                                             │
+│          "D": "It failed to explain how adults learn new          │
+│  languages."                                                      │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 1 explains, 'Chomsky pointed out   │
+│  that the behaviorist theory did not address the notion of        │
+│  creativity in language—it did not explain how children could     │
+│  understand and make up sentences that they had never heard       │
+│  before.'"                                                        │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "Noam Chomsky's theory, described in           │
+│  *Syntactic Structures*, was noted for what characteristic that   │
+│  set it apart from previous theories?",                           │
+│        "options": {                                               │
+│          "A": "It was based purely on observable behavior.",      │
+│          "B": "It was less detailed than Skinner's approach.",    │
+│          "C": "It was formal enough that it could in principle    │
+│  be programmed.",                                                 │
+│          "D": "It focused solely on language acquisition in       │
+│  adults."                                                         │
+│        },                                                         │
+│        "correct": "C",                                            │
+│        "explanation": "Passage 1 states, 'Chomsky’s theory...     │
+│  unlike previous theories, it was formal enough that it could in  │
+│  principle be programmed.'"                                       │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "The King Midas problem is used in the text    │
+│  to illustrate what common issue in requests or commands?",       │
+│        "options": {                                               │
+│          "A": "The importance of historical myths in modern       │
+│  culture.",                                                       │
+│          "B": "The difficulty in predicting long-term             │
+│  consequences of actions.",                                       │
+│          "C": "The regret that often follows when one gets        │
+│  exactly what they literally ask for.",                           │
+│          "D": "The ethical dilemma of choosing between wealth     │
+│  and family."                                                     │
+│        },                                                         │
+│        "correct": "C",                                            │
+│        "explanation": "Passage 3 describes the King Midas         │
+│  problem by stating, 'Invariably, in these stories, they get      │
+│  what they literally ask for, and then regret it.'"               │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "According to the passage, what two features   │
+│  would have improved King Midas's wish, from a safety             │
+│  perspective?",                                                   │
+│        "options": {                                               │
+│          "A": "A 'reset' button and a 'time-travel' button.",     │
+│          "B": "A 'save' button and a 'load' button.",             │
+│          "C": "An 'undo' button and a 'pause' button.",           │
+│          "D": "A 'forward' button and a 'reverse' button."        │
+│        },                                                         │
+│        "correct": "C",                                            │
+│        "explanation": "Passage 4 suggests, 'Midas would have      │
+│  done better if he had followed basic principles of safety and    │
+│  included an “undo” button and a “pause” button in his wish.'"    │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "When approaching AI, what two important       │
+│  pairs of questions are highlighted as distinguishing different   │
+│  goals?",                                                         │
+│        "options": {                                               │
+│          "A": "Are you concerned with theory, or application? Do  │
+│  you want to optimize for speed, or accuracy?",                   │
+│          "B": "Are you concerned with thinking, or behavior? Do   │
+│  you want to model humans, or try to achieve the optimal          │
+│  results?",                                                       │
+│          "C": "Are you concerned with hardware, or software? Do   │
+│  you want to develop for consumers, or industry?",                │
+│          "D": "Are you concerned with ethics, or efficiency? Do   │
+│  you want to build for the present, or the future?"               │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 5 states, 'Two important           │
+│  questions to ask are: Are you concerned with thinking, or        │
+│  behavior? Do you want to model humans, or try to achieve the     │
+│  optimal results?'"                                               │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "According to what the text calls the          │
+│  'standard model' of AI, what is AI primarily concerned with?",   │
+│        "options": {                                               │
+│          "A": "Emotional intelligence and empathy.",              │
+│          "B": "Rational action.",                                 │
+│          "C": "Human-like thought processes.",                    │
+│          "D": "The ability to learn from experience."             │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 5 says, 'According to what we      │
+│  have called the standard model, AI is concerned mainly with      │
+│  rational action.'"                                               │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "Which philosopher proposed a theory of        │
+│  rule-based or deontological ethics?",                            │
+│        "options": {                                               │
+│          "A": "B. F. Skinner",                                    │
+│          "B": "Noam Chomsky",                                     │
+│          "C": "John Stuart Mill",                                 │
+│          "D": "Immanuel Kant"                                     │
+│        },                                                         │
+│        "correct": "D",                                            │
+│        "explanation": "Passage 7 states, 'In contrast, Immanuel   │
+│  Kant, in 1875 proposed a theory of rule-based or deontological   │
+│  ethics...'"                                                      │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "How would a utilitarian typically view the    │
+│  act of telling a 'white lie' compared to a Kantian?",            │
+│        "options": {                                               │
+│          "A": "Both would agree that lying is always wrong,       │
+│  regardless of outcome.",                                         │
+│          "B": "A utilitarian could tell a white lie if the        │
+│  expected good outweighs the bad, while a Kantian would be bound  │
+│  not to.",                                                        │
+│          "C": "Both would agree that a white lie is permissible   │
+│  if it prevents harm.",                                           │
+│          "D": "A utilitarian would never lie, but a Kantian       │
+│  might if it upholds a universal social law."                     │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 7 explains, 'Thus, a utilitarian   │
+│  could tell a white lie if the expected good outweighs the bad,   │
+│  but a Kantian would be bound not to, because lying is            │
+│  inherently wrong.'"                                              │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "John Stuart Mill acknowledged the value of    │
+│  rules, but understood them as what?",                            │
+│        "options": {                                               │
+│          "A": "Rigid, unbreakable moral imperatives given by      │
+│  divine authority.",                                              │
+│          "B": "Efficient decision procedures compiled from        │
+│  first-principles reasoning about consequences.",                 │
+│          "C": "Arbitrary social conventions with no inherent      │
+│  ethical basis.",                                                 │
+│          "D": "Innate knowledge structures similar to Chomsky's   │
+│  linguistic theories."                                            │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 7 notes, 'Mill acknowledged the    │
+│  value of rules, but understood them as efficient decision        │
+│  procedures compiled from first-principles reasoning about        │
+│  consequences.'"                                                  │
+│      }                                                            │
+│    ]                                                              │
+│  }                                                                │
+│  ```                                                              │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 📋 Task Completion ────────────────────────╮
+│                                                                   │
+│  Task Completed                                                   │
+│  Name: === RETRIEVED TEXTBOOK MATERIAL FOR COURSE                 │
+│  'test_course_101' (you MUST base your answer only on this; do    │
+│  not invent other sources) ===                                    │
+│  --- Passage 1 (relevance: 0.62) ---                              │
+│  # Cost function                                                  │
+│                                                                   │
+│  # 1.2.8 Linguistics                                              │
+│                                                                   │
+│  # How does language relate to thought?                           │
+│                                                                   │
+│  In 1957, B. F. Skinner published *Verbal Behavior. This was a    │
+│  comprehensive, detailed account of the behaviorist approach to   │
+│  language learning, written by the foremost expert in the field.  │
+│  But curiously, a review of the book became as well known as the  │
+│  book itself, and served to almost kill off interest in           │
+│  behaviorism. The author of the review was the linguist Noam      │
+│  Chomsky, who had just published a book on his own theory,        │
+│  Syntactic Structures*. Chomsky pointed out that the behaviorist  │
+│  theory did not address the notion of creativity in language—it   │
+│  did not explain how children could understand and make up        │
+│  sentences that they had never heard before. Chomsky’s            │
+│  theory—based on syntactic models going back to the Indian        │
+│  linguist Panini (c. 350 BCE)—could explain this, and unlike      │
+│  previous theories, it was formal enough that it could in         │
+│  principle be programmed.                                         │
+│                                                                   │
+│  # Computational linguistics                                      │
+│                                                                   │
+│  --- Passage 2 (relevance: 0.62) ---                              │
+│  # Cost function                                                  │
+│                                                                   │
+│  # 1.2.8 Linguistics                                              │
+│                                                                   │
+│  # How does language relate to thought?                           │
+│                                                                   │
+│  In 1957, B. F. Skinner published *Verbal Behavior. This was a    │
+│  comprehensive, detailed account of the behaviorist approach to   │
+│  language learning, written by the foremost expert in the field.  │
+│  But curiously, a review of the book became as well known as the  │
+│  book itself, and served to almost kill off interest in           │
+│  behaviorism. The author of the review was the linguist Noam      │
+│  Chomsky, who had just published a book on his own theory,        │
+│  Syntactic Structures*. Chomsky pointed out that the behaviorist  │
+│  theory did not address the notion of creativity in language—it   │
+│  did not explain how children could understand and make up        │
+│  sentences that they had never heard before. Chomsky’s            │
+│  theory—based on syntactic models going back to the Indian        │
+│  linguist Panini (c. 350 BCE)—could explain this, and unlike      │
+│  previous theories, it was formal enough that it could in         │
+│  principle be programmed.                                         │
+│                                                                   │
+│  # Computational linguistics                                      │
+│                                                                   │
+│  --- Passage 3 (relevance: 0.60) ---                              │
+│  Many cultures have myths of humans who ask gods, genies,         │
+│  magicians, or devils for something. Invariably, in these         │
+│  stories, they get what they literally ask for, and then regret   │
+│  it. The third wish, if there is one, is to undo the first two.   │
+│  We will call this the King Midas problem: Midas, a legendary     │
+│  King in Greek mythology, asked that everything he touched        │
+│  should turn to gold, but then regretted it after touching his    │
+│  food, drink, and family members.16                               │
+│                                                                   │
+│  16 Midas would have done better if he had followed basic         │
+│  principles of safety and included an “undo” button and a         │
+│  “pause” button in his wish.                                      │
+│                                                                   │
+│  # King Midas problem                                             │
+│                                                                   │
+│  --- Passage 4 (relevance: 0.60) ---                              │
+│  Many cultures have myths of humans who ask gods, genies,         │
+│  magicians, or devils for something. Invariably, in these         │
+│  stories, they get what they literally ask for, and then regret   │
+│  it. The third wish, if there is one, is to undo the first two.   │
+│  We will call this the King Midas problem: Midas, a legendary     │
+│  King in Greek mythology, asked that everything he touched        │
+│  should turn to gold, but then regretted it after touching his    │
+│  food, drink, and family members.16                               │
+│                                                                   │
+│  16 Midas would have done better if he had followed basic         │
+│  principles of safety and included an “undo” button and a         │
+│  “pause” button in his wish.                                      │
+│                                                                   │
+│  # King Midas problem                                             │
+│                                                                   │
+│  --- Passage 5 (relevance: 0.60) ---                              │
+│  # Assistance game                                                │
+│                                                                   │
+│  # Inverse reinforcement learning                                 │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # Summary                                                        │
+│                                                                   │
+│  This chapter defines AI and establishes the cultural background  │
+│  against which it has developed. Some of the important points     │
+│  are as follows:                                                  │
+│                                                                   │
+│  Different people approach AI with different goals in mind. Two   │
+│  important questions to ask are: Are you concerned with           │
+│  thinking, or behavior? Do you want to model humans, or try to    │
+│  achieve the optimal results?                                     │
+│                                                                   │
+│  According to what we have called the standard model, AI is       │
+│  concerned mainly with rational action. An ideal intelligent      │
+│  agent takes the best possible action in a situation. We study    │
+│  the problem of building agents that are intelligent in this      │
+│  sense.                                                           │
+│                                                                   │
+│  --- Passage 6 (relevance: 0.60) ---                              │
+│  # Assistance game                                                │
+│                                                                   │
+│  # Inverse reinforcement learning                                 │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # Summary                                                        │
+│                                                                   │
+│  This chapter defines AI and establishes the cultural background  │
+│  against which it has developed. Some of the important points     │
+│  are as follows:                                                  │
+│                                                                   │
+│  Different people approach AI with different goals in mind. Two   │
+│  important questions to ask are: Are you concerned with           │
+│  thinking, or behavior? Do you want to model humans, or try to    │
+│  achieve the optimal results?                                     │
+│                                                                   │
+│  According to what we have called the standard model, AI is       │
+│  concerned mainly with rational action. An ideal intelligent      │
+│  agent takes the best possible action in a situation. We study    │
+│  the problem of building agents that are intelligent in this      │
+│  sense.                                                           │
+│                                                                   │
+│  --- Passage 7 (relevance: 0.60) ---                              │
+│  # Utilitarianism                                                 │
+│                                                                   │
+│  In contrast, Immanuel Kant, in 1875 proposed a theory of         │
+│  rule-based or deontological ethics, in which “doing the right    │
+│  thing” is determined not by outcomes but by universal social     │
+│  laws that govern allowable actions, such as “don’t lie” or       │
+│  “don’t kill.” Thus, a utilitarian could tell a white lie if the  │
+│  expected good outweighs the bad, but a Kantian would be bound    │
+│  not to, because lying is inherently wrong. Mill acknowledged     │
+│  the value of rules, but understood them as efficient decision    │
+│  procedures compiled from first-principles reasoning about        │
+│  consequences. Many modern AI systems adopt exactly this          │
+│  approach.                                                        │
+│                                                                   │
+│  # Deontological ethics                                           │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # 1.2.2 Mathematics                                              │
+│                                                                   │
+│  What are the formal rules to draw valid conclusions?             │
+│                                                                   │
+│  What can be computed?                                            │
+│                                                                   │
+│  How do we reason with uncertain information?                     │
+│                                                                   │
+│  --- Passage 8 (relevance: 0.60) ---                              │
+│  # Utilitarianism                                                 │
+│                                                                   │
+│  In contrast, Immanuel Kant, in 1875 proposed a theory of         │
+│  rule-based or deontological ethics, in which “doing the right    │
+│  thing” is determined not by outcomes but by universal social     │
+│  laws that govern allowable actions, such as “don’t lie” or       │
+│  “don’t kill.” Thus, a utilitarian could tell a white lie if the  │
+│  expected good outweighs the bad, but a Kantian would be bound    │
+│  not to, because lying is inherently wrong. Mill acknowledged     │
+│  the value of rules, but understood them as efficient decision    │
+│  procedures compiled from first-principles reasoning about        │
+│  consequences. Many modern AI systems adopt exactly this          │
+│  approach.                                                        │
+│                                                                   │
+│  # Deontological ethics                                           │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│                                                                   │
+│  # 1.2.2 Mathematics                                              │
+│                                                                   │
+│  What are the formal rules to draw valid conclusions?             │
+│                                                                   │
+│  What can be computed?                                            │
+│                                                                   │
+│  How do we reason with uncertain information?                     │
+│  === END OF RETRIEVED MATERIAL ===                                │
+│                                                                   │
+│  Quiz focus (chapter/topic label for search context):             │
+│  derivatives                                                      │
+│  Difficulty: Medium.                                              │
+│                                                                   │
+│  You MUST create EXACTLY 10 questions in total, with these        │
+│  counts by type:                                                  │
+│  - multiple_choice: 10                                            │
+│  - true_false: 0                                                  │
+│  - short_answer: 0                                                │
+│                                                                   │
+│  Do not add extra questions. Do not omit questions. If you        │
+│  cannot fulfill a type from the passages, still output 10 items:  │
+│  substitute with the closest fair question from the same          │
+│  material, or return JSON with an empty quiz and a short message  │
+│  only if there is truly no usable content.                        │
+│                                                                   │
+│  Use ONLY the retrieved passages above. Output a single JSON      │
+│  object with key 'quiz' (array of exactly 10 objects). Each       │
+│  object MUST include a string field 'type': "mc" | "tf" | "sa".   │
+│                                                                   │
+│  For type "mc":                                                   │
+│  {"type":"mc","question":"...","options":{"A":"...","B":"...","C  │
+│  ":"...","D":"..."},"correct":"A"|"B"|"C"|"D","explanation":"...  │
+│  "}                                                               │
+│  For type "tf": {"type":"tf","question":"... (a single            │
+│  declarative                                                      │
+│  statement)","correct":"true"|"false","explanation":"..."}        │
+│  For type "sa":                                                   │
+│  {"type":"sa","question":"...","sample_answer":"... (ideal        │
+│  concise answer)","explanation":"what a good answer should        │
+│  include"}                                                        │
+│                                                                   │
+│  Order: emit all multiple_choice items first (in order), then     │
+│  all true_false, then all short_answer — total length must be     │
+│  10.                                                              │
+│  Agent: Assessment Agent (Grader)                                 │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+Crew kickoff took: 15.34 seconds
+Total time: 16.52 seconds
+╭───────────────────────── Crew Completion ─────────────────────────╮
+│                                                                   │
+│  Crew Execution Completed                                         │
+│  Name: crew                                                       │
+│  ID: e7b20a67-3e3a-46af-ae2d-ba3840778e7d                         │
+│  Final Output: ```json                                            │
+│  {                                                                │
+│    "quiz": [                                                      │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "Which linguist published a comprehensive      │
+│  account of the behaviorist approach to language learning in      │
+│  1957 titled *Verbal Behavior*?",                                 │
+│        "options": {                                               │
+│          "A": "Noam Chomsky",                                     │
+│          "B": "B. F. Skinner",                                    │
+│          "C": "Panini",                                           │
+│          "D": "Immanuel Kant"                                     │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 1 states, 'In 1957, B. F. Skinner  │
+│  published *Verbal Behavior. This was a comprehensive, detailed   │
+│  account of the behaviorist approach to language learning...'"    │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "What was Noam Chomsky's primary criticism of  │
+│  the behaviorist theory of language learning, as detailed in his  │
+│  review of *Verbal Behavior*?",                                   │
+│        "options": {                                               │
+│          "A": "It was too formal and complex to be programmed.",  │
+│          "B": "It did not address the notion of creativity in     │
+│  language.",                                                      │
+│          "C": "It relied too heavily on syntactic models from     │
+│  ancient linguists.",                                             │
+│          "D": "It failed to explain how adults learn new          │
+│  languages."                                                      │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 1 explains, 'Chomsky pointed out   │
+│  that the behaviorist theory did not address the notion of        │
+│  creativity in language—it did not explain how children could     │
+│  understand and make up sentences that they had never heard       │
+│  before.'"                                                        │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "Noam Chomsky's theory, described in           │
+│  *Syntactic Structures*, was noted for what characteristic that   │
+│  set it apart from previous theories?",                           │
+│        "options": {                                               │
+│          "A": "It was based purely on observable behavior.",      │
+│          "B": "It was less detailed than Skinner's approach.",    │
+│          "C": "It was formal enough that it could in principle    │
+│  be programmed.",                                                 │
+│          "D": "It focused solely on language acquisition in       │
+│  adults."                                                         │
+│        },                                                         │
+│        "correct": "C",                                            │
+│        "explanation": "Passage 1 states, 'Chomsky’s theory...     │
+│  unlike previous theories, it was formal enough that it could in  │
+│  principle be programmed.'"                                       │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "The King Midas problem is used in the text    │
+│  to illustrate what common issue in requests or commands?",       │
+│        "options": {                                               │
+│          "A": "The importance of historical myths in modern       │
+│  culture.",                                                       │
+│          "B": "The difficulty in predicting long-term             │
+│  consequences of actions.",                                       │
+│          "C": "The regret that often follows when one gets        │
+│  exactly what they literally ask for.",                           │
+│          "D": "The ethical dilemma of choosing between wealth     │
+│  and family."                                                     │
+│        },                                                         │
+│        "correct": "C",                                            │
+│        "explanation": "Passage 3 describes the King Midas         │
+│  problem by stating, 'Invariably, in these stories, they get      │
+│  what they literally ask for, and then regret it.'"               │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "According to the passage, what two features   │
+│  would have improved King Midas's wish, from a safety             │
+│  perspective?",                                                   │
+│        "options": {                                               │
+│          "A": "A 'reset' button and a 'time-travel' button.",     │
+│          "B": "A 'save' button and a 'load' button.",             │
+│          "C": "An 'undo' button and a 'pause' button.",           │
+│          "D": "A 'forward' button and a 'reverse' button."        │
+│        },                                                         │
+│        "correct": "C",                                            │
+│        "explanation": "Passage 4 suggests, 'Midas would have      │
+│  done better if he had followed basic principles of safety and    │
+│  included an “undo” button and a “pause” button in his wish.'"    │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "When approaching AI, what two important       │
+│  pairs of questions are highlighted as distinguishing different   │
+│  goals?",                                                         │
+│        "options": {                                               │
+│          "A": "Are you concerned with theory, or application? Do  │
+│  you want to optimize for speed, or accuracy?",                   │
+│          "B": "Are you concerned with thinking, or behavior? Do   │
+│  you want to model humans, or try to achieve the optimal          │
+│  results?",                                                       │
+│          "C": "Are you concerned with hardware, or software? Do   │
+│  you want to develop for consumers, or industry?",                │
+│          "D": "Are you concerned with ethics, or efficiency? Do   │
+│  you want to build for the present, or the future?"               │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 5 states, 'Two important           │
+│  questions to ask are: Are you concerned with thinking, or        │
+│  behavior? Do you want to model humans, or try to achieve the     │
+│  optimal results?'"                                               │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "According to what the text calls the          │
+│  'standard model' of AI, what is AI primarily concerned with?",   │
+│        "options": {                                               │
+│          "A": "Emotional intelligence and empathy.",              │
+│          "B": "Rational action.",                                 │
+│          "C": "Human-like thought processes.",                    │
+│          "D": "The ability to learn from experience."             │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 5 says, 'According to what we      │
+│  have called the standard model, AI is concerned mainly with      │
+│  rational action.'"                                               │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "Which philosopher proposed a theory of        │
+│  rule-based or deontological ethics?",                            │
+│        "options": {                                               │
+│          "A": "B. F. Skinner",                                    │
+│          "B": "Noam Chomsky",                                     │
+│          "C": "John Stuart Mill",                                 │
+│          "D": "Immanuel Kant"                                     │
+│        },                                                         │
+│        "correct": "D",                                            │
+│        "explanation": "Passage 7 states, 'In contrast, Immanuel   │
+│  Kant, in 1875 proposed a theory of rule-based or deontological   │
+│  ethics...'"                                                      │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "How would a utilitarian typically view the    │
+│  act of telling a 'white lie' compared to a Kantian?",            │
+│        "options": {                                               │
+│          "A": "Both would agree that lying is always wrong,       │
+│  regardless of outcome.",                                         │
+│          "B": "A utilitarian could tell a white lie if the        │
+│  expected good outweighs the bad, while a Kantian would be bound  │
+│  not to.",                                                        │
+│          "C": "Both would agree that a white lie is permissible   │
+│  if it prevents harm.",                                           │
+│          "D": "A utilitarian would never lie, but a Kantian       │
+│  might if it upholds a universal social law."                     │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 7 explains, 'Thus, a utilitarian   │
+│  could tell a white lie if the expected good outweighs the bad,   │
+│  but a Kantian would be bound not to, because lying is            │
+│  inherently wrong.'"                                              │
+│      },                                                           │
+│      {                                                            │
+│        "type": "mc",                                              │
+│        "question": "John Stuart Mill acknowledged the value of    │
+│  rules, but understood them as what?",                            │
+│        "options": {                                               │
+│          "A": "Rigid, unbreakable moral imperatives given by      │
+│  divine authority.",                                              │
+│          "B": "Efficient decision procedures compiled from        │
+│  first-principles reasoning about consequences.",                 │
+│          "C": "Arbitrary social conventions with no inherent      │
+│  ethical basis.",                                                 │
+│          "D": "Innate knowledge structures similar to Chomsky's   │
+│  linguistic theories."                                            │
+│        },                                                         │
+│        "correct": "B",                                            │
+│        "explanation": "Passage 7 notes, 'Mill acknowledged the    │
+│  value of rules, but understood them as efficient decision        │
+│  procedures compiled from first-principles reasoning about        │
+│  consequences.'"                                                  │
+│      }                                                            │
+│    ]                                                              │
+│  }                                                                │
+│  ```                                                              │
+│                                                                   │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────── Tracing Status ──────────────────────────╮
+│                                                                   │
+│  Info: Tracing is disabled.                                       │
+│                                                                   │
+│  To enable tracing, do any one of these:                          │
+│  • Set tracing=True in your Crew/Flow code                        │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env file    │
+│  • Run: crewai traces enable                                      │
+│                                                                   │
+╰───────────────────────────────────────────────────────────────────╯

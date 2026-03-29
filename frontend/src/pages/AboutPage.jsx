@@ -1,22 +1,39 @@
 import { PageShell } from '../components/PageShell'
 import { Link } from 'react-router-dom'
 
+const IconStudent = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+)
+const IconAccess = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+)
+const IconInnovation = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.9 1.2 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+)
+const IconPrivacy = ({ className }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+)
+
 const values = [
   {
     title: 'Student-focused',
     text: 'Workflows mirror real study sessions — not generic chat demos.',
+    icon: <IconStudent className="h-6 w-6" />,
   },
   {
     title: 'Accessible learning',
     text: 'Plain language, guided paths, and support for many learning styles.',
+    icon: <IconAccess className="h-6 w-6" />,
   },
   {
     title: 'Innovation',
     text: 'Agents collaborate behind one simple experience tuned for freshmen.',
+    icon: <IconInnovation className="h-6 w-6" />,
   },
   {
     title: 'Privacy first',
     text: 'Course context stays scoped to learning — review policies before sharing personal data.',
+    icon: <IconPrivacy className="h-6 w-6" />,
   },
 ]
 
@@ -87,7 +104,7 @@ export default function AboutPage() {
             {values.map((v) => (
               <li key={v.title} className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
                 <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-usf-green text-white">
-                  ●
+                  {v.icon}
                 </span>
                 <h3 className="mt-4 font-semibold text-slate-900">{v.title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{v.text}</p>

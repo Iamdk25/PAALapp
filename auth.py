@@ -1,6 +1,7 @@
 import os
 import httpx
 import jwt
+import functools
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from dotenv import load_dotenv
@@ -12,6 +13,7 @@ CLERK_JWKS_URL = os.getenv("CLERK_JWKS_URL")
 
 security = HTTPBearer()
 
+@functools.lru_cache(maxsize=1)
 def get_clerk_jwks():
     """Fetch the JSON Web Key Set from your Clerk Frontend API."""
     if not CLERK_JWKS_URL:
