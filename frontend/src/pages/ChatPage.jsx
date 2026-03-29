@@ -11,8 +11,10 @@ import { parseTutorPayload } from '../lib/parseAgent'
 import { toChatHistory } from '../lib/chatHistory'
 import { loadChats, saveChats } from '../lib/storage'
 import { loadQuizHistory } from '../lib/storage'
+import { usePaalStorageScope } from '../providers/StorageScopeProvider.jsx'
 
 export default function ChatPage() {
+  const { scopeId } = usePaalStorageScope()
   const { getToken } = usePaalApi()
   const { courses, loading: coursesLoading, error: coursesError, refetch } = useCourses()
   const [searchParams] = useSearchParams()
@@ -78,7 +80,7 @@ export default function ChatPage() {
   const [loading, setLoading] = useState(null)
   const [error, setError] = useState('')
   const [recentList, setRecentList] = useState(() =>
-    Object.values(loadChats()).sort((a, b) => (b.updatedAt ?? 0) - (a.updatedAt ?? 0)),
+    Object.values(loadChats(scopeId)).sort((a, b) => (b.updatedAt ?? 0) - (a.updatedAt ?? 0)),
   )
 
   const messagesRef = useRef(messages)
@@ -88,12 +90,12 @@ export default function ChatPage() {
 
   const refreshRecentList = useCallback(() => {
     setRecentList(
-      Object.values(loadChats()).sort((a, b) => (b.updatedAt ?? 0) - (a.updatedAt ?? 0)),
+      Object.values(loadChats(scopeId)).sort((a, b) => (b.updatedAt ?? 0) - (a.updatedAt ?? 0)),
     )
-  }, [])
+  }, [scopeId])
 
   const persist = useCallback(() => {
-    const map = loadChats()
+    const map = loadChats(scopeId)
     const title = `${course?.code ?? 'Course'} · ${topicChoice || 'Chat'}`
     map[chatId] = {
       id: chatId,
@@ -102,19 +104,19 @@ export default function ChatPage() {
       messages,
       updatedAt: Date.now(),
     }
-    saveChats(map)
+    saveChats(scopeId, map)
     setRecentList(Object.values(map).sort((a, b) => (b.updatedAt ?? 0) - (a.updatedAt ?? 0)))
-  }, [chatId, courseId, course?.code, topicChoice, messages])
+  }, [scopeId, chatId, courseId, course?.code, topicChoice, messages])
 
   useEffect(() => {
     if (messages.length) persist()
   }, [messages, persist])
 
-  const quizScores = useMemo(() => loadQuizHistory().slice(0, 5), [])
+  const quizScores = useMemo(() => loadQuizHistory(scopeId).slice(0, 5), [scopeId])
 
   const newChat = () => {
     if (messages.length > 0) {
-      const map = loadChats()
+      const map = loadChats(scopeId)
       const c = findCourseById(courses, courseId)
       map[chatId] = {
         id: chatId,
@@ -123,7 +125,7 @@ export default function ChatPage() {
         messages: messagesRef.current,
         updatedAt: Date.now(),
       }
-      saveChats(map)
+      saveChats(scopeId, map)
       refreshRecentList()
     }
     setChatId(crypto.randomUUID())
@@ -139,7 +141,7 @@ export default function ChatPage() {
       if (!newCourseId || newCourseId === courseId) return
       const msgs = messagesRef.current
       if (msgs.length > 0) {
-        const map = loadChats()
+        const map = loadChats(scopeId)
         const c = findCourseById(courses, courseId)
         map[chatId] = {
           id: chatId,
@@ -148,7 +150,7 @@ export default function ChatPage() {
           messages: msgs,
           updatedAt: Date.now(),
         }
-        saveChats(map)
+        saveChats(scopeId, map)
         refreshRecentList()
       }
       setCourseId(newCourseId)
@@ -158,11 +160,11 @@ export default function ChatPage() {
       setInput('')
       setError('')
     },
-    [courseId, courses, chatId, sessionTopicLabel, refreshRecentList],
+    [courseId, courses, chatId, sessionTopicLabel, scopeId, refreshRecentList],
   )
 
   const openSavedChat = (id) => {
-    const map = loadChats()
+    const map = loadChats(scopeId)
     const saved = map[id]
     if (!saved) return
     setChatId(saved.id)

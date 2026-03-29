@@ -1,39 +1,49 @@
-const CHATS_KEY = 'paal_chats_v1'
-const QUIZ_KEY = 'paal_quiz_history_v1'
+/** Per-user localStorage keys so switching Clerk accounts does not leak history on this device. */
+function chatsKey(scopeId) {
+  return `paal_chats_v2:${scopeId}`
+}
 
-export function loadChats() {
+function quizKey(scopeId) {
+  return `paal_quiz_v2:${scopeId}`
+}
+
+export function loadChats(scopeId) {
+  if (!scopeId) return {}
   try {
-    const raw = localStorage.getItem(CHATS_KEY)
+    const raw = localStorage.getItem(chatsKey(scopeId))
     return raw ? JSON.parse(raw) : {}
   } catch {
     return {}
   }
 }
 
-export function saveChats(map) {
-  localStorage.setItem(CHATS_KEY, JSON.stringify(map))
+export function saveChats(scopeId, map) {
+  if (!scopeId) return
+  localStorage.setItem(chatsKey(scopeId), JSON.stringify(map))
 }
 
-export function loadQuizHistory() {
+export function loadQuizHistory(scopeId) {
+  if (!scopeId) return []
   try {
-    const raw = localStorage.getItem(QUIZ_KEY)
+    const raw = localStorage.getItem(quizKey(scopeId))
     return raw ? JSON.parse(raw) : []
   } catch {
     return []
   }
 }
 
-export function saveQuizHistory(list) {
-  localStorage.setItem(QUIZ_KEY, JSON.stringify(list.slice(0, 80)))
+export function saveQuizHistory(scopeId, list) {
+  if (!scopeId) return
+  localStorage.setItem(quizKey(scopeId), JSON.stringify(list.slice(0, 80)))
 }
 
-export function appendQuizAttempt(entry) {
-  const list = loadQuizHistory()
+export function appendQuizAttempt(scopeId, entry) {
+  const list = loadQuizHistory(scopeId)
   list.unshift({
     id: crypto.randomUUID(),
     at: Date.now(),
     ...entry,
   })
-  saveQuizHistory(list)
+  saveQuizHistory(scopeId, list)
   return list
 }

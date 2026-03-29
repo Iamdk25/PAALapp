@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { ProtectedRoute } from './components/ProtectedRoute'
+import { SessionGate } from './components/SessionGate'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import CoursesPage from './pages/CoursesPage'
@@ -23,7 +24,9 @@ export default function App() {
         path="/learn"
         element={
           <ProtectedRoute>
-            <ChatPage />
+            <SessionGate>
+              <ChatPage />
+            </SessionGate>
           </ProtectedRoute>
         }
       />
@@ -31,7 +34,9 @@ export default function App() {
         path="/quiz"
         element={
           <ProtectedRoute>
-            <QuizPage />
+            <SessionGate>
+              <QuizPage />
+            </SessionGate>
           </ProtectedRoute>
         }
       />
@@ -39,7 +44,9 @@ export default function App() {
         path="/analytics"
         element={
           <ProtectedRoute>
-            <AnalyticsPage />
+            <SessionGate>
+              <AnalyticsPage />
+            </SessionGate>
           </ProtectedRoute>
         }
       />

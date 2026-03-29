@@ -5,6 +5,7 @@ import { ClerkProvider } from '@clerk/clerk-react'
 import './index.css'
 import App from './App.jsx'
 import { PaalApiProvider } from './providers/PaalApiProvider.jsx'
+import { StorageScopeProvider } from './providers/StorageScopeProvider.jsx'
 import { authDevBypass, clerkPublishableKey } from './lib/authMode'
 
 export function AppRoot() {
@@ -23,9 +24,11 @@ export function AppRoot() {
         </div>
       ) : null}
       <BrowserRouter>
-        <PaalApiProvider>
-          <App />
-        </PaalApiProvider>
+        <StorageScopeProvider>
+          <PaalApiProvider>
+            <App />
+          </PaalApiProvider>
+        </StorageScopeProvider>
       </BrowserRouter>
     </>
   )

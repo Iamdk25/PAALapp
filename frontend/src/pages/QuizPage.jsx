@@ -13,6 +13,7 @@ import {
   parseQuizPayload,
 } from '../lib/parseAgent'
 import { appendQuizAttempt, loadQuizHistory } from '../lib/storage'
+import { usePaalStorageScope } from '../providers/StorageScopeProvider.jsx'
 import { AssistantMarkdown } from '../components/AssistantMarkdown'
 
 const difficulties = ['Easy', 'Medium', 'Hard', 'Mixed']
@@ -90,6 +91,7 @@ function answerComplete(q, val) {
 }
 
 export default function QuizPage() {
+  const { scopeId } = usePaalStorageScope()
   const { getToken } = usePaalApi()
   const { courses, loading: coursesLoading, error: coursesError, refetch } = useCourses()
   const [searchParams] = useSearchParams()
@@ -182,7 +184,7 @@ export default function QuizPage() {
   const [grading, setGrading] = useState(false)
   const [error, setError] = useState('')
   const [gradeResult, setGradeResult] = useState(null)
-  const [history, setHistory] = useState(() => loadQuizHistory())
+  const [history, setHistory] = useState(() => loadQuizHistory(scopeId))
 
   const setAnswer = (idx, value) => {
     setAnswers((prev) => ({ ...prev, [idx]: value }))
@@ -262,13 +264,13 @@ export default function QuizPage() {
       const parsed = parseGradePayload(raw)
       if (parsed) {
         setGradeResult({ ...parsed, raw })
-        appendQuizAttempt({
+        appendQuizAttempt(scopeId, {
           course: course?.code ?? apiCourse,
           topic: sessionTopicLabel,
           score: parsed.score,
           feedback: parsed.feedback,
         })
-        setHistory(loadQuizHistory())
+        setHistory(loadQuizHistory(scopeId))
       } else {
         const fb = normalizeFeedbackMarkdown(normalizeAgentOutput(raw))
         setGradeResult({ score: '—', feedback: fb, reviewTopics: [], items: [], raw })

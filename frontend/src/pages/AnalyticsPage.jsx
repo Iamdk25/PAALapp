@@ -6,16 +6,18 @@ import { postChat } from '../lib/api'
 import { usePaalApi } from '../hooks/usePaalApi'
 import { parseProgressPayload } from '../lib/parseAgent'
 import { loadChats, loadQuizHistory } from '../lib/storage'
+import { usePaalStorageScope } from '../providers/StorageScopeProvider.jsx'
 
 export default function AnalyticsPage() {
+  const { scopeId } = usePaalStorageScope()
   const { getToken } = usePaalApi()
   const { courses: catalogCourses } = useCourses()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [insight, setInsight] = useState(null)
 
-  const quizzes = useMemo(() => loadQuizHistory(), [])
-  const chats = useMemo(() => Object.values(loadChats()), [])
+  const quizzes = useMemo(() => loadQuizHistory(scopeId), [scopeId])
+  const chats = useMemo(() => Object.values(loadChats(scopeId)), [scopeId])
 
   const scoreRatios = useMemo(() => {
     return quizzes
