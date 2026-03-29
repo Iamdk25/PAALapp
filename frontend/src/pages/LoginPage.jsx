@@ -79,7 +79,8 @@ export default function LoginPage() {
 
           {!authDevBypass && !showClerk && (
             <p className="text-center text-sm text-slate-600">
-              Add <code className="font-mono text-xs">VITE_CLERK_PUBLISHABLE_KEY</code> to enable Clerk on this screen.
+              Copy <code className="font-mono text-xs">.env.example</code> to project root <code className="font-mono text-xs">.env</code> and set{' '}
+              <code className="font-mono text-xs">VITE_CLERK_PUBLISHABLE_KEY</code>.
             </p>
           )}
 
