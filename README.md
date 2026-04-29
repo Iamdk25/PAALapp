@@ -125,6 +125,12 @@ Navigate to [http://localhost:5173](http://localhost:5173) in your browser, log 
 
 ---
 
+## 📝 Code Source Declaration
+
+This project was developed with the assistance of **Claude Code** (by [Anthropic](https://www.anthropic.com/)) and **Antigravity** (by [Google DeepMind](https://deepmind.google/)) as AI-powered coding assistants. These tools were used throughout the development process to help with code generation, debugging, architecture design, and documentation. All AI-generated code was reviewed, tested, and validated by the team before inclusion in the final submission.
+
+---
+
 <p align="center">
   <br>
   Built with ❤️ for better, smarter, faster learning.
